@@ -1,0 +1,24 @@
+<view class='slide' style="width:{{options.width}}">
+  <!-- <view class='buyMian-slide-title'>{{slider1Value}}w-{{slider2Value}}w</view> -->
+  <view class='buyMian-slide-contain'>
+    <slider class='slider-left' style='width:{{slider1W+"%"}}' block-size="{{options.blockSize}}" step="{{options.step}}" min='{{options.min}}' max='{{slider1Max}}' backgroundColor='{{options.colors[1]}}' activeColor='{{options.colors[0]}}' block-color='{{options.colors[2]}}' bindchanging='changing' catchtouchstart='changeStart' bindchange='changed' data-idx='1'></slider>
+    <slider wx:if='{{!change}}' class='slider-right' style='width:{{slider2W+"%"}}' block-size="{{options.blockSize}}" step="{{options.step}}" min='{{slider2Min}}' max='{{options.max}}' backgroundColor='{{options.colors[0]}}' activeColor='{{options.colors[1]}}' block-color='{{options.colors[2]}}' bindchanging='changing' catchtouchstart='changeStart' bindchange='changed' data-idx='2'></slider>
+  </view>
+  <!-- <view class='flex flexSb buyMian-slide-range'>
+    <view class=''>{{min}}w</view>
+    <view class=''>{{max}}w</view>
+  </view> -->
+</view>
+ 
+<!-- <view class='slide' style="width:{{width}}">
+  <view class='buyMian-slide-contain'>
+
+
+    <slider class='slider-left' style='width:{{slider1W+"%"}}' block-size="{{blockSize}}" step="{{step}}" min='{{min}}' max='{{slider1Max}}' backgroundColor='{{colors[1]}}' activeColor='{{colors[0]}}' block-color='{{colors[2]}}' bindchanging='changing' catchtouchstart='changeStart' bindchange='changed' data-idx='1'></slider>
+
+
+    <slider wx:if='{{!change}}' class='slider-right' style='width:{{slider2W+"%"}}' block-size="{{blockSize}}" step="{{step}}" min='{{slider2Min}}' max='{{max}}' backgroundColor='{{colors[0]}}' activeColor='{{colors[1]}}' block-color='{{colors[2]}}' bindchanging='changing' catchtouchstart='changeStart' bindchange='changed' data-idx='2'></slider>
+
+
+  </view>
+</view> -->

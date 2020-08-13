@@ -1,0 +1,29 @@
+<!--pages/pages-list/chat/txim/index.wxml-->
+<view>
+  <!-- 对话列表 -->
+  <view class="item flex" wx:for="{{dialogueList}}" wx:key="item" data-index="{{index}}" data-url="/subpackages/chat/txim/main/index" bindtap="jump">
+    <view class="left">
+      <image wx:if="{{item.userProfile.avatar}}" src="{{item.userProfile.avatar}}"></image>
+      <view wx:else class="icon flex-cen"><text class="iconfont icon-ren"></text></view>
+    </view>
+    <view class="right flex1">
+      <view class="h3">{{item.userProfile.nick || item.userProfile.userID}}</view>
+      <view class="h4" wx:if="{{!item.lastMessage.isRevoked}}">{{item.lastMessage.messageForShow}}</view>
+      <view class="h5">{{item.lastMessage.lastTime}}</view>
+      <view class="remain" wx:if="{{item.unreadCount > 0}}">{{item.unreadCount > 99 ? '99+' : item.unreadCount}}</view>
+    </view>
+  </view>
+  <!-- 修改头像昵称 -->
+  <view class="userInfo flex-cen haze" hidden="{{isShowUserInfo}}">
+    <view class="box fadeShow">
+      <view class="avatar" bindtap="chooseImages">
+        <image wx:if="{{item.userProfile.avatar}}" src="{{item.userProfile.avatar}}"></image>
+        <view wx:else class="icon flex-cen"><text class="iconfont icon-ren"></text></view>
+      </view>
+      <view class="nickname flex-ali"><view class="h4">昵称：</view><input placeholder="输入您要设置的昵称"></input></view>
+      <view class="btn" bindtap="updateMyProfile">确认</view>
+      <view class="close" bindtap="showUserInotModify"><text class="iconfont icon-guanbi"></text></view>
+    </view>
+  </view>
+  <view class="modify-btn flex-cen" bindtap="showUserInotModify"><text class="iconfont icon-wode"></text></view>  
+</view>

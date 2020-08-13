@@ -1,0 +1,4 @@
+page{background: #eee;}
+.val{text-align: center;font-size: 46rpx;color:#027C60;margin-bottom: 100rpx;}
+button{width:200rpx;margin-top: 100rpx;}
+.slider{ width: 80vw;margin:0 auto;}

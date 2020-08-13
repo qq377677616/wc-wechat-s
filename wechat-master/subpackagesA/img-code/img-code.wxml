@@ -1,0 +1,12 @@
+<!--pages/pages-list/imgCode/img-code.wxml-->
+<view class="body flex-cen">
+  <view class="code">
+    <view class="flex-cen box">
+      <input type="text" id="code" bindinput='codeImg' placeholder="请输入验证码" maxlength="4" value='{{imgCode}}'/>
+      <view style='position:relative;' bindtap="onTap" class="img-code">
+        <canvas canvas-id="canvas"></canvas>
+      </view>
+    </view>
+    <view bindtap="verification" class="btn">点击验证</view>
+  </view>
+</view>

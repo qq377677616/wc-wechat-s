@@ -1,0 +1,61 @@
+/* pages/pages-list/chat/txim/main/index.wxss */
+.message-list .item{margin-bottom: 36rpx;}
+.message-list .item .avatar{width:80rpx;height: 80rpx;background-color: #f2f2f2;border-radius: 10rpx;flex-shrink: 0;}
+.message-list .item .icon{width:100%;height: 100%;}
+.message-list .item.left .font{padding-left: 20rpx;}
+.message-list .item .h3{font-size: 24rpx;color:#495060;padding-bottom: 12rpx;}
+.message-list .item .h4{font-size: 32rpx;line-height: 44rpx;text-align: left;width: fit-content;word-break: break-all;background-color: #c4c4c4;padding: 24rpx;}
+.message-list .item .expression{background-color: #f8f8f8;border: 2rpx solid #d9d9d9;border-radius: 4rpx 16rpx 16rpx 16rpx;padding:24rpx;}
+.message-list .item .expression image{width:180rpx;}
+.message-list .item.left .h4{background-color: #f8f8f8;border: 2rpx solid #d9d9d9;border-radius: 4rpx 16rpx 16rpx 16rpx;}
+.message-list{padding:40rpx 40rpx 0 40rpx;}
+.message-list .item.right{flex-direction: row-reverse;}
+.message-list .item.right .font{padding-right: 20rpx;text-align: right;}
+.message-list .item.right .h4{background-color: #e4f0fd;border: 2rpx solid #b1d4ff;border-radius: 16rpx 4rpx 16rpx 16rpx;}
+.controls{background-color: #ededed;position: fixed;bottom: 0;left: 0;width: 100%;}
+.controls .top{border-top: 2rpx solid #ddd;padding: 20rpx;flex-direction: row;box-sizing: border-box;}
+.iconfont{font-size: 56rpx;color:#000;}
+.controls .inputs{width: 100%;background-color: #fff;border: 2rpx solid #dbdbdb;color: #495060;border-radius: 16rpx;box-sizing: border-box;height: 68rpx;line-height: 68rpx;font-weight: 600;display: flex;justify-content: center;}
+.controls .input-box{width:100%;}
+.controls input{border-radius: 16rpx;height: 68rpx;box-sizing: border-box;padding: 0 12rpx;width:100%;}
+.controls .send{font-size: 28rpx;background-color: #006fff;color: #fff;border-radius: 8rpx;width: 100rpx;padding:10rpx;margin-left: 12rpx;text-align: center;box-sizing: border-box;line-height: 40rpx;}
+.record-box{margin-right: 20rpx;}
+.icon-jia,.send-box{margin-left: 20rpx;}
+.icon-jia{font-size: 62rpx;}
+.message-img image {max-width: 360rpx;border-radius: 4rpx;}
+.message-text image {width: 40rpx;height:40rpx;}
+.tool-list .item{width: 25vw;padding: 20rpx 5vw 30rpx;box-sizing: border-box;text-align: center;font-size: 24rpx;color: #999;}
+.tool-list text{font-size: 54rpx;color:#4C4C4C;}
+.tool-list .icon{border-radius: 16rpx;background-color: #fff;padding: 3vw;}
+.tool-list .h4{padding-top: 6rpx;}
+.message-video video{max-height: 400rpx;max-width: 50vw;object-fit: cover;}
+.emojis-box .emojis{flex-wrap: wrap;height: 300rpx;overflow-y: scroll;box-sizing: border-box;}
+.emojis-box .emoji{height: 12.5vw;width: 12.5vw;padding: 16rpx;box-sizing: border-box;}
+.emojis-box image{width:100%;height:100%;}
+.emoji-list .tab{height: 58rpx;padding-left: 20rpx;box-sizing: border-box;align-items:center;}
+.emoji-list .tab .iconfont{font-size: 44rpx;}
+.emoji-list .tab .item{padding: 6rpx 4rpx 4rpx;border-radius: 12rpx;box-sizing: border-box;margin-right: 16rpx;}
+.emoji-list .tab .item.cur{background: #fff;}
+.emoji-list .bigemoji{height: 20vw;width: 20vw;padding: 20rpx;box-sizing: border-box;}
+.record-modal{height: 300rpx;width: 60vw;background-color: #000;opacity: 0.8;position: fixed;top: 400rpx;z-index: 9999;left: 20vw;border-radius: 24rpx;display: flex;flex-direction: column;}
+.record-modal .wrapper {display: flex;height: 200rpx;box-sizing: border-box;padding: 10vw;}
+.record-modal .wrapper .modal-loading {opacity: 1;width: 40rpx;height: 16rpx;border-radius: 4rpx;background-color: #006fff;animation: loading 2s cubic-bezier(0.17, 0.37, 0.43, 0.67) infinite;}
+.record-modal .modal-title {text-align: center;color: #fff;}
+.message-sound .iconfont{font-size: 34rpx;} 
+.message-sound .text{padding-left: 6px;font-weight: 500;font-size: 28rpx;margin-top: -4rpx;}
+.iconfont-box{width:34rpx;overflow: hidden;}
+.iconfont-box .box{width:100%;overflow: hidden;border-radius: 50%;}
+.iconfont-box .box.on{animation: autoWidth .8s infinite;}
+.message-list .item.right .message-sound .box{flex-direction: row-reverse;}
+.message-list .item.right .message-sound .iconfont-box{transform: rotateY(180deg);}
+.message-list .item.right .message-sound .text{padding:0 6rpx 0 0;}
+@keyframes loading{
+  0%{ transform: translate(0,0);}
+  50%{ transform: translate(30vw,0);background-color: #f5634a;width: 40px;}
+  100%{transform: translate(0,0);}
+}   
+@keyframes autoWidth{
+  0%{ width: 20%;}
+  100%{width: 100%;}
+}  
+   

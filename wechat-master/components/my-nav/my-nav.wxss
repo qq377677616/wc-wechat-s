@@ -1,0 +1,6 @@
+.my_header{text-align: center;color:#fff;font-size: 24rpx;}
+.header_top{height:40rpx;line-height: 40rpx;}
+.header_bottom{height:96rpx;line-height: 96rpx;font-size: 34rpx;position: relative;padding:0 200rpx;overflow: hidden;
+text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;white-space: normal;}
+.header_bottom .icon{width:40rpx;height:40rpx;position: absolute;left:20rpx;top:calc(50% - 20rpx);font-size: 0;}
+.header_bottom .icon text{font-size: 40rpx;color:#fff;}

@@ -1,0 +1,24 @@
+<!--subpackagesA/wx-validate/wx-validate.wxml-->
+<view>
+  <view class="ul">
+    <form bindsubmit="bindsubmit">
+      <view class="li flex-ali">
+        <view class="title">姓名</view>:
+        <view class="input flex1"><input name="name" placeholder="请输入2-5位姓名" maxlength="5"></input></view>
+      </view>
+      <view class="li flex-ali">
+        <view class="title">手机号</view>:
+        <view class="input flex1"><input name="phone" placeholder="请输入手机号" maxlength="11"></input></view>
+      </view>
+      <view class="li flex-ali">
+        <view class="title">电子邮箱</view>:
+        <view class="input flex1"><input name="email" placeholder="请输入电子邮箱"></input></view>
+      </view>
+      <view class="li flex-ali">
+        <view class="title">密码</view>:
+        <view class="input flex1"><input type="password" name="password" placeholder="8-15位大写开头且含小写字母" maxlength="15"></input></view>
+      </view>
+      <view><button formType="submit" type="primary">提交</button></view>
+    </form>
+  </view>
+</view>

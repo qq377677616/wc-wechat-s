@@ -1,0 +1,13 @@
+/* subpackages/move/move.wxss */
+movable-area{width:100vw;height:100vh;position: fixed;left:0;top:0;z-index: 100;pointer-events: none;}
+movable-view{pointer-events: auto;}
+/* movable-view{background-color: #027C60;} */
+.con{position: absolute;z-index: 10;width: 100%;left:0;bottom:0;}
+movable-area image{width:144rpx;height: 152rpx;}
+.con .bucket{width:22%;height: 200rpx;background-color: #DD5145;margin:0 2%;border-radius: 20rpx 20rpx 0 0;transition: all .2s;font-size: 30rpx;color:#fff;}
+.con .bucket>view{margin-top: 20rpx;}
+.con .bucket.on{transform: translateY(-40rpx);}
+.con .bucket:nth-child(2){background: #4683C2;}
+.con .bucket:nth-child(3){background: #9B6C40;}
+.con .bucket:nth-child(4){background: #7E7A79;}
+.body{background: #eee;}

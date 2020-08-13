@@ -1,0 +1,4 @@
+/* pages/pages-list/custom/custom.wxss */
+.custom{background: #ddd;}
+.con{height:calc(100vh - 220rpx);flex-direction: column;}
+.con .li{width:250rpx;height:70rpx;line-height: 70rpx;text-align: center;border:1rpx solid #ddd;border-radius: 10rpx;margin:20rpx auto;background: #fff;}

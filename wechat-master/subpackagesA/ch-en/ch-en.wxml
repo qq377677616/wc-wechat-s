@@ -1,0 +1,54 @@
+<!--pages/my/my.wxml-->
+<view class="body"> 
+  <view class="my_one conBox flex-ali">
+    <view class="avatar"><image src="{{userInfo.avatarUrl || 'http://game.flyh5.cn/resources/game/wechat/xw/rc_qc/assets/my/avatar.png'}}"/></view>
+    <view>
+      <view class="nickname">{{languageCon.my.nickName}}</view>
+      <view class="number flex">
+        <view>{{languageCon.my.phone[0]}}377677616</view>
+        <view>{{languageCon.my.phone[1]}}{{userInfo.phone || 15822228888}}</view>
+      </view>
+    </view> 
+    <view class="lang" bindtap="toggleLang"><text class="{{lang == 'EN' ? 'cur' : ''}}">English</text>/<text class="{{lang == 'CH' ? 'cur' : ''}}">中文</text></view> 
+  </view>
+  <view class="my_two conBox">
+    <view class="ul wraps">
+      <view class="li flex-bet myIdea">
+        <view class="flex-ali">
+          <view class="icon"><image src="./icon_03.png"/></view>
+          <view>{{languageCon.my.column[0]}}</view>
+        </view>
+        <text class="iconfont icon-iconset0424" data-type="0" bindtap="jump_myIdea"></text>
+      </view>
+      <view class="li flex-bet myIdea">
+        <view class="flex-ali">
+          <view class="icon"><image src="./icon_19.png"/></view>
+          <view>{{languageCon.my.column[1]}}</view>
+        </view>
+        <text class="iconfont icon-iconset0424" data-type="1" bindtap="jump_myIdea"></text>
+      </view>
+      <view class="li flex-bet proposal">
+        <view class="flex-ali">
+          <view class="icon"><image src="./icon_04.png"/></view>
+          <view>{{languageCon.my.column[2]}}</view>
+        </view>
+        <text class="iconfont icon-iconset0424" bindtap="jump_proposal"></text>
+      </view>
+      <view class="li flex-bet about">
+        <view class="flex-ali">
+          <view class="icon"><image src="./icon_05.png"/></view>
+          <view>{{languageCon.my.column[3]}}</view>
+        </view>
+        <text class="iconfont icon-iconset0424" bindtap="jump_about"></text>
+      </view> 
+                <!-- <view class="li" id="curid" bindtap="getEle">
+                
+            99999999999999999
+          </view>
+          <video src="http://game.flyh5.cn/resources/game/hz_game/walmart_img/15421758035bebbc3bd8d64.mp4" id="myvideo"></video> -->
+    </view>  
+  </view>
+  <view class="tabBarBox">
+    <tab-bar curIndex="2" bindmytab="bindmytab"></tab-bar>
+  </view>
+</view>

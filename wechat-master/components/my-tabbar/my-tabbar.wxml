@@ -1,0 +1,7 @@
+<!--components/tabBar/tabBar.wxml-->
+<view class="tabBar flex-bet {{navType == 1 ? 'is-icon' : ''}}">
+  <view wx:for="{{tabList}}" wx:key="key" class="tab-item flex-cen {{curIndex === index ? 'cur' : ''}}" id="tab{{index}}" data-index="{{index}}" bindtap="checked">
+    <text class="{{item.icon}} iconfont {{item.otherclass}}"></text>
+    <text class="text" wx:if="{{navType == 0 || (navType == 1 && index != 1)}}">{{item.title}}</text>
+  </view>
+</view>

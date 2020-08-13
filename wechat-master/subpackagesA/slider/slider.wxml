@@ -1,0 +1,12 @@
+<view class="full flex-cen-col">
+  <view class="slider">
+    <!-- 当前值 -->
+    <view class="val">{{sliderValue[0]}}--{{sliderValue[1]}}</view>
+    <!-- 双向滑块 -->
+    <sliders id="slider" sliderOptions="{{sliderOptions}}" bindsliderChange="bindsliderChange" />
+  </view>
+  <!-- 按钮 -->
+  <view class="btns">
+    <button type="primary" bindtap="reset">重置</button>
+  </view>
+</view>

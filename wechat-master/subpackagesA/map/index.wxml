@@ -1,0 +1,4 @@
+<view class="body flex-cen-col">
+  <view bindtap="jumps" data-page="maps/maps" class="li">纯净版</view>
+  <view bindtap="jumps" data-page="my-map/index" class="li">导航版</view>
+</view>

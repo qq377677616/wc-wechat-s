@@ -1,0 +1,11 @@
+<!--pages/pages-list/custom/custom.wxml-->
+<view class="custom body">
+  <!-- 自定义头部 -->
+  <my-nav title="我的" types="{{types}}" navBottomStyle="{{['#000', '#fff']}}" bindnavBack="navBack"></my-nav>
+  <view class="con flex-cen">
+    <view class="li" bindtap="switchBack">切换返回键:{{types == 0 ? '无' : (types == 1 ? '返回' : '首页')}}</view>
+    <view class="li" bindtap="switchTab">切换导航:{{navType == 0 ? '普通' : '特殊'}}</view>
+  </view>
+  <!-- 自定义导航 -->
+  <my-tabbar bindmytab="bindmytab" curIndex="2" navType="{{navType}}"></my-tabbar>
+</view>

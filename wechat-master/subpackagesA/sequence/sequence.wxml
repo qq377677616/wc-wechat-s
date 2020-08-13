@@ -1,0 +1,8 @@
+<!--pages/pages-list/sequence/sequence.wxml-->
+<view>
+  <view class="currency" hidden="{{!(sequenceListIndex >= 0)}}">
+    <image class="{{sequenceListIndex == index ? 'on' : ''}}" wx:for="{{sequenceList}}" wx:key="key{{index}}" src="{{item.url}}"></image>
+  </view>
+  <view class="start" bindtap="start" hidden="{{sequenceListIndex >= 0}}">播放序列帧</view>
+</view>
+ 

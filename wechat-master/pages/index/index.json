@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "",
+  "usingComponents": {
+    "h5Examine": "/components/h5-examine/h5-examine"
+  }
+}

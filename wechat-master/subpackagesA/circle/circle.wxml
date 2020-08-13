@@ -1,0 +1,2 @@
+<!--pages/pages-list/circle/circle.wxml-->
+<circle circle="{{circle}}"></circle>

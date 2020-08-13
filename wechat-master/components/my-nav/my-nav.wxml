@@ -1,0 +1,7 @@
+<view class="my_header">
+  <view class="header_top" style="height:{{statusBarHeight}}px;line-height:{{statusBarHeight}}px;background:{{navTopStyle[0]}};color:{{navTopStyle[1]}}"></view>  
+  <view class="header_bottom" style="height:{{titleHeight}}px;line-height:{{titleHeight}}px;background:{{navBottomStyle[0]}};color:{{navBottomStyle[1]}}">
+    {{title}}
+    <view class="icon flex-cen" bindtap="navBack"><text wx:if="{{types === '1'}}" class="icon-fanhui1 iconfont"></text><text wx:if="{{types === '2'}}" class="icon-zhuye iconfont"></text></view>
+  </view>
+</view>

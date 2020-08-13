@@ -1,0 +1,2 @@
+/* pages/pages-list/scrape/scrape.wxss */
+.tui-luck{width: 300px;height: 150px;margin: 20px auto;background-color: #ddd;background-size:cover !important;border:2rpx solid #999;}

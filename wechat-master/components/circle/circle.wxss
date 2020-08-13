@@ -1,0 +1,10 @@
+/* components/circle/circle.wxss */
+.circle{height:100vh;display: flex;justify-content: center;align-items: center;}
+.progress_box{position: relative;display: flex;align-items: center;justify-content: center;}
+.progress_bg{position: absolute;}
+/* .progress_bg{position: absolute;width:220px;height: 220px;}
+.progress_canvas{width:220px;height: 220px;}  */
+.progress_text{ position: absolute;display: flex;align-items: center;justify-content: center;}
+.progress_info{font-size: 60rpx; padding-left: 16rpx;letter-spacing: 2rpx;} 
+.progress_dot{width:16rpx;height: 16rpx;border-radius: 50%;background-color: #fb9126;}
+.progress_box{transform: translateY(180deg);}

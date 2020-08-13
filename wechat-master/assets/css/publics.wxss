@@ -1,0 +1,60 @@
+/**publics.wxss**/
+page{line-height: 1;}
+button{background: #fff;font-size: 28rpx;padding:0;margin:0;}
+button::after{border:none;}
+.wrap,.wraps{width:100%;max-width: 92%;margin:0 auto;}
+.wraps{max-width: 82.4%;}
+.flex{display:flex;}
+.flex-bet{display:flex;justify-content: space-between;align-items: center;}
+.flex-bett{display:flex;justify-content: space-between;}
+.flex-aro{display:flex;justify-content: space-around;align-items: center;}
+.flex-cen{display: flex;justify-content: center;align-items: center;}
+.flex-cen-col{display: flex;justify-content: center;align-items: center;flex-direction: column;}
+.flex-jus{display: flex;justify-content: center;}
+.flex-ali{display: flex;align-items: center;}
+.flex-col{display: flex;flex-direction: column;}
+.flex-row{display: flex;flex-direction: row-reverse;}
+.flex-wrap{display: flex;flex-wrap: wrap;}
+.flex1{flex:1;}
+.full{width:100vw;height:100vh;}
+.cover{width:100%;height:100%;}
+.posa{position: absolute;width:100%;height:100%;left:0;top:0;}
+.haze{position: fixed;width:100%;height:100%;background: rgba(0,0,0,.7);left:0;top:0;z-index: 9999}
+::-webkit-scrollbar {width: 0;height: 0;color: transparent;}
+.ell{white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
+.ell1{display: -webkit-box;-webkit-box-orient: vertical;text-overflow: ellipsis;overflow: hidden;-webkit-line-clamp: 1;}
+.ell2{display: -webkit-box;-webkit-box-orient: vertical;text-overflow: ellipsis;overflow: hidden;-webkit-line-clamp: 2;}
+.ell3{display: -webkit-box;-webkit-box-orient: vertical;text-overflow: ellipsis;overflow: hidden;-webkit-line-clamp: 3;}
+.ell4{display: -webkit-box;-webkit-box-orient: vertical;text-overflow: ellipsis;overflow: hidden;-webkit-line-clamp: 4;}
+button.disabled{background: #ccc;}
+.clamp3{display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 3;overflow: hidden;}
+/*  重写 radio 样式  */
+/* 未选中的 背景样式 */
+radio {display: block;}
+radio .wx-radio-input{display: none;}
+radio text{position: relative;display: flex;align-items: center;}
+radio text::before,radio text::after{content:"";display: inline-block;width:38rpx;height:38rpx;border-radius: 50%;border:1rpx solid green;margin-right:10rpx; }
+radio text::after{display: none;}
+radio.checked text::after{display: inline-block;position: absolute;left:0;top:calc(50% - 20rpx);background: green;transform: scale(.4);}
+.btn-success,.btn-err{width:200rpx;height: 80rpx;line-height: 80rpx;border-radius: 10rpx;background-color: #07C160;font-size: 28rpx;color:#fff;text-align: center;margin:0 auto;}
+.btn-err{background-color: #DD5044;}
+/* scroll-view{position: absolute;width:100%;height:100%;left:0;top:0;box-sizing: border-box;} */
+/*动画*/
+/* 小大小弹出 */
+@keyframes fadeShow {
+  0%{transform:scale(.1);opacity:0;}
+  90%{transform:scale(1.1);opacity:1;}
+  100%{transform:scale(1);opacity:1;}
+}
+.fadeShow{animation:fadeShow .5s forwards;}
+/*上下晃动*/
+@keyframes wobble {
+  0%{transform:translateY(-8rpx) rotateY(5deg);}
+  100%{transform:translateY(8rpx) rotateY(-5deg);}
+}
+.wobble{animation:wobble 2s infinite alternate;}
+@keyframes wobble2 {
+  0%{transform:translateY(-8rpx);}
+  100%{transform:translateY(8rpx);}
+}
+.wobble2{animation:wobble2 2s infinite alternate;}

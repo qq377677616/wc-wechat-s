@@ -1,0 +1,2 @@
+/* subpackages/live/live/live-dev/live-play.wxss */
+live-player{width:100vw;height: 100vh;}

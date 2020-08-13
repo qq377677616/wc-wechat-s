@@ -1,0 +1,7 @@
+/* subpackages/werun/werun.wxss */
+.body{text-align: center;}
+.h2{font-size: 80rpx;font-weight: bold;font-style: italic;color:#027C60;}
+.datas{margin:30rpx 0;}
+.h3{font-size: 30rpx;margin:0 40rpx;color:#666;}
+.btn{margin-top: 60rpx;}
+.h2 text{font-size: 30rpx;color:#999;font-style: normal;font-weight: normal;}

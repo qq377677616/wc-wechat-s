@@ -1,0 +1,5 @@
+<!--pages/pages-list/computed-watch/computed-watch.wxml-->
+<view class="body flex-cen-col">
+  <view>{{order}}</view>
+  <view class="num">{{num}}</view>
+</view>

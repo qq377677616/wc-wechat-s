@@ -1,0 +1,65 @@
+<!--subpackages/shop/order/order.wxml-->
+<view>
+  <view class="order full flex-col">
+    <!-- label栏 -->
+    <view class="label flex-cen">
+      <view class="item" wx:for="{{label}}" wx:key="index" data-index="{{index}}" bindtap="selectLabel"><view class="text">{{item}}<view class="after {{labelIndex == index ? 'on' : ''}}"></view></view></view>
+    </view>
+    <!-- 列表栏 -->
+    <view class="flex1 ordere-list">
+      <swiper indicator-dots="{{indicatorDots}}" current="{{labelIndex}}" duration="{{300}}" bindchange="bindchangeSwiper">
+        <block wx:for="{{label.length}}" wx:key="*this">
+          <swiper-item>
+            <scroll-view scroll-y data-index="{{index}}" bindscrolltolower="bindscrolltolower">
+              <view class="ul wrap">
+                <view class="li" wx:for="{{index == 0 ? orderList : (index == 1 ? unpaidList : (index == 2 ? deliverGoodsList : receiptGoodsList))}}" wx:key="id">
+                  <view class="goods">
+                    <view class="item flex" wx:for="{{item.orders}}" wx:for-item="item2" wx:for-index="index2" wx:key="id">
+                      <view class="img"><image mode="aspectFill" src="{{item2.img}}"></image></view>
+                      <view class="flex-col flex1">
+                        <view>
+                          <view class="h3 ell1">{{item2.name}}</view>
+                          <view class="h4">{{item2.other}}</view>
+                          <view class="h5">数量：x{{item2.num}}</view>
+                        </view>
+                        <view class="p">￥{{item2.prize}}</view>
+                      </view>
+                    </view>
+                  </view>
+                  <view class="subtotal">
+                    <text class="h6">共{{item.numTotal}}件商品</text>
+                    <text>合计：<text class="prize-total">￥{{item.prizeTotal}}</text></text>
+                  </view>
+                  <view class="btns flex-ali">
+                    <block wx:if="{{item.type == 1}}">
+                      <button class="flex-cen" data-index="{{item.id}}" data-type="1" bindtap="operation">删除订单</button>
+                      <button class="flex-cen dark" data-index="{{item.id}}" data-type="2" bindtap="operation">去付款</button>
+                    </block>
+                    <block wx:if="{{item.type == 2}}">
+                      <button class="flex-cen" data-index="{{item.id}}" data-type="3" bindtap="operation">取消订单</button>
+                      <button class="flex-cen dark" data-index="{{item.id}}" data-type="4" bindtap="operation">提醒发货</button>
+                    </block>
+                    <block wx:if="{{item.type == 3}}">
+                      <button class="flex-cen" data-index="{{item.id}}" data-type="5" bindtap="operation">查看物流</button>
+                      <button class="flex-cen dark" data-index="{{item.id}}" data-type="6" bindtap="operation">确认收货</button>
+                    </block>
+                    <block wx:if="{{item.type == 4}}">
+                      <view class="span">已完成</view>
+                    </block>
+                    <block wx:if="{{item.type == 5}}">
+                      <view class="span">已关闭</view>
+                    </block>
+                    <block wx:if="{{item.type == 6}}">
+                      <view class="span">退款中</view>
+                    </block>
+                  </view>
+                </view>
+              </view>
+              <load-more loadMoreType="{{((index == 0 && orderList.length == 0) || (index == 1 && unpaidList.length == 0) || (index == 2 && deliverGoodsList.length == 0) || (index == 3 && receiptGoodsList.length == 0)) ? 0 : 2}}" iconfont="{{['icon-xiaoxihezi-kong', '250rpx', '#165D4C']}}" textList="{{['暂无数据~', '拼命加载中...', '我是有底线的啦~']}}"></load-more>
+            </scroll-view>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+  </view>
+</view>

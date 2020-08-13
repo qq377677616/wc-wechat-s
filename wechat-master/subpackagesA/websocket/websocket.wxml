@@ -1,0 +1,40 @@
+<!--pages/pages-list/websocket/websocket.wxml-->
+<wxs src="./my-wxs.wxs" module="myWxs"></wxs>
+<view class="body">
+  <button bindtap="start" class="btn start" wx:if="{{blueList.length == 0}}" >开始匹配</button>
+  <!-- <button bindtap="send" class="btn">发送消息</button>
+  <button bindtap="close" class="btn">断开连接</button> -->
+  <!-- 玩家 -->
+  <view class="player flex-aro" wx:if="{{blueList.length > 0}}">
+    <view>
+      <view wx:for="{{blueList}}" wx:key="{{index}}">
+        <view class="avatar {{item.is_answer==1 ? 'ok' : ''}}">
+          <image src="{{item.user.avatar}}"></image>
+          <view class="nickname">{{item.user.nickName}}<view>(总分：{{item.score.totalScore}})</view><view>(得分：{{item.score.score}})</view></view>
+        </view>
+      </view>
+    </view>
+    <view class="times">{{maxTime - times}}s</view>
+    <view>
+      <view wx:for="{{redList}}" wx:key="{{index}}">
+        <view class="avatar {{item.is_answer==1 ? 'ok' : ''}}">
+          <image src="{{item.user.avatar}}"></image>
+          <view class="nickname">{{item.user.nickName}}<view>(总分：{{item.score.totalScore}})</view><view>(得分：{{item.score.score}})</view></view>
+        </view>
+      </view>
+    </view>
+  </view>  
+  <!-- 题目 -->
+  <view wx:if="{{blueList.length > 0}}">
+    <view class="h3">第{{curIndex+1}}题</view>
+    <view class="li" wx:for="{{answerList}}" wx:key="k{{index}}" wx:if="{{index == curIndex}}">
+      <view class="h4">{{item.question_description}}</view>
+      <view class="dl">
+        <view class="dd {{item2.answer_isright == 1 ? 'ok' : ''}}" wx:for="{{item.answerOptionResponses}}" wx:key="k{{index}}" wx:for-item="item2" wx:for-index="index2" data-selects="{{index}},{{index2}}" bindtap="selected">
+          {{myWxs.order(index2)}}
+          {{item2.answer_description}}
+        </view>
+      </view>
+    </view>
+  </view>  
+</view>

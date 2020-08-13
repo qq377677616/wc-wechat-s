@@ -1,0 +1,10 @@
+<!--components/star/star.wxml-->
+<view class='evaluate_box'>
+  <!--内层循环展示每个评价条目的星星 -->
+  <block wx:for="{{starOption.type}}" wx:key=''>
+    <image class="star-image" style="width:{{starOption.width}}rpx;margin-right:{{starOption.spacing}}rpx" src="{{score > item ? (score - item == 0.5 ? './star_02.png' : './star_03.png') : './star_01.png'}}" mode="widthFix">
+      <view class="item" data-score="{{item + 0.5}}" data-type='0' bindtap="select"></view>
+      <view class="item" data-score="{{item + 1}}" data-type='1' bindtap="select"></view>
+    </image>
+  </block>
+</view>

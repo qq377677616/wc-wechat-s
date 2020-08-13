@@ -1,0 +1,6 @@
+<!--pages/pages-list/chat/index.wxml-->
+<view class="body flex-cen-col">
+  <view bindtap="jumps" data-page="chat/research/research" class="li">自研开发版</view>
+  <view bindtap="jumps" data-page="chat/txim/index" class="li">腾讯云IM版</view>
+</view>
+

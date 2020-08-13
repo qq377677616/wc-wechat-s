@@ -1,0 +1,66 @@
+<!--components/h5-examine.js/h5-examine.wxml-->
+<view class="h5-examine">
+  <view class="con one" wx:if="{{examineType == 1}}">
+    <view class="con-top"><image src="https://game.flyh5.cn/resources/game/wechat/szq/images/h5examine/index_3.png" mode="widthFix" class="bounceInUp animated"></image></view>
+    <view class="con-bottom"><image src="https://game.flyh5.cn/resources/game/wechat/szq/images/h5examine/index_2.png" class="animated {{isJello ? 'jello' : ''}}" mode="widthFix" bindtap='jumpHome'></image></view>
+  </view>
+  <block wx:if="{{examineType == 2}}">
+    <view class="con two">
+      <view class="con-top">
+        <view class="box">
+          <swiper autoplay="{{isAutoplay}}" interval="2500" current="{{current}}">
+            <swiper-item wx:for="{{myList}}" wx:key="{{index}}"><image src="{{'https://game.flyh5.cn/resources/game/wechat/szq/images/h5examine/map_0'+index+'.jpg'}}" mode="widthFix" data-index="{{index}}" bindtap="previewImage"></image><view class="h3">{{item.title}}</view></swiper-item>
+          </swiper>
+          <view hidden ="{{isAutoplay}}" class="cover" data-index="{{selectIndex}}" bindtap='previewImage'></view>
+        </view>
+      </view>
+      <view class="con-bottom">
+          <view class="scroll-view-box">
+            <view class="ul" wx:if="{{!isShowDetails}}">
+              <view class="li" wx:for="{{myList}}" wx:if="{{index < 6}}" data-index="{{index}}" bindtap="getDetails" wx:key="{{index}}"><image src="{{'https://game.flyh5.cn/resources/game/wechat/szq/images/h5examine/game1_'+item.num+'.png'}}" mode="widthFix"></image></view>
+            </view>
+            <view class="details" wx:if="{{isShowDetails}}">
+              <view class="dd">
+                <view class="title"><view>中国的{{myList[selectIndex].title}}</view></view>
+                <view class="box">
+                  <view wx:if="{{selectIndex == 0}}">我国陆地地貌的基本类型分为山地、高原、丘陵、盆地和平原五大类，纵横交错的山系构成了地貌轮廓的基本骨架，控制着盆地、高原、丘陵的空间分布格局。再加上山地性高原、丘陵性高原、方山与丘陵性盆地，连同起伏和缓的丘陵，广义的山地约占陆地总面积的65%。</view>
+                  <view wx:if="{{selectIndex == 1}}">我国河流众多，流域面积在100平方千米及以上的河流有22900多条，流域面积在1000平方千米及以上的河流2221条。因受地形、气候的影响，河流在地域上分布很不均匀。我国河流外流区域与内流区域的界线大致沿着大兴安岭—阴山—贺兰山—祁连山—巴颜喀拉山—冈底斯山等山脉，止于西端的国界线，这条线的东南部是外流区域，河流分别注入太平洋和印度洋；此线以西以北，除额尔齐斯河流入北冰洋外，均属内陆河。</view>
+                  <view wx:if="{{selectIndex == 2}}">森林是陆地上分布面积最大、组成结构最复杂、生物多样性最丰富的生态系统，被誉为大自然的总调节器和“地球之肺”，维持着全球的生态平衡。我国地域辽阔，自然地理环境复杂多样，孕育了生物种类繁多、植被类型多样的森林资源。我国森林资源包括各种类型的林地、宜林地与林分、疏林、散生木，以及林地内的动物、植物、景观等资源。</view>
+                  <view wx:if="{{selectIndex == 3}}">国以民为本，民以食为天”。中国是有着13亿多人口的大国，人民赖田地而生存。种植土地是宝贵的资源，是农业生产重要的物质基础，也是农民基本的生产资料。我国人均耕地面积约为世界平均水平的40%，中低产田约占70%，粮食生产保障能力不够稳定。随着人口持续增长，我国人均耕地还将下降，耕地资源紧约束态势仍将进一步加剧。这一基本国情决定我们要多措并举，要像保护大熊猫一样保护耕地。</view>
+                  <view wx:if="{{selectIndex == 4}}">我国是世界上湖泊数量最多的国家之一。湖泊分布呈现出显著的区域性差异，分五个自然分布区：东部湖区、蒙新湖区、云贵湖区、青藏湖区和东北湖区。湖泊在饮用水保障、防洪减灾、水产品供给、局地气候调节、休闲旅游、生物多样性保护和水文化建设等方面发挥着积极的作用，是支撑社会经济发展的重要自然资源。</view>
+                  <view wx:if="{{selectIndex == 5}}">草地生态系统是指在中纬度地带大陆性半湿润和半干旱气候条件下，由多年生耐旱、耐低温、以禾草占优势的植物群落的总称。草地生态系统具有防风、固沙、保土、调节气候、净化空气、涵养水源等生态功能，是自然生态系统的重要组成部分，对维系生态平衡、地区经济、人文历史具有重要地理价值。</view>
+                  <view>改革开放以来，以耕地为重中之重的土地资源在中国经济高速增长中，起到了发动机作用。20世纪80年代的农村土地制度改革，促进了我国农业的转型和农村的增产。在此基础上，又通过农村土地制度改革，推动乡村工业化和城镇化。</view>
+                  <view>2016年年末，全国耕地面积为20.24亿亩。截至目前，全国永久基本农田落地到户各项任务总体完成，全国实际划定15.50亿亩永久基本农田。据不完全统计，全国城市周边共划定永久基本农田9 740万亩。基本农田划定后与森林、河流、湖泊、山体、草原等共同形成了生态屏障，成为城市开发实体边界，优化了国土资源空间格局。</view>
+                </view>
+              </view>
+            </view>
+          </view>  
+      </view>
+    </view>
+    <view class="model flex-cen" hidden="{{isShowModal}}">
+      <view class="box">
+        <image src="https://game.flyh5.cn/resources/game/wechat/szq/images/h5examine/game1_9.png" class="bg" mode="widthFix"></image>
+        <view class="container">
+          <view class="ul">
+            <view class="li"><image src="https://game.flyh5.cn/resources/game/wechat/szq/images/h5examine/title_01.png" class="bg" mode="widthFix"></image><picker bindchange="bindPickerChange" value="{{index}}" range="{{province}}"><view class="picker">{{province[province_index]}}<image class="icon" src="https://game.flyh5.cn/resources/game/wechat/szq/images/h5examine/icon_01.png" mode="widthFix"></image></view></picker></view>
+            <view class="li"><image src="https://game.flyh5.cn/resources/game/wechat/szq/images/h5examine/title_02.png" class="bg" mode="widthFix"></image><text>{{provinceDetails.water_people == 0 ? "--" : provinceDetails.water_people}}</text></view>
+            <view class="li"><image src="https://game.flyh5.cn/resources/game/wechat/szq/images/h5examine/title_03.png" class="bg" mode="widthFix"></image><text>{{provinceDetails.land_area == 0 ? "--" : provinceDetails.land_area}}</text></view>
+            <view class="li"><image src="https://game.flyh5.cn/resources/game/wechat/szq/images/h5examine/title_04.png" class="bg" mode="widthFix"></image><text>{{provinceDetails.crops_area == 0 ? "--" : provinceDetails.crops_area}}</text></view>
+            <view class="li"><image src="https://game.flyh5.cn/resources/game/wechat/szq/images/h5examine/title_05.png" class="bg" mode="widthFix"></image><text>{{provinceDetails.grass_land == 0 ? "--" : provinceDetails.grass_land}}</text></view>
+            <view class="li"><image src="https://game.flyh5.cn/resources/game/wechat/szq/images/h5examine/title_06.png" class="bg" mode="widthFix"></image><text>{{provinceDetails.nature_reserve == 0 ? "--" : provinceDetails.nature_reserve}}</text></view>
+          <view class="li"><image src="https://game.flyh5.cn/resources/game/wechat/szq/images/h5examine/title_08.png" class="bg" mode="widthFix"></image><text>{{provinceDetails.forest_coverage == 0 ? "--" : provinceDetails.forest_coverage}}</text></view>
+            <view class="li"><image src="https://game.flyh5.cn/resources/game/wechat/szq/images/h5examine/title_07.png" class="bg" mode="widthFix"></image><text>{{provinceDetails.forest_coverage_top == 0 ? "--" : provinceDetails.forest_coverage_top}}</text></view>
+            <view class="li"><image src="https://game.flyh5.cn/resources/game/wechat/szq/images/h5examine/title_09.png" class="bg" mode="widthFix"></image><text>{{provinceDetails.about_island_nums == 0 ? "--" : provinceDetails.about_island_nums}}</text></view>
+          </view>
+          <view class="li submit" bindtap="isShowModal"></view>
+          <!-- <view class="li close" bindtap="isShowModal"></view> -->
+          <view class="notes">*注：数据来源于中国地图出版社 《地图上的绿水青山》、中国统计出版社《中国第二次全国农业普查资料汇编》、国家林业与草原局《第八次森林资源清查》—森林覆盖率情况。</view>
+        </view>
+      </view>
+    </view>
+    <view class="calculator {{isShowCalculator ? 'on' : ''}}" bindtap="isShowModal"><image src="https://game.flyh5.cn/resources/game/wechat/szq/images/h5examine/game1_12.png" class="bg" mode="widthFix"></image></view>
+    <view class="back {{isShowBack ? 'on' : ''}}" bindtap="back"><image src="https://game.flyh5.cn/resources/game/wechat/szq/images/h5examine/game1_19.png" class="bg" mode="widthFix"></image></view>
+    <!-- <view id="Calculator" class="{{isShowCalculator ? 'on' : ''}}" bindtap="isShowModal"><image src="https://game.flyh5.cn/resources/game/wechat/szq/images/h5examine/game1_12.png" class="bg" mode="widthFix"></image></view>
+    <view id="back" class="{{isShowBack ? 'on' : ''}}" bindtap="back"><image src="https://game.flyh5.cn/resources/game/wechat/szq/images/h5examine/game1_19.png" class="bg" mode="widthFix"></image></view> -->
+  </block>
+</view>

@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "mlvb-live-room": "./mlvb-live-room/mlvbliveroomview"
+  }
+}

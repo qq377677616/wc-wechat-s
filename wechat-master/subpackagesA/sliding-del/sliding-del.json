@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "滑动删除", 
+  "usingComponents": {
+    "load-more": "/components/load-more/load-more"
+  }
+}

@@ -1,0 +1,5 @@
+/* components/getPhoneNumber/getPhoneNumber.wxss */
+.get-box{z-index: 99999;}
+.box{position: relative;}
+.box button{opacity: 0;}
+.box image{width:650rpx;height: 506rpx;}

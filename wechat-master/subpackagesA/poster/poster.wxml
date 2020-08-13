@@ -1,0 +1,13 @@
+<!--pages/pages-list/poster/poster.wxml-->
+<view>
+  <view class="canvas-mask flex-cen">
+      <view class="content riseShow">
+         <image class="myCanvas {{isPosterOk ? (isIos == 1 ? 'wobble2' : 'wobble') : ''}}" mode="widthFix" src="{{ posterImgUrl }}"></image>
+         <view class="flex-aro">
+           <view class="btn" bindtap="savePhoto">保存到手机相册</view>
+         </view>
+      </view>
+   </view>
+   <canvas canvas-id="myCanvas" id="myCanvas"></canvas>
+   <showModal showModalOption="{{showModalOption}}" bindoperation="operation"></showModal>
+</view>

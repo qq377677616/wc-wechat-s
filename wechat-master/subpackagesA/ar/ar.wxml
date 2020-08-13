@@ -1,0 +1,21 @@
+<view class="page-body">
+  <view class="page-body-wrapper">
+    <view class="camera">
+      <camera class="{{type == 1 ? 'isFull' : ''}}" device-position="{{device}}" flash="off" binderror="error" frame-size="small">
+        <image wx:if="{{type == 0}}" class="cover-image" src="./ar.png"></image>
+      </camera>
+    </view>
+    <!-- <view bindtap="deviceSwitch" class="deviceSwitch">切换前后摄像头</view> -->
+    <!-- <view class="preview-tips" wx:if="{{src}}">AR识别到的内容：</view> -->
+    <!-- <cover-image mode="widthFix" wx:if="{{src}}" src="{{src}}" style="width: {{imgw}}; height: {{imgh}};display:block;"></cover-image> -->
+    <image mode="widthFix" wx:if="{{src}}" src="{{src}}"></image>
+    <cover-view class="times" wx:if="{{isInit && !photographOk}}">{{times}}</cover-view>
+    <view class="img-list" wx:if="{{imgList.length > 0}}">
+      <scroll-view scroll-x>
+        <view class="box flex">
+          <image wx:for="{{imgList}}" src="{{item}}" mode="widthFix"></image>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+</view>

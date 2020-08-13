@@ -1,0 +1,10 @@
+/* pages/pages-list/scroll-show/scroll-show.wxss */
+.body .box{height:800rpx;background: green;}
+.body .box:nth-child(1){height:auto;}
+.body .box:nth-child(2){background: purple;}
+.body .box:nth-child(3){background: orange;}
+.body .box:nth-child(4){background: blue;}
+.body .box:nth-child(5){background: black;}
+.body .box .con{height:600rpx;}
+.body .box:nth-child(2),.body .box:nth-child(3),.body .box:nth-child(4),.body .box:nth-child(5){transform: translateY(300rpx);opacity: 0;transition: all .7s;}
+.body .box.on{transform: translateY(0);opacity: 1;}

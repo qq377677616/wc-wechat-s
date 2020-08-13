@@ -1,0 +1,13 @@
+/* components/tabBar/tabBar.wxss */
+.tabBar{height:100rpx;position: fixed;left:0;bottom: 0;width:100%;background: #000;}
+.tabBar view{flex-direction:column;color:#afafaf;width:120rpx;text-align: center;height:100%;margin:0 10rpx;}
+.tabBar image{width:49rpx;height:55rpx;}
+.tabBar .tabThree image{width:50rpx;height:53rpx;}
+.tabBar.is-icon .tab-item:nth-child(2){width:120rpx;height:120rpx;border-radius: 50%;background: #000;margin-top: -60rpx;}
+.tabBar.is-icon .tab-item:nth-child(2) text{color:#fff;font-size: 42rpx;}
+.tabBar .iconfont{font-size: 40rpx;color:#fff;}
+.tabBar .text{color:#fff;font-size: 24rpx;padding-top: 6rpx;max-width: 4em;overflow: hidden;height:1em;
+text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;white-space: normal;}
+.tabBar .cur .iconfont,.tabBar .cur .text{color:#FFCD43;}
+.tabBar.is-icon .cur.tab-item:nth-child(2) text{transform: rotate(45deg);}
+.tabBar .tab-item:nth-child(2),.tabBar .cur.tab-item:nth-child(2) text{transition: all .5s;}

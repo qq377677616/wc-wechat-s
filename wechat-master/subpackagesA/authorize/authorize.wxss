@@ -1,0 +1,7 @@
+/* pages/login/login.wxss */
+.body{height:100vh;font-size: 50rpx;}
+button{border:1rpx solid #333;padding:0 40rpx;width:30%;}
+.user{position: relative;text-align: center;}
+.user image{width:160rpx;height:160rpx;border-radius: 50%;border:1rpx solid #bbb;}
+.user .nick-name{font-size: 32rpx;padding:20rpx 0;}
+.user button{position: absolute;width:100%;height:100%;left:0;top:0;opacity: 0;}

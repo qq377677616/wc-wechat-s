@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "购物车抛物线动效",
+  "usingComponents": {
+    "my-tabbar": "../../components/my-tabbar/my-tabbar",
+    "parabola": "../../components/parabola/parabola"
+  }
+}

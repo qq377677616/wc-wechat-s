@@ -1,0 +1,76 @@
+<!--pages/pages-list/test/test.wxml-->
+<!-- <swiper vertical="true" bindchange="bindchange">
+  <swiper-item wx:for="{{videoList}}">
+    <video wx:if="{{imgVideoType == 0}}" src="{{item.videoUrl}}" id="video{{index}}" object-fit="fill" loop="true" controls='{{false}}' class="image-video"></video>
+    <image wx:else src="{{item.imgUrl}}" model="widthFix" class="image-video"></image>
+    <view class="box">
+      <image class="bg" src="./img_01.png" mode="widthFix"></image>
+      <view class="currency" data-index="{{index}}" bindtap="start">
+        <image class="image {{item.curIndex == indexs ? 'on' : ''}}" wx:for="{{sequenceList}}" wx:for-item="items" wx:for-index="indexs" wx:key="key{{indexs}}" src="{{items.url}}"></image>
+      </view>
+    </view>
+  </swiper-item>
+</swiper> -->
+
+<!-- <swiper vertical="true" bindchange="bindchange">
+  <swiper-item wx:for="{{videoList}}">
+    <video wx:if="{{imgVideoType == 0}}" src="{{item.videoUrl}}" id="video{{index}}" object-fit="fill" loop="true" controls='{{false}}' class="image-video"></video>
+    <cover-image wx:else src="{{item.imgUrl}}" model="widthFix" class="image-video" class="image-video"></cover-image>
+    <cover-view class="box">
+      <cover-image class="bg" src="./img_01.png" mode="widthFix"></cover-image>
+      <cover-view class="currency" data-index="{{index}}" bindtap="start">
+        <cover-image class="image {{item.curIndex == indexs ? 'on' : ''}}" wx:for="{{sequenceList}}" wx:for-item="items" wx:for-index="indexs" wx:key="key{{indexs}}" src="{{items.url}}"></cover-image>
+      </cover-view>
+    </cover-view>
+  </swiper-item>
+</swiper> -->
+<!-- <scroll-view scroll-x scroll-y>
+  <image src="https://vrupup.com/resources/web/yls/beishida/index/hdbg4.jpg" mode="widthFix"></image>
+</scroll-view> -->
+<!-- <live-pusher url="rtmp://send3a.douyu.com/live/8621196rh6vKTVwl?wsSecret=668eb5d3dba3cf50f17c8855a57befa2&wsTime=5ea01445&wsSeek=off&wm=0&tw=0&roirecognition=0" mode="RTC" autopush bindstatechange="statechange" style="width: 300px; height: 225px;" /> -->
+<!-- <video src="http://video.szjspx.com.cn/resource/newsvideo/zxyxqp.mp4"></video>
+<video src="http://video.szjspx.com.cn/resource/zhuanxiangban/2020/wk/sjlk.mp4"></video>
+<video src="http://video.szjspx.com.cn/resource/bjyy/2019/zhongxiaoyou/tongshi/xgjdhzdmy/xgjdhzdmy_01_01.mp4"></video> -->
+<view>
+  <!-- 公众号组件 -->
+  <!-- <view class="official-box">
+    <official-account class="official-account"></official-account>
+  </view> -->
+  <view>
+    <!-- <video src="http://ivi.bupt.edu.cn/hls/cctv1hd.m3u8"></video> -->
+    <!-- <video src="https://93678.liveplay.myqcloud.com/live/songziquan.m3u8"></video> -->
+  </view>
+  <!-- 直播-推流 -->
+  <!-- <live-pusher url="https://domain/push_stream" mode="RTC" autopush bindstatechange="statechange" style="width: 300px; height: 225px;" /> -->
+  <!-- 企业微信联系我 -->
+  <!-- <cell bind:startmessage='startmessage' bind:completemessage="completemessage" plugid='b1334ff917a80fe708eac13de0324295'  /> -->
+  <!-- <canvas canvas-id="myCanvas" id="myCanvas"></canvas> -->
+  <!-- <video style="width:100vw;height:30vh;margin-top:40rpx;" src="http://game.flyh5.cn/resources/game/wechat/szq/images/video_04.mp4" objectFit="cover"></video>
+  <video style="width:100vw;height:30vh;margin-top:40rpx;" src="https://vrupup.com/resources/web/yls/webview/video_02.mp4" objectFit="cover"></video> -->
+  <view class="li" bindtap="openLocation">打开地图</view>
+  <view class="li" bindtap="chooseVideo">录制视频</view>
+  <view class="li" bindtap="chooseAddressMap">地图选择</view>
+  <view class="li" bindtap="chooseAddress">收货地址</view>
+  <view class="li" bindtap="requestPayment">点击支付</view>
+  <view class="li" bindtap="subscribeMessage">发送订阅消息</view>
+  <view class="li" bindtap="goWechat">跳转到小程序</view>
+  <view class="li" bindtap="goGame">跳转到小游戏</view>
+  <view class="li" bindtap="goGame2">返回到小游戏</view>
+  <view class="li" bindtap="uploadFile">上传文件</view>
+  <view class="li" bindtap="openDocument">点击查看</view>
+  <view class="li" bindtap="uploadImg">上传图片</view>
+  <view class="li" bindtap="setKeepScreenOn">屏幕长亮</view>
+  <view class="li" bindtap="chooseInvoiceTitle">发票抬头</view>
+  <view class="li" bindtap="jump_Invoice">开发票</view>
+  <view class="li" bindtap="connectWifi">连接wifi</view>
+  <view class="li" bindtap="setScreenBrightness">设置屏幕亮度</view>
+  <view class="li" bindtap="makePhoneCall">拨打电话</view>
+  <view class="li" bindtap="vibrateLong">手机振动</view>
+  <button class="li" session-from="来自小程序模板" open-type="contact" send-message-title="张三" show-message-card="{{true}}" send-message-path="/pages/pages-list/ar/ar" send-message-img="https://res.zhangu365.com/fodder/img/2019/0805/1358/2761d3adbf5f811495bb2d5e1e61f699.png?x-oss-process=image/resize,w_250">进入客服会话</button>
+  <ad unit-id="adunit-1c1f3a26e877a68e"></ad>
+  <view class="li" bindtap="goTest2">进入下一个广告页</view>
+  <mp-toptips msg="这是一个错误提示" type="error" show="这是一个错误提示"></mp-toptips>
+</view>
+<!-- <web-view src="https://game.flyh5.cn/resources/game/wechat/szq/index.html"></web-view> -->
+<!-- 自定义导航 -->
+<!-- <my-tabbar bindmytab="bindmytab"></my-tabbar> -->

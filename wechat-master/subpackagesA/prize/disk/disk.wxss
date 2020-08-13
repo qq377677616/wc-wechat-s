@@ -1,0 +1,25 @@
+/* pages/disk/disk.wxss */
+.prize_box{width:600rpx;height: 600rpx;border-radius: 50%;border: 8rpx solid #274C28;position: relative;}
+.prize_box .ul{width:100%;height: 100%;transform-origin: center center;border-radius: 50%;}
+.prize_box .ul .li{width:300rpx;border-top:1rpx solid #666;position: absolute;left:50%;top:50%;transform-origin: left top;text-align: center;}
+.prize_box .ul .li text{display: block;margin-top: 36rpx;transform: rotate(45deg);}
+.prize_box .needle{width:220rpx;height:10rpx;background: #00B26A;position: absolute;left:50%;top:calc(50% - 5rpx);transform-origin: left center;transform: rotate(-90deg);}
+.prize_box .needle::after{content:"";display: block;width:0;height:0;border: 20rpx solid transparent;border-top-color:#00B26A;position: absolute;left:100%;top:calc(50% - 20rpx);transform: rotate(-90deg);}
+.prize_box .needle::before{content:"";display: block;width:20rpx;height:20rpx;border-radius: 50%;background: #00B26A;position: absolute;left:-10rpx;top:calc(50% - 10rpx);}
+.start{width:200rpx;height: 80rpx;line-height: 80rpx;text-align: center;background: #00B26A;color:#fff;border-radius: 10rpx;margin: 50rpx  auto 0;}
+.start.on{background: #B92722;border-color:#B92722;}
+.prize_box .ul .li .title{font-size: 28rpx;}
+.prize_box .ul .li image{width: 100rpx;height: 64rpx;margin-top: 12rpx;}
+.prize_box .ul .li .box{text-align: center;}
+/* 3个奖品时的样式 */
+.prize_box .type3{transform: translate(-60rpx, 110rpx) rotate(150deg);}
+/* 4个奖品时的样式 */
+.prize_box .type4{transform: translate(-10rpx, 90rpx) rotate(135deg);}
+/* 5个奖品时的样式 */
+.prize_box .type5{transform: translate(20rpx, 68rpx) rotate(125deg);}
+/* 6个奖品时的样式 */
+.prize_box .type6{transform: translate(20rpx, 40rpx) rotate(120deg);}
+/* 7个奖品时的样式 */
+.prize_box .type7{transform: translate(40rpx, 38rpx) rotate(115deg);}
+/* 8个奖品时的样式 */
+.prize_box .type8{transform: translate(40rpx, 22rpx) rotate(110deg);}

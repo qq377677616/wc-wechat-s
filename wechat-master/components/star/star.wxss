@@ -1,0 +1,5 @@
+/* components/star/star.wxss */
+.evaluate_box .star-image { position: relative;}
+.evaluate_box .star-image:last-child{margin-right: 0 !important;}
+.evaluate_box .star-image .item{position: absolute;top: 0rpx;width: 50%;height: 100%;}
+.evaluate_box .star-image .item:last-child{left:50%;}

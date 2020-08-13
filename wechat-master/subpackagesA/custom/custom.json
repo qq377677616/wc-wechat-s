@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "我的",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "my-nav": "../../components/my-nav/my-nav",
+    "my-tabbar": "../../components/my-tabbar/my-tabbar"
+  }
+}

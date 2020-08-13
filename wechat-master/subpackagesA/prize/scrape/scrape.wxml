@@ -1,0 +1,4 @@
+<!--pages/pages-list/scrape/scrape.wxml-->
+<view>
+  <canvas style="width:{{canvasWidth}}px;height:{{canvasHeight}}px;background: url({{prize_img}}) no-repeat center center;" canvas-id="luck" class="tui-luck" bindtouchstart="onTouchStart" bindtouchmove="onTouchMove" bindtouchend="onTouchEnd"></canvas>
+</view>

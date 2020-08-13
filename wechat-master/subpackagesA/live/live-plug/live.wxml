@@ -1,0 +1,31 @@
+<!--pages/pages-list/live/live.wxml-->
+<view>
+  <!-- <navigator url="plugin-private://wx2b03c6e691cd7370/pages/live-player-plugin?room_id={{liveList[0].roomid}}">我要看直播</navigator> -->
+  <view class="live-list">
+    <view class="item" wx:for="{{liveList}}" wx:key="roomid" data-index="{{index}}" bindtap="openLive">
+      <view class="item-top">
+        <view class="flex-ali">
+          <view class="avatar"><image src="{{avatar}}"></image></view>
+          <view>
+            <view class="nick-name">{{item.anchor_name}}</view>
+            <view class="fans">有{{item.goods.length}}件带货商品</view>
+          </view>
+        </view>
+        <view class="title">{{item.name}}</view>
+      </view>
+      <view class="item-bottom" style="background:url({{item.share_img}}) no-repeat center;">
+        <view class="status">
+          <block wx:if="{{item.live_status == 101}}">直播中</block>
+          <block wx:elif="{{item.live_status == 102}}">未开始</block>
+          <block wx:elif="{{item.live_status == 103}}">已结束</block>
+          <block wx:elif="{{item.live_status == 104}}">禁播</block>
+          <block wx:elif="{{item.live_status == 105}}">暂停中</block>
+          <block wx:elif="{{item.live_status == 106}}">异常</block>
+          <block wx:elif="{{item.live_status == 107}}">已过期</block>
+        </view>
+        <view class="icon flex-cen"><text class="iconfont icon-icon_play"></text></view>
+      </view>
+    </view>
+    <view class="load-more"><load-more loadMoreType="{{loadMoreType}}" padding="{{['5rpx', '100rpx']}}"></load-more></view>
+  </view>
+</view>

@@ -1,0 +1,6 @@
+<!--pages/audiocontrols/controls.wxml-->
+<view class="btn {{!isPause ? 'on' : ''}}" wx:if="{{isAudio}}" bindtap='controls'>
+  <image src="./m_p.png" hidden="{{isPause}}"></image>
+  <image src="./m_s.png" hidden="{{!isPause}}"></image>
+</view>
+ 

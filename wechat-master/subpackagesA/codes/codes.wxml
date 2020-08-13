@@ -1,0 +1,12 @@
+<!--pages/pages-list/qrcode/qrcode.wxml-->
+<view class="body">
+  <view class="view flex-cen">
+    <image src="{{imagePath}}" mode="widthFix"></image>
+    <image src="{{imagePath2}}" mode="widthFix"></image>
+  </view>
+  <view class="canvas">
+    <canvas id="barcode" canvas-id="barcode" />
+    <view>{{codeStr}}</view>
+    <canvas id="qrcode" canvas-id="qrcode" />
+  </view>
+</view>

@@ -1,0 +1,14 @@
+/* pages/pages-list/websocket/websocket.wxss */
+.body{padding:0 5%;}
+.h4{padding:30rpx 0;line-height: 1.5;}
+.dd{padding:20rpx 0;line-height: 1.3;}
+.dd.ok{color:green;font-weight: bold;}
+button{border:1rpx solid #ccc;margin-top: 5%;}
+.h3{padding:80rpx 0 40rpx;text-align: center;font-size: 40rpx;}
+.player{padding:50rpx 0;}
+.player .avatar{width:160rpx;height:160rpx;line-height: 160rpx;border-radius: 50%;border:2rpx solid #ccc;text-align: center;font-size: 0;position: relative;}
+.times{width:60rpx;text-align: center;}
+.player .avatar image{width:100%;height:100%;}
+.player .avatar.ok{box-shadow: 0 0 5px 5px green;}
+.player .avatar .nickname{position: absolute;width:100%;top:100%;padding-top: 20rpx;text-align: center;font-size: 30rpx;line-height: 30rpx;}
+.start{margin-top:60%;}

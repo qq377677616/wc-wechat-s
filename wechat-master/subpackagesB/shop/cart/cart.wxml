@@ -1,0 +1,48 @@
+<!--subpackages/shop/cart/cart.wxml-->
+<view class="body">
+  <!-- 购物车列表部分 -->
+  <view class="goods wrap">
+    <view class="ul">
+      <view class="li {{item.isSelect ? 'on' : ''}} {{item.isTouchMove ? 'ons' : ''}}" wx:for="{{goodsList}}" wx:key="id" data-index="{{index}}" bindtap="jump" >
+        <view class="flex-cen" data-index="{{index}}" bindtouchstart="touchstart" bindtouchmove="touchmove">
+          <view class="icon"><text class="iconfont icon-gouxuan"></text></view>
+          <view class="selects" data-index="{{index}}" catchtap="selectSingle"></view>
+          <view class="img">
+            <image src="{{item.img}}" mode="aspectFill"></image>
+          </view>
+          <view class="text flex1">
+            <view class="top">
+              <view class="h2 ell1">{{item.name}}</view>
+              <view class="h3">{{item.other}}</view>
+            </view>
+            <view class="bottom flex-bet">
+              <view class="price">￥{{item.prize}}</view>
+              <view class="guard" catchtap="emptyMethods"></view>
+              <view class="num flex">
+                <button hover-class="hover-class" data-type="0" data-index="{{index}}" catchtap="numChange">-</button>
+                <view>{{item.num}}</view>
+                <button hover-class="hover-class" data-type="1" data-index="{{index}}" catchtap="numChange">+</button>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="del flex-cen" data-index="{{index}}" catchtap="del">删除</view>
+      </view>
+    </view>
+    <load-more loadMoreType="{{goodsList.length == 0 ? 0 : 2}}" iconfont="icon-xiaoxihezi-kong" iconfont="{{['icon-xiaoxihezi-kong', '250rpx', '#165D4C']}}" textList="{{['您的购物车清空啦~', '拼命加载中...', '我是有底线的啦~']}}"></load-more>
+  </view>
+  <!-- 全选、结算部分 -->
+  <view class="count flex-bet {{goodsList.length != 0 ? 'on' : ''}}">
+    <view class="flex-cen">
+      <view class="flex-cen allSelect {{isSelectAll ? 'on' : ''}}" bindtap="selectAll">
+        <view class="icon"><text class="iconfont icon-gouxuan"></text></view>
+        <view class="btn">全选</view>
+      </view>
+      <view class="delete" bindtap="delete" hidden="{{!isSelectGoods}}">删除</view>
+    </view>
+    <view class="flex-cen">
+      <view class="prices" hidden="{{!isSelectGoods}}">合计：<text>￥{{prizeTotal || '0.00'}}</text></view>
+      <button bindtap="settlement">去结算</button>
+    </view>
+  </view>
+</view>

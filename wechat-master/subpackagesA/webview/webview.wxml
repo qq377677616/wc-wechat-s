@@ -1,0 +1,4 @@
+<!--pages/webview/webview.wxml-->
+<view class="webview page">
+  <web-view src="{{h5Url}}" bindmessage="bindmessage"></web-view>
+</view>

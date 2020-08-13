@@ -1,0 +1,10 @@
+<!--subpackages/countUp/countUp.wxml-->
+<view class="full flex-cen">
+  <view class="box">
+    <view class="h3">{{number}}</view>
+    <button type="primary" bindtap="start">开始</button>
+    <button type="primary" bindtap="pauseResume">暂停/重新开始</button>
+    <button type="primary" bindtap="reset">重置</button>
+    <button type="primary" bindtap="update">更新</button>
+  </view>
+</view>

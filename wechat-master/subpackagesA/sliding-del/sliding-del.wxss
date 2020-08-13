@@ -1,0 +1,10 @@
+/* pages/pages-list/sliding-del/sliding-del.wxss */
+.sliding-del .ul{overflow: hidden;}
+.sliding-del .li{margin-top: 20rpx;position: relative;transition: .3s;}
+.sliding-del .li.on{transform: translateX(-140rpx);}
+.sliding-del .li .li-box{border:1rpx solid #ddd;border-radius: 10rpx;padding:30rpx 20rpx;}
+.sliding-del .li .title{margin-bottom: 20rpx;}
+.sliding-del .li .name{font-size: 32rpx;}
+.sliding-del .li .add{font-size: 26rpx;color:#666;padding-left: 20rpx;}
+.sliding-del .li .tel{font-size: 22rpx;color:#999;}
+.sliding-del .li .del{position: absolute;left:100%;top:0;width:140rpx;height:100%;background: #D73F45;color:#fff;border-radius: 10rpx;}

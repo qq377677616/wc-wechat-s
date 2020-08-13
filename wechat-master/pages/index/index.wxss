@@ -1,0 +1,5 @@
+/**index.wxss**/
+.body{font-size: 28rpx;background:linear-gradient(135deg,#027C60 0%, #A8271E 100%);}
+.body scroll-view{height:90%}
+.body .li{width:250rpx;height:50rpx;line-height: 50rpx;text-align: center;border:1rpx solid #ddd;border-radius: 10rpx;margin:20rpx auto;background: #fff;}
+.body .li:last-child{color:#999;}

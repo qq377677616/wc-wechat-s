@@ -1,0 +1,19 @@
+/* pages/pages-list/live/live.wxss */
+navigator{width:60%;height:100rpx;line-height: 100rpx;border-radius: 10rpx;background-color: #07C160;text-align: center;color:#fff;font-size: 40rpx;margin: 200rpx auto;}
+.live-list .item{padding:24rpx;border-bottom: 4rpx solid #eee;}
+.item .item-top{padding-bottom:20rpx;}
+.item .item-top .avatar image{width:80rpx;height: 80rpx;border-radius: 50%;margin-right: 18rpx;}
+.item .item-top .nick-name{font-size: 32rpx;margin-bottom: 10rpx;color:#000;}
+.item .item-top .fans{font-size: 24rpx;color:#bbb;}
+.item .item-top .title{font-size: 32rpx;color:#000;margin-top: 14rpx;}
+.item .item-bottom{height:400rpx;background-size: cover !important;border-radius: 14rpx;position: relative;background-position-y: -100rpx !important;}
+.item .item-bottom .icon{width:100rpx;height:100rpx;background:rgba(0,0,0,.6);font-size: 30rpx;color:#fff;border-radius: 50%;position: absolute;left:50%;top:50%;transform: translate(-50%, -50%);}
+.status{width:120rpx;height: 44rpx;line-height: 40rpx;text-align: center;font-size: 24rpx;color:#fff;position: absolute;top:20rpx;right:16rpx;background-image: linear-gradient(0, #FC0312 0%,  #FD398A 50%);border-radius: 6rpx;}
+.load-more{padding:60rpx 0;}
+
+
+
+
+
+
+

@@ -1,0 +1,25 @@
+<!--components/load-more/load-more.wxml-->
+<view class="load-more flex-cen-col" style="padding:{{loadMoreType == 0 ? padding[1] : padding[0]}} 0">
+  <view class="img" wx:if="{{loadMoreType == 0}}">
+    <text wx:if="{{!iconfontType}}" class="iconfont {{iconfontTypes? iconfont[0] : iconfont}}" style="font-size:{{iconfontSize}};color:{{iconfontColor}};"></text>
+    <image wx:else src="{{iconfontTypes ? iconfont[0] : iconfont}}" class="iconfont {{iconfont}}" style="width:{{iconfontSize}};background:{{iconfontColor}};margin-bottom:{{margin}}" mode="widthFix"></image>
+  </view>
+  <view class="p" style="font-size:{{textSize}};color:{{textColor}};">{{textList[loadMoreType]}}</view>
+</view>
+<!-- 默认图标、提示文字 -->
+<!-- <load-more loadMoreType="1" padding="{{['5rpx', '100rpx']}}"></load-more> -->
+
+<!-- 自定义图标（字符形式--字体图标）、文字 -->
+<!-- <load-more loadMoreType="0" iconfont="icon-xiaoxihezi-kong" textList="{{['暂无数据', '拼命加载中...', '我是有底线的啦~']}}"></load-more> -->
+
+<!-- 自定义图标（字符形式--本地图片）、文字 -->
+<!-- <load-more loadMoreType="0" iconfont="/assets/images/icon_not.png" textList="{{['暂无数据', '拼命加载中...', '我是有底线的啦~', '30rpx', 'green']}}"></load-more> -->
+
+<!-- 自定义图标（字符形式--线上图片）、文字 -->
+<!-- <load-more loadMoreType="0" iconfont="https://game.flyh5.cn/resources/game/wechat/szq/images/icon_not.png" margin="10rpx" textList="{{['暂无数据', '拼命加载中...', '我是有底线的啦~', '30rpx', 'green']}}"></load-more> -->
+
+<!-- 自定义图标（数组形式--字体图标）、文字 -->
+<!-- <load-more loadMoreType="0" iconfont="{{['icon-kanchexianxing', '250rpx', 'purple']}}" textList="{{['暂无数据', '拼命加载中...', '我是有底线的啦~', '30rpx', 'green']}}"></load-more> -->
+
+<!-- 自定义图标（数组形式--本地图片）、文字 -->
+<!-- <load-more loadMoreType="0" iconfont="{{['/assets/images/icon_not.png', '400rpx']}}" textList="{{['暂无数据', '拼命加载中...', '我是有底线的啦~', '30rpx', 'green']}}"></load-more> -->

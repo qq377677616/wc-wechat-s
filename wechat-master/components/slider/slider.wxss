@@ -1,0 +1,60 @@
+/* slide */
+ 
+.slide, .buyMian-title { margin: 0 auto; }
+ 
+.buyMian-title {
+  font-size: 34rpx;
+  color: #212121;
+  line-height: 36rpx;
+  margin-top: 45rpx;
+}
+ 
+.buyMian-slide-title {
+  font-size: 36rpx;
+  color: #ff7500;
+  line-height: 38rpx;
+  margin-top: 25rpx;
+  text-align: center;
+}
+ 
+.buyMian-slide-slide {
+  margin: 10rpx auto 0;
+}
+ 
+/* range */
+ 
+.buyMian-slide-contain {
+  width: 100%;
+  display: flex;
+  padding: 20px 0 10px;
+  position: relative;
+  left: -25rpx;
+}
+ 
+.buyMian-slide-range {
+  font-size: 26rpx;
+  color: #8a8a8a;
+  margin-top: 15rpx;
+}
+ 
+.slider-left, .slider-right {
+  margin-right: -8rpx;
+}
+ 
+.flex {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  display: box;
+  flex-wrap: wrap;
+}
+ 
+.flexSb {
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+}

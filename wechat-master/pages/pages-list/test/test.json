@@ -1,0 +1,9 @@
+{
+  "enablePullDownRefresh": false,
+  "disableScroll": false,
+  "usingComponents": {
+    "my-tabbar": "/components/my-tabbar/my-tabbar",
+    "load-more": "/components/load-more/load-more",
+    "cell": "plugin://contactPlugin/cell"
+  }
+}

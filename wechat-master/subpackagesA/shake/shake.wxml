@@ -1,0 +1,4 @@
+<!--pages/pages-list/shake/shake.wxml-->
+<view class="body flex-cen-col">
+  <view class="titles">拿起手机摇一摇</view>
+</view>

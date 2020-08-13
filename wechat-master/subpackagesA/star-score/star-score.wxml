@@ -1,0 +1,5 @@
+<!--pages/pages-list/star-score/star-score.wxml-->
+<view class='body flex-cen-col'>
+  <star starOption="{{starOption}}" bindcurStar="curStar"></star>
+  <view class="score">当前评分：<text>{{starOption.score}}</text>分</view>
+</view>

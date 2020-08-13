@@ -1,0 +1,4 @@
+/* subpackagesA/live/voip-room/voip-room.wxss */
+.voip-box{flex-wrap: wrap;}
+voip-room{width:50vw;height: 50vw;background: #222;}
+.msg{text-align: center;padding:100rpx 0;font-weight: bold;}

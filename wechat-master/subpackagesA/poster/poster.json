@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "生成海报",
+  "usingComponents": {
+    "showModal": "/components/showModal/showModal"
+  }
+}

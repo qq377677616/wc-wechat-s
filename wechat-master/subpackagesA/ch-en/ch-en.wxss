@@ -1,0 +1,18 @@
+/* pages/my/my.wxss */
+.my_one{padding:40rpx 0 98rpx;background: #FFD515;}
+.my_one .avatar{width:130rpx;height:130rpx;border-radius: 50%;border:6rpx solid #FFB106;margin:0 30rpx;}
+.my_one .avatar image{width:100%;height:100%;border-radius: 50%;}
+.my_one .nickname{font-size: 36rpx;color:#1c1c1c;}
+.my_one .number{font-size: 24rpx;padding-top: 27rpx;}
+.my_one .number view:not(:last-child){border-right: 1rpx solid #7a7a7a;padding-right: 30rpx;margin-right: 30rpx;}
+.my_two{padding-top: 10rpx;position: fixed;width:100%;left:0;top:213rpx;bottom:114rpx;}
+.my_two .ul{background: #fff;height:100%;border-radius: 15rpx;padding: 24rpx 32rpx;box-sizing: border-box;}
+.my_two .ul .li{height:110rpx;border-bottom:1rpx solid #E0ECF5;white-space: nowrap;color:#004c9a;}
+.my_two .ul .li>view{width:50%;text-align: center;}
+.my_two .ul .li .icon{padding:0 42rpx 0 18rpx;}
+.my_two .ul .li text{color:#359DDE;font-size: 40rpx;}
+.my_two .ul .myIdea image{width:43rpx;height:44rpx;}
+.my_two .ul .proposal image{width:42rpx;height:44rpx;}
+.my_two .ul .about image{width:42rpx;height:47rpx;}
+.my_one .lang{position: absolute;right:0;top:0;padding:25rpx 36rpx;color:#666;}
+.my_one .lang .cur{color:#004c9a;font-weight: bold;}

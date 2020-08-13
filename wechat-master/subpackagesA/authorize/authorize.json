@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "授权头像昵称",
+  "usingComponents": {
+    "showModal": "/components/showModal/showModal",
+    "getUserInfo": "/components/get-user-info/get-user-info"
+  }
+}

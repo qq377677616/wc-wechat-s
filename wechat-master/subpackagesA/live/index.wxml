@@ -1,0 +1,17 @@
+<!--subpackages/prize/index.wxml-->
+<view class="body flex-cen-col">
+  <!-- 列表 -->
+  <view class="titles2" bindtap="jump" data-page="/subpackagesA/live/live-plug/live">插件版</view>
+  <view class="titles2" bindtap="jump" data-page="/subpackagesA/live/live-dev/live-pusher">开发版-录制</view>
+  <view class="titles2" bindtap="jump" data-page="/subpackagesA/live/live-dev/live-play">开发版-播放</view>
+  <view class="titles2" bindtap="jump" data-page="/subpackagesA/live/live-room/live-room">直播连麦</view>
+  <view class="titles2" bindtap="jump" data-page="/subpackagesA/live/voip-room/voip-room">多人音视频对话</view>
+  <!-- 密码弹窗 -->
+  <view class="haze flex-cen" hidden="{{isShowHaze}}">
+    <view class="box fadeShow">
+      <input type="number" value="{{inputValue}}" bindinput="bindinput" placeholder="输入直播间密码"></input>
+      <button bindtap="confirm">确定</button>
+      <view class="close" bindtap="isShowHaze"><text class="iconfont icon-guanbi"></text></view>
+    </view>
+  </view>
+</view>

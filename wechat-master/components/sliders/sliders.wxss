@@ -1,0 +1,59 @@
+/* component/zyslider.wxss */
+.container {
+  height: 40rpx;
+  width: 100%;
+  position: relative;
+  font-size: 0;
+  display: flex;
+  align-items: center;
+}
+.slider-line{position: relative;width: 100%;}
+.slider-body {
+  height: 100%;
+  background-color: #ddd;
+  position: absolute;
+  /* top:50%;
+  transform: translateY(-50%); */
+}
+
+.body {
+  /* bottom: 60rpx; */
+  background-color: #19896f;
+  z-index: 0.3;
+}
+
+.left {
+  /* bottom: 58rpx; */
+  left:0;
+  z-index: 0.1;
+}
+
+.right {
+  z-index: 0.2;
+  right: 0;
+  /* bottom: 62rpx; */
+}
+
+.slider-item {
+  border-radius: 50%;
+  width: 40rpx;
+  height: 40rpx;
+  background-color: #19896f;
+  z-index: 2;
+}
+
+.min {
+  position: absolute;
+  top: 0;
+  /*left: 100rpx;*/
+}
+
+.max {
+  position: absolute;
+  top: 0;
+  /*left: 600rpx;*/
+}
+
+.hide{
+display: none;
+}

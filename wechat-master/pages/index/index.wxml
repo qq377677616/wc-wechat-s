@@ -1,0 +1,14 @@
+<!--index.wxml-->
+<!-- 小程序模板内容 -->
+<view id="body" class="index body flex-cen" wx:if="{{contentType == 0}}">
+  <!-- 列表 -->
+  <scroll-view scroll-y>
+    <view class="ul">
+      <view wx:for="{{jumpList}}" wx:key="index" class="li" data-index="{{index}}" bindtap="jumps" hidden="{{(index == 28 && contentType == 1) || index == 30 && contentType == 1}}">{{item.name}}</view>
+    </view>
+  </scroll-view>
+  <!-- 背景音乐控制按钮 -->
+  <controls isPause="{{isPause}}"></controls>
+</view>
+<!-- h5游戏审核用 -->
+<h5Examine wx:if="{{contentType == 1}}"></h5Examine>

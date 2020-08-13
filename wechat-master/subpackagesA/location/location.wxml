@@ -1,0 +1,10 @@
+<!--pages/pages-list/location/location.wxml-->
+<view class="body flex-cen">
+  <view class="label">您所在城市:</view>
+  <view class="input-group">
+    <picker class="picker" mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+      <text>{{region[0]}}，{{region[1]}}，{{region[2]}}</text>
+    </picker>
+  </view>
+  <showModal showModalOption="{{showModalOption}}" bindoperation="operation"></showModal>
+</view>

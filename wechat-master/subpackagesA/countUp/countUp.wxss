@@ -1,0 +1,5 @@
+/* subpackages/countUp/countUp.wxss */
+page{text-align: center;}
+.box{width:100%;}
+.h3{font-size: 80rpx;color:#4D63BC;margin-bottom: 60rpx;}
+button{width:200rpx;margin:20rpx auto;}

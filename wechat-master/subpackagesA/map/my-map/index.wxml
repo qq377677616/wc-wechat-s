@@ -1,0 +1,28 @@
+<!--pages/pages-list/map/my-map/index.wxml-->
+<view>
+  <view class="top">
+    <view class="flex-style">
+      <view wx:for="{{schemeList}}" class="flex-item {{(schemeListIndex || 0) == index ? 'active' : ''}}" data-index="{{index}}" bindtap="selectScheme">{{item}}</view>
+    </view>
+    <view class="map-inputtips-input">
+      <input bindinput="bindInput" data-type="0" value="{{position_start_end[0].title || currentLocationList[0].title || ''}}" bindfocus="inputFocus" placeholder="输入起点（当前位置）" />
+      <input bindinput="bindInput" data-type="1" value="{{position_start_end[1].title || ''}}" bindfocus="inputFocus" placeholder="输入终点" />
+    </view>
+    <view class="map-search-list" hidden="{{!isShowSearchList}}">
+      <scroll-view scroll-y>
+        <view bindtap="selectPosition" wx:key="searchId" data-index="{{index}}" data-keywords="{{item.name}}" data-location="{{item.location}}" class="map-box" wx:for="{{searchList}}">{{item.title}}</view>
+      </scroll-view>
+    </view>
+    <view class="scheme" hidden="{{busSchemeList.length == 0}}">
+      <scroll-view scroll-y>
+        <view class="li" wx:for="{{busSchemeList}}"><text class="num">{{index + 1}}、</text><text>{{item.describe}}</text></view>
+      </scroll-view>
+    </view>
+  </view>
+  <view class="map">
+    <map id="{{mapOption.mapId}}" longitude="{{mapOption.longitude}}" latitude="{{mapOption.latitude}}" scale="{{mapOption.scale}}" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" circles="{{circles}}" polyline="{{polyline}}" bindregionchange="regionchange" show-location></map>
+  </view>
+  <view class="controls">
+    <view class="current" bindtap="getMyPosition"><image src="../icon_04.png" mode="widthFix"></image></view>
+  </view>
+</view>

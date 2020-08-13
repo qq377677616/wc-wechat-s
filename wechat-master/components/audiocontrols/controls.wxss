@@ -1,0 +1,8 @@
+/* pages/audiocontrols/controls.wxss */
+.btn{width:57rpx;height:57rpx;position: fixed;padding:20rpx;right:10rpx;top:10rpx;z-index:88888888;background:linear-gradient(135deg,#027C60 0%, #A8271E 100%);border-radius: 50%;}
+.btn image{width:100%;height:100%;}
+.on{animation: rotate 2.5s linear infinite;}
+@keyframes rotate{
+  0% { transform: rotate(0) }
+  100% { transform: rotate(360deg) }
+}

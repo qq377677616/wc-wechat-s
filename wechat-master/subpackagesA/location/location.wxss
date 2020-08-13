@@ -1,0 +1,5 @@
+/* pages/pages-list/location/location.wxss */
+.input-group{padding:20rpx;border:1rpx solid #ccc;border-radius: 10rpx;}
+.input-group .label{padding-right:40rpx;}
+.body{flex-direction: column;}
+.label{margin-bottom: 20rpx;}

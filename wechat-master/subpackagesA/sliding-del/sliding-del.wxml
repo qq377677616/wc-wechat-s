@@ -1,0 +1,16 @@
+<!--pages/pages-list/sliding-del/sliding-del.wxml-->
+<view class="sliding-del">
+  <view class="ul wrap">
+    <view class="li {{item.isTouchMove ? 'on' : ''}}" wx:for="{{dataList}}" wx:key="index">
+      <view class="li-box" data-index="{{index}}" bindtouchstart="touchstart" bindtouchmove="touchmove">
+        <view class="title flex">
+          <view class="name">{{item.name}}</view>
+          <view class="add">{{item.add}}</view>
+        </view>
+        <view class="tel">{{item.tel}}</view>
+      </view>
+      <view class="del flex-cen" data-index="{{index}}" catchtap="del">删除</view>
+    </view>
+    <load-more loadMoreType="{{loadMoreType}}" iconfont="icon-xiaoxihezi-kong" textList="{{['暂无数据', '拼命加载中...', '我是有底线的啦~']}}"></load-more>
+  </view>
+</view>

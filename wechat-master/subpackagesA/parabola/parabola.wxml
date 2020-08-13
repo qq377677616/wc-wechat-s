@@ -1,0 +1,24 @@
+<view class="body">
+  <!-- 商品列表 -->
+  <view class="wrap">
+    <view class="ul">
+      <view class="li flex" wx:for="{{10}}" wx:key="key">
+        <view class="img"></view>
+        <view class="box flex-col">
+          <view>
+            <view class="h3 ell2">洗护系列 氨基酸滋养修护受损烫染 洗发水护发素套装500ml*2</view>
+            <view class="h4">氨基酸滋养修护受损烫染 洗发水护发素套装</view>
+          </view>
+          <view class="flex-bet">
+            <view class="h5">￥588.50</view>
+            <view class="icon iconfont icon-gouwuche" id="goods{{index}}" data-id="#goods{{index}}" bindtap="addCart"></view>
+          </view>
+        </view>
+      </view>
+    </view> 
+  </view>
+  <my-tabbar tabList="{{tabList}}" bindmytab="bindmytab" curIndex="2" navType="{{0}}"></my-tabbar>
+  <!-- 抛物体和目标位置 -->
+  <parabola id="parabola" addCartConfig="{{addCartConfig}}" bindaddCartEndCallback="addCartEndCallback"></parabola>
+  <view id="car-box"></view>
+</view>

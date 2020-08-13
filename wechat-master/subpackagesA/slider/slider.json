@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "双向slider",
+  "usingComponents": {
+    "sliders": "/components/sliders/sliders"
+  }
+}

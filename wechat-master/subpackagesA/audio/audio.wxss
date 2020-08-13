@@ -1,0 +1,4 @@
+/* subpackages/audio/audio.wxss */
+.li{width:200rpx;height: 80rpx;line-height: 80rpx;text-align: center;border-radius: 10rpx;background: #1AA15F;margin:40rpx auto;color:#fff;}
+.times{font-size: 60rpx;text-align: center;}
+.times text{color:#1AA15F;}

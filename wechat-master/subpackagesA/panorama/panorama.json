@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "全景",
+  "usingComponents": {
+    "pano": "plugin://wxPano/pano"
+  }
+}

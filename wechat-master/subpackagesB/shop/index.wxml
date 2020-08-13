@@ -1,0 +1,5 @@
+<!--subpackages/shop/index.wxml-->
+<view class="body flex-cen-col">
+  <view class="titles2" bindtap="jump" data-page="/subpackagesB/shop/cart/cart">购物车</view>
+  <view class="titles2" bindtap="jump" data-page="/subpackagesB/shop/order/order">订单管理</view>
+</view>

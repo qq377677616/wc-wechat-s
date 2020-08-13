@@ -1,0 +1,17 @@
+<!--pages/disk/disk.wxml-->
+<view class="body flex-cen-col">
+  <view class="prizeBox">
+    <view class="prize_box">
+      <view class="ul">
+        <view class="li {{curIndex == index ? 'cur' : ''}}" wx:for="{{prizeList}}" wx:key="id" style='transform:rotate({{item.deg}}deg)'>
+          <view class="box {{'type' + prizeList.length}}">
+            <view class="title">{{item.name}}</view>
+            <image src="../img.png"></image>
+          </view>
+        </view>
+      </view> 
+      <view class="needle" style='transform:rotate({{needleDeg}}deg);transition: all {{duration / 1000}}s ease-in-out;'></view>
+      <view class="start {!isPrize ? '' : 'on'}}]" bindtap="start"><text wx:if="{{isPrize}}">开始</text><text wx:if="{{!isPrize}}">好运来...</text></view>
+    </view>  
+  </view>
+</view>

@@ -1,0 +1,6 @@
+<!--components/parabola/parabola.wxml-->
+<view class="parabola">
+  <view wx:for="{{(ballIndex || 1)}}" wx:key="key" wx:if="{{(ballIndex || 1) == index + 1}}" animation="{{animationY[index]}}" style="position:fixed;z-index:999;top:{{ballY[index]}}px;" hidden="{{!showBall}}">
+    <view class="ball" animation="{{animationX[index]}}" style="position:fixed;z-index:999;border-radius: 50%;left:{{ballX[index]}}px;width:{{addCartConfig.ballSize[0] || 20}}px;height:{{addCartConfig.ballSize[1] || 20}}px;background: {{addCartConfig.ballColor || '#ffcd43'}};"></view>
+  </view>
+</view>

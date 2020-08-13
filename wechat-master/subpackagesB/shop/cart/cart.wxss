@@ -1,0 +1,36 @@
+/* subpackages/shop/cart/cart.wxss */
+.body{background-color: #f5f5f5;padding-bottom: 100rpx;height: auto;min-height: calc(100vh - 100rpx);}
+.goods{padding-top: 30rpx;}
+.goods .ul{overflow:hidden;}
+.goods .li{padding:30rpx;background-color: #fff;border-radius: 14rpx;position: relative;transition: .3s;}
+.goods .li:not(:last-child){margin-bottom: 20rpx;}
+.goods .li.ons{transform: translateX(-140rpx);}
+.icon{border:2rpx solid #bfbfbf;border-radius: 50%;width:26rpx;height: 26rpx;font-size: 0;}
+.icon text{font-size: 30rpx;color:#165D4C;opacity: 0;}
+.goods .li.on .icon text, .allSelect.on .icon text{opacity: 1;}
+.goods .li.on .icon, .allSelect.on .icon{border-color: transparent;}
+.hover-class{background: #165D4C;color:#fff;}
+.goods .li .img{width:160rpx;height: 160rpx;background-size:cover !important;margin:0 28rpx 0 15rpx;}
+.goods .li .img image{width: 100%;height: 100%;}
+.goods .li .h2{font-size: 28rpx;line-height: 40rpx;color:#222;}
+.goods .li .h3{background: #EDEDED;border-radius: 6rpx;padding:0 12rpx;height: 40rpx;line-height: 40rpx;font-size: 20rpx;color:#999;display: inline-block;margin-top: 10rpx;}
+.goods .li .bottom{margin-top: 26rpx;}
+.price{font-size:30rpx;color:#D73F45;font-weight: bold;}
+.num{border-radius: 6rpx;border:1px solid #EDEDED;font-size: 0;position: relative;z-index: 5;}
+.num view, .num button{width:50rpx;height:50rpx;line-height: 50rpx;text-align: center;font-size: 24rpx;color: #999;vertical-align: top;}
+.num button{font-weight: bold;}
+.num button:first-child{border-radius: 6rpx 0 0 6rpx;}
+.num button:last-child{border-radius: 0 6rpx 6rpx 0;}
+.num view:nth-child(2){border-left: 1rpx solid #EDEDED;border-right: 1px solid #EDEDED;font-size: 26rpx;color:#666;}
+.count{width:100%;position: fixed;left:0;bottom:0;z-index: 999;background: #fff;height: 100rpx;padding-right:30rpx;box-sizing: border-box;box-shadow: 0 0 10rpx 0 #ddd;transform: translateY(100%);transition: all .3s;}
+.count.on{transform: translateY(0);}
+.count .icon{display: block;margin-right: 13rpx;}
+.count .btn,.count .prices{font-size: 24rpx;color:#333;}
+.prices text{font-size: 30rpx;color: #F0452D;font-weight: bold;} 
+.count button{width:200rpx;height: 70rpx;line-height: 70rpx;background: #165D4C;border-radius: 70rpx;text-align: center;font-size: 30rpx;color:#fff;margin-left: 34rpx;}
+.selects{width:75rpx;height: 100%;position: absolute;left:0;top:0;}
+.allSelect{padding:0 10rpx 0 50rpx;height: 100%;}
+.count .delete{font-size: 24rpx;padding:20rpx 10rpx;}
+.guard{width:227rpx;height: 124rpx;position: absolute;right:0;bottom:0;z-index: 1;}
+.goods .li .tel{font-size: 22rpx;color:#999;}
+.goods .li .del{position: absolute;left:100%;top:0;width:140rpx;height:100%;background: #D73F45;color:#fff;border-radius: 10rpx;}

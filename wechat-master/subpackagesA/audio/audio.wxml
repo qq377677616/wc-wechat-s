@@ -1,0 +1,12 @@
+<!--subpackages/audio/audio.wxml-->
+<view class="full flex-cen">
+  <view>
+    <view class="times" wx:if="{{totalTime}}">{{currentTime}}/<text>{{totalTime}}</text></view>
+    <view class="ul">
+      <view class="li" data-type="1" bindtap="controls">播放</view>
+      <view class="li" data-type="2" bindtap="controls">暂停</view>
+      <view class="li" data-type="3" bindtap="controls">停止</view>
+      <view class="li" data-type="4" bindtap="controls">跳转</view>
+    </view>
+  </view>
+</view>

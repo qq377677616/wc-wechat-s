@@ -1,0 +1,5 @@
+/* pages/pages-list/imgCode/img-code.wxss */
+.code,.box{width:100%;}
+.code input{border:1rpx solid #999;width:200rpx;height:70rpx;margin-right: 20rpx;padding-left: 10rpx;}
+.img-code canvas{width:160rpx;height:70rpx;border:1rpx solid #999;}
+.btn{width:392rpx;margin:40rpx auto;border:1rpx solid #aaa;height:70rpx;line-height: 70rpx;text-align: center;border-radius: 10rpx;color:#333;}

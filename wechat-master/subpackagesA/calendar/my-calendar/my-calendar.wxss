@@ -1,0 +1,19 @@
+/* subpackagesA/calendar/my-calendar/my-calendar.wxss */
+/*默认样式：周一到周五 样式*/
+.default_normal-date{color:#00C3EF !important;}
+/*默认样式：周六周日 样式*/
+.default_weekend-color{color:purple !important;}
+/*选中样式*/
+.default_choosed{background: #DD5145 !important;}
+/*今天样式*/
+.default_today{background: green !important;}
+/*自定义class样式*/
+.news.date{background: #FFCD43 !important;color:#fff;}
+/*往前翻年、月按钮样式*/
+.prev-handle.icon-doubleleft, .next-handle.icon-doubleright{color: green !important;}
+/*往后翻年、月按钮样式*/
+.prev-handle.icon-left,.next-handle.icon-right{color: #C6A900 !important;}
+/*中间顶部标题样式*/
+.date-in-handle{color: #DD5145 !important;}
+/*日一二三四五六样式*/
+.week.fs28{color: purple !important;}

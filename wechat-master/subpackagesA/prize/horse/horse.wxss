@@ -1,0 +1,14 @@
+/**index.wxss**/
+.prizeBox{width:90%;height:640rpx;border:8rpx solid #274C28;border-radius: 20rpx;padding:20rpx;}
+.prizeBox .prize_box{position: relative;}
+.prizeBox .ul .li,.start{width: 31%;height:200rpx;line-height: 200rpx;text-align: center;border-radius: 10rpx;border:1rpx solid #ccc;box-sizing: border-box;font-size: 30rpx;}
+.prizeBox .ul .li.cur{background: #00B26A;color:#fff;border-color:#00B26A;}
+.prizeBox .ul .li:nth-child(2){position: absolute;left:34.5%;top:0;}
+.prizeBox .ul .li:nth-child(3){position: absolute;left:69%;top:0;}
+.prizeBox .ul .li:nth-child(4){position: absolute;right:0;top:220rpx;}
+.prizeBox .ul .li:nth-child(5){position: absolute;right:0;top:440rpx;}
+.prizeBox .ul .li:nth-child(6){position: absolute;right:34.5%;top:440rpx;}
+.prizeBox .ul .li:nth-child(7){position: absolute;right:69%;top:440rpx;}
+.prizeBox .ul .li:nth-child(8){position: absolute;left:0;top:220rpx;}
+.start{position: absolute;left:34.5%;top:220rpx;background: #8481FF;color:#fff;border-color:#8481FF;}
+.start.on{background: #B92722;border-color:#B92722;}

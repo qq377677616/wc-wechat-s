@@ -1,0 +1,11 @@
+<!--subpackages/werun/werun.wxml-->
+<view class="body flex-cen">
+  <view class="werun-box">
+    <view class="h2">{{runData_cur}}<text wx:if="{{runData_cur}}">（走了{{times}}分钟）</text></view>
+    <view class="flex datas">
+      <view class="h3">原：{{runData_pre}}</view>
+      <view class="h3">现：{{runData_new}}</view>
+    </view>
+    <view class="btn {{!runType ? 'btn-success' : 'btn-err'}}" bindtap="startRun">{{!runType ? '开始计步' : '结束计步'}}</view>
+  </view>
+</view>

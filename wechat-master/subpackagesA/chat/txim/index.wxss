@@ -1,0 +1,21 @@
+/* pages/pages-list/chat/txim/index.wxss */
+.left{width:96rpx;height: 96rpx;padding: 24rpx 32rpx;border-radius: 10rpx;}
+.left image,.left .icon{width:96rpx;height: 96rpx;background-color: #EDEDED;border-radius: 10rpx;}
+.left text{color: #333;font-size: 60rpx;}
+.right{padding: 24rpx 0;border-bottom: 2rpx solid #dbdbdb;position: relative;}
+.right .h3{color: #111;font-size: 36rpx;line-height: 56rpx;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.right .h4{color: #999;font-size: 28rpx;overflow: hidden;line-height: 40rpx;text-overflow: ellipsis;white-space: nowrap;}
+.right .h5{color: #999;font-size: 24rpx;line-height: 56rpx;position: absolute;top:15rpx;right:10rpx;}
+.right .remain{color: #fff;font-size: 24rpx;background-color: #fb5250;border-radius: 60rpx;padding: 4rpx 16rpx;position: absolute;bottom:28rpx;right:10rpx;}
+.userInfo .box{padding: 10% 5%;background: #fff;border-radius: 10rpx;position: relative;}
+.userInfo .box .icon{width: 100%;height: 100%;}
+.userInfo .box .icon .iconfont{font-size: 80rpx;}
+.userInfo .avatar{width:180rpx;height: 180rpx;background-color: #EDEDED;border-radius: 50%;margin:0 auto 40rpx;}
+.userInfo input{border:1rpx solid #dbdbdb;padding: 20rpx;width:300rpx;}
+.userInfo .box .close{position: absolute;left:50%;bottom:105%;color: #fff;transform: translateX(-50%);}
+.userInfo .box .close .iconfont{font-size: 80rpx;}
+.userInfo .box .btn{width:300rpx;height: 80rpx;line-height: 80rpx;background: #027C60;border-radius: 10rpx;text-align: center;font-size: 30rpx;color: #fff;margin:100rpx auto 0;}
+.modify-btn{width:100rpx;height: 100rpx;border-radius: 50%;background: #027C60;position: fixed;right:5%;bottom:10%;z-index: 999;}
+.modify-btn text{font-size: 60rpx;color:#fff;}
+
+

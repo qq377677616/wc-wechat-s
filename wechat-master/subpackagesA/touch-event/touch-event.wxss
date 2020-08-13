@@ -1,0 +1,2 @@
+/* subpackages/touch-event/touch-event.wxss */
+.body{font-size: 40rpx;font-style: italic;color:#fff;background:linear-gradient(135deg,#027C60 0%, #7AD238 100%);}

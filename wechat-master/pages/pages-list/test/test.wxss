@@ -1,0 +1,27 @@
+/* pages/pages-list/test/test.wxss */
+swiper{width:100vw;height:100vh;}
+swiper-item .image-video,swiper-item .box{width:100%;height:100%;}
+swiper-item .box{position: absolute;left:0;top:0;z-index: 10000;}
+.box .bg{width:100%;height:411rpx;margin-top: 50vh;}
+.currency{position:absolute;top:48vh;right:12rpx;z-index: 100;width:140rpx;height:140rpx;}
+.currency .image{position: absolute;width:100%;height:100%;left:0;top:0;opacity: 0;}
+.currency .image.on{opacity: 1;}
+/* .official-account{width:100vw;height:100vh;} */
+.li{width:200rpx;height:60rpx;text-align: center;border: 1rpx solid #aaa;margin:40rpx auto;line-height: 60rpx;border-radius: 10rpx;}
+.icon {
+       width: 1em; height: 1em;
+       vertical-align: -0.15em;
+       fill: currentColor;
+       overflow: hidden;
+    }
+scroll-view{width:100vw;height:100vh;}
+scroll-view .box{width:1500vw;height:400vh;background: linear-gradient(45deg, #F28F29 0, #027C60 100%);}
+scroll-view image{width:7430rpx;}
+canvas{width:100%;height:500px;}
+.song{width:12.5%;height: 170rpx;border:1rpx solid #333;box-sizing: border-box;float: left;}
+/* .official-box{width:80%;height:84px;position: relative;border:1rpx solid green;} */
+/* .official-account{position: absolute;width:100%;height:100%;left:0;top:0;opacity: .5;background-color: green;} */
+.tab{width: 100vw;height: 170rpx;position: fixed;left:0;bottom:0;background-size: 100% 100%;overflow: hidden;border-radius: 40rpx 40rpx 0 0;}
+.tab .bg{position: absolute;width: 100%;height: 100%;left:0;top:0;background:#e1e1e1;filter:blur(24rpx);}
+.tab image{width:563rpx;height: 94.25rpx;}
+/* video{margin:20px auto;} */

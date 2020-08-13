@@ -1,0 +1,13 @@
+<view class="siger flex-cen-col">
+  <view class="machine_wp">
+    <view class="machine_item_wp" wx:for="{{latticeNum || 1}}" wx:key="item">
+      <view class="machine_item_slide" style="transform: translateY({{index == 0 ? transY1 : (index == 1 ? transY2 : (index == 2 ? transY3 : (index == 3 ? transY4 : transY5)))}}px);">
+        <view class="machine_item_ele flex-cen" wx:for="{{lattice}}" wx:key="index">
+          <image wx:if="{{!debug}}" src="{{'./img_0'+item+'.jpg'}}"></image>
+          <text wx:if="{{debug}}">{{item}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <button bindtap="onStart">开始抽奖</button>
+ </view>

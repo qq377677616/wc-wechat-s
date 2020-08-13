@@ -1,0 +1,14 @@
+/* pages/pages-list/poster/poster.wxss */
+/* canvas-mask */
+@font-face {
+  font-family:'ygyxsziti2';
+  src:url('https://game.flyh5.cn/resources/game/wechat/szq/fonts/ygyxsziti2.0.ttf') format('truetype');
+}
+.canvas-mask{position: fixed;left: 0;top: 0;z-index:999;width: 100%;height: 100%; background-color: rgba(0,0,0,0.8);}
+.canvas-mask .content{margin: auto;width:574rpx;transform-style:preserve-3d;perspective:2000rpx;}
+.canvas-mask .content .myCanvas{width:100%;height:1022rpx;background-color: #fff;position: relative;z-index: 500;}
+.canvas-mask .content .btn{width: 60%;height: 62rpx;background-color: #e53333;color: #fff;font-size: 26rpx;border-radius: 62rpx;text-align: center;line-height: 62rpx;margin-left: auto;margin-right: auto; margin-top: 50rpx;font-family:'ygyxsziti2';}
+.share-box {position: relative;}
+.share-box .btn-share {width: 100%;height: 100%;position: absolute; background: transparent;border: 0;}
+.share-box .btn-share::after{border: 0 !important;}
+#myCanvas{width:574px;height:1022px;position: fixed;left: 100%;top: 0;}

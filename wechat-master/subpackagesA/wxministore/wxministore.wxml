@@ -1,0 +1,19 @@
+<!--subpackages/wxministore/wxministore.wxml-->
+<view class="body full flex-cen">
+  <view class="con">
+    <view class="li">
+      <view class="h3">本人</view>
+      <view class="p">{{$state.name}}</view>
+      <view class="p">{{$state.address}}</view>
+      <view class="p">{{$state.age}}</view>
+    </view>
+    <view class="li">
+      <view class="h3">家人</view>
+      <view class="p">{{$state.family.name}}</view>
+      <view class="p">{{$state.family.address}}</view>
+      <view class="p">{{$state.family.age}}</view>
+    </view>
+    <view class="li-item {{disClick ? 'dis' : ''}}" bindtap="updataState">点击更新状态</view>
+    <view class="li-item" data-type="2020" bindtap="publicMethods">点击调用公共方法</view>
+  </view>
+</view>

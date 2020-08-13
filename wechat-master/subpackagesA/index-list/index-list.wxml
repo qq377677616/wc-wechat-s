@@ -1,0 +1,2 @@
+
+<mp-indexList class="city__list" list="{{list}}" bindchoose="onChoose"></mp-indexList>

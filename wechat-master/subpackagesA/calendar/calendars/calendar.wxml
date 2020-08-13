@@ -1,0 +1,5 @@
+<!--pages/pages-list/calendar/calendar.wxml-->
+<view class="body">
+  <calendar selected="{{selected}}" bindselect="bindselect" bindgetdate="bindgetdate" />
+  <!-- is-open="1" -->
+</view>

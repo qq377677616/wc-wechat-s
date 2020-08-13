@@ -1,0 +1,4 @@
+/* pages/pages-list/html/html.wxss */
+.html{padding:40rpx;box-sizing: border-box;}
+.html image{width:90vw !important;}
+.html view{font-size: 28rpx !important;line-height: 48rpx !important;}

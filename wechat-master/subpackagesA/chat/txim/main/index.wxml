@@ -1,0 +1,110 @@
+<!--pages/pages-list/chat/txim/main/index.wxml-->
+<view>
+  <!-- 对话消息区域 -->
+  <view id="page" class="message-list" style="padding-bottom:{{paddingBottom}}px">
+    <view class="item left flex {{item.flow == 'out' ? 'right' : 'left'}}" wx:for="{{messageList}}" wx:key="{{item}}">
+      <view class="avatar">
+        <image wx:if="{{item.userProfile.avatar}}" src="{{item.userProfile.avatar}}"></image>
+        <view wx:else class="icon flex-cen"><text class="iconfont icon-ren"></text></view>
+      </view>
+      <view class="font">
+        <view class="h3">{{item.from}}</view>
+        <!-- 文字消息 -->
+        <!-- <view class="h4" wx:if="{{item.type === 'TIMTextElem'}}">{{item.payload.text}}</view> -->
+        <view class="message-text h4 flex-wrap" wx:if="{{item.type === 'TIMTextElem'}}">
+          <view wx:for="{{item.virtualDom}}" wx:key="item.ID + index2" wx:for-index="index2" wx:for-item="item2">
+            <text wx:if="{{item2.name === 'span'}}">{{item2.text}}</text>
+            <image wx:if="{{item2.name === 'img'}}" src="{{item2.src}}"></image>
+          </view>
+        </view>
+        <!-- 表情消息 -->
+        <view class="expression" wx:elif="{{item.type === 'TIMFaceElem'}}">
+          <!-- <image :src="" style="height:90px; width:90px"/> -->
+          <!-- <image wx:if="{{faceUrl + item.payload.data.indexOf('@') > 0}}" src="{{faceUrl + item.payload.data + '.png'}}" mode="widthFix"></image>
+          <image wx:else src="{{faceUrl + item.payload.data + '@2x.png'}}" mode="widthFix"></image> -->
+          <image src="{{item.payload.data.indexOf('@') > 0 ? faceUrl + item.payload.data + '.png' : faceUrl + item.payload.data + '@2x.png'}}" mode="widthFix"></image>
+        </view> 
+        <!-- 图片消息 -->
+        <view class="message-img" wx:elif="{{item.type === 'TIMImageElem'}}">
+          <!-- <image :src="" style="height:90px; width:90px"/> -->
+          <!-- <image wx:if="{{faceUrl + item.payload.data.indexOf('@') > 0}}" src="{{faceUrl + item.payload.data + '.png'}}" mode="widthFix"></image>
+          <image wx:else src="{{faceUrl + item.payload.data + '@2x.png'}}" mode="widthFix"></image> -->
+          <image src="{{item.payload.imageInfoArray[1].url}}" mode="widthFix" data-url="{{item.payload.imageInfoArray[1].url}}" bindtap="previewImage"></image>
+        </view> 
+        <!-- 视频消息 -->
+        <view class="message-video"  wx:elif="{{item.type === 'TIMVideoFileElem'}}">
+          <video src="{{item.payload.videoUrl}}" poster="{{item.payload.thumbUrl}}" object-fit="contain"></video>
+        </view>
+        <!-- 音频消息 -->
+        <view class="message-sound" wx:elif="{{item.type === 'TIMSoundElem'}}" :url="item.payload.url">
+          <view class="box h4 flex-ali" data-index="{{index}}" data-payload="{{item.payload}}" bindtap="openAudio">
+            <view class="iconfont-box"><view class="box {{item.payload.isAudioPlay ? 'on' : ''}}"><view class="iconfont icon-saying"></view></view></view>
+            <view class="text">{{item.payload.second}}s″</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 输入法区域 -->
+  <view class="controls" id="controls">
+    <!-- 输入栏 -->
+    <view class="top">
+      <view class="flex-ali">
+        <view class="record-box" bindtap="switchInputsType">
+          <text wx:if="{{isRecording}}" class="iconfont icon-send_sound"></text>
+          <text wx:else class="iconfont icon-jianpan"></text>
+        </view>
+        <view class="inputs">
+          <view wx:if="{{!isRecording}}" class="input-box"><input bindinput="bindinput" value="{{inputText}}"></input></view>
+          <view wx:else bindtap="openSettings" bindlongtap="send_video_recording" bindtouchend="handleTouchEnd">{{isRecordings ? '按住 说话' : '松开 发送'}}</view>
+        </view>
+        <view class="send-box flex-ali">
+          <view data-type="1" bindtap="switchToolType"><text class="iconfont icon-biaoqing"></text></view>
+          <view wx:if="{{!inputText}}" data-type="2" bindtap="switchToolType"><text class="iconfont icon-jia"></text></view>
+          <view wx:else class="send" bindtap="send_message_font">发送</view>
+        </view>
+      </view>
+    </view>
+    <!-- 工具栏 -->
+    <view class="bottom">
+      <!-- 工具列表 -->
+      <view class="tool-list flex" wx:if="{{toolType == 2}}">
+        <view class="item" wx:for="{{toolList}}" wx:key="item" data-index="{{index}}" bindtap="send_other">
+          <view class="icon"><text class="iconfont {{item.icon}}"></text></view>
+          <view class="h4">{{item.title}}</view>
+        </view>
+      </view>
+      <!-- 表情列表 -->
+      <view class="emoji-list"  wx:if="{{toolType == 1}}">
+        <view class="tab flex">
+          <view class="item {{emojisType == 0 ? 'cur' : ''}}" data-type="0" bindtap="switchEmojiType"><text class="iconfont icon-biaoqing"></text></view>
+          <view class="item {{emojisType == 1 ? 'cur' : ''}}" data-type="1" bindtap="switchEmojiType"><text class="iconfont icon-biaoqing1"></text></view>
+        </view>
+        <view class="emojis-box">
+          <!-- 普通表情 -->
+          <view class="emojis flex" wx:if="{{emojisType == 0}}">
+            <view wx:for="{{emojiName}}" class="emoji" wx:key="{{item}}" data-type="0" data-emoji="{{item}}" bindtap="send_emoji">
+              <image src="{{emojiUrl + emojiMap[item]}}"></image>
+            </view>
+          </view>
+          <!-- 图片表情 -->
+          <view class="emojis flex" wx:if="{{emojisType == 1}}">
+            <view wx:for="{{bigEmoji}}" class="bigemoji" wx:key="{{item}}" data-type="1" data-emoji="{{item}}" bindtap="send_emoji">
+              <image src="{{faceUrl + item + '@2x.png'}}"></image>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 其它 -->
+  <view class="other">
+    <!-- 录音时的提示动画 -->
+    <view hidden="{{isRecordings}}" class="record-modal">
+      <view class="wrapper">
+        <view class="modal-loading"></view>
+      </view>
+      <view class="modal-title">录音中</view>
+    </view>
+  </view>
+</view>

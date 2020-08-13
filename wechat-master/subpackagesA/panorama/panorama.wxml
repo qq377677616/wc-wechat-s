@@ -1,0 +1,10 @@
+<!--pages/pages-list/panorama/panorama.wxml-->
+<pano panolist="{{panolist}}" entryid="{{entrypanoid}}" entryname="{{entrypanoname}}" width="100vw" height="100vh" key="{{key}}" autoinit="{{false}}">
+<!-- <cover-view style="position: fixed;top:80%;width:100%;text-align:center;">
+  <cover-view style="width:50%;text-align:center;float:left;" bindtap="covertap">跳转全景图</cover-view>
+  <cover-view style="width:50%;text-align:center;float:left;" bindtap="setCameraLookAt">切换视角</cover-view>
+  <cover-view style="width:50%;text-align:center;float:left;" bindtap="enableTouch">打开触摸</cover-view>
+  <cover-view style="width:50%;text-align:center;float:left;" bindtap="disableTouch">关闭触摸</cover-view>
+  <cover-view style="width:50%;text-align:center;float:left;" bindtap="getPanoInfo">获取当前全景信息</cover-view>
+</cover-view> -->
+</pano>

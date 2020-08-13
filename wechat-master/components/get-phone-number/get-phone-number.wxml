@@ -1,0 +1,7 @@
+<!--components/getPhoneNumber/getPhoneNumber.wxml-->
+<view class="get-box posf full haze flex-cen" wx:if="{{isShow}}">
+  <view class="box">
+    <image src="https://vrupup.com/resources/web/yls/ybyl/index/auth_02.png"></image>
+    <button class="posa" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumberUserInfo" bindtap='operation'>{{showModalOption.confirmText}}</button>
+  </view>
+</view>

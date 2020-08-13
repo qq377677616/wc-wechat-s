@@ -1,0 +1,7 @@
+/* subpackages/wxministore/wxministore.wxss */
+.con{width:80%;text-align: center;}
+.con .p{margin:20rpx 0;}
+.li-item{margin:40rpx auto;background-color: #027C60;border-radius: 10rpx;color:#fff;border:none;}
+.li-item.dis{background: #ccc;}
+.li{margin-bottom: 50rpx;}
+.li .h3{font-size: 40rpx;color:#1E88FF;}

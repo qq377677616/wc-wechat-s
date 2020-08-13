@@ -1,0 +1,8 @@
+.machine_wp{display: flex;margin: 200px auto 0;}
+.machine_wp .machine_item_wp{position: relative;box-shadow: 0 0 4rpx 1px #6190e8;border-radius: 2px;overflow: hidden;}
+.machine_wp .machine_item_wp:not(:last-child){margin-right: 20rpx;}
+.machine_wp .machine_item_wp .machine_item_slide image{width:100%;height: 100%;}
+.machine_wp .machine_item_wp .machine_item_ele{ font-size: 0; }
+.machine_wp .machine_item_wp .machine_item_ele text{font-size: 48rpx;font-weight: bold;}
+button{ margin-top:100rpx; width:400rpx;height: 80rpx;line-height: 80rpx;background: #6BC129;text-align: center;font-size: 30rpx;color:#fff;}
+.machine_wp .machine_item_wp, .machine_wp .machine_item_wp .machine_item_ele{width:160rpx;height: 160rpx;}

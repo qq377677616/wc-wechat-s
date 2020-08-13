@@ -1,0 +1,11 @@
+<!--components/circle/circle.wxml-->
+<wxs src="../../assets/wxs/my-wxs.wxs" module="myWxs"></wxs>
+<view class="circle">
+  <view class='progress_box'>
+    <canvas class="progress_bg" style="width:{{circle.width}}px;height:{{circle.width}}px" canvas-id="canvasProgressbg"></canvas> 
+    <canvas class="progress_canvas" style="width:{{circle.width}}px;height:{{circle.width}}px" canvas-id="canvasProgress"></canvas> 
+    <view class="progress_text">
+        <text class='progress_info' style="font-size:{{circle.fontStyle[0]}};color:{{circle.fontStyle[1]}}">{{myWxs.parseInt(5*(count-1)/3) >= 0 ?  myWxs.parseInt(5*(count-1)/3) : 0}}%</text>
+    </view>     
+  </view>
+</view>

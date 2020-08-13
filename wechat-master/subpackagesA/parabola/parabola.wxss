@@ -1,0 +1,10 @@
+.body{height:auto;padding-bottom: 160rpx;background: #f9f9f9;}
+.ul{padding-top: 40rpx;}
+.li{margin-bottom: 40rpx;border-radius: 10rpx;background: #fff;}
+.li .img{width:240rpx;height:240rpx;background: purple;background: url(http://game.flyh5.cn/resources/game/wechat/szq/images/good_02.jpg) no-repeat center;background-size: cover;}
+.li .box{flex:1;justify-content: space-between;padding: 20rpx;}
+.li .h3{font-size: 28rpx;line-height: 36rpx;height:72rpx;color:#222222;}
+.li .h4{font-size: 20rpx;color:#999;margin-top: 20rpx;}
+.li .h5,.li .icon{font-size: 30rpx;color:#D73F45;}
+.li .icon{font-size: 38rpx;}
+#car-box{position: fixed;bottom:60rpx;left:60%;width:50rpx;height:50rpx;}

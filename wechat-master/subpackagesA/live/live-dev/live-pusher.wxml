@@ -1,0 +1,4 @@
+<!--subpackages/live/live/live-dev/live-pusher.wxml-->
+<view>
+  <live-pusher url="{{pusherUrl}}" mode="RTC" autopush bindstatechange="statechange" />
+</view>

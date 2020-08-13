@@ -1,0 +1,5 @@
+/* pages/pages-list/sequence/sequence.wxss */
+.currency{position: fixed;width:100%;height:100%;z-index: 10000;left:0;top:0;background: #eee;}
+.currency image{position: absolute;width:745rpx;height:921rpx;left:0;top:0;opacity: 0;}
+.currency image.on{opacity: 1;}
+.start{width:400rpx;height:100rpx;line-height: 100rpx;text-align: center;position: absolute;left:50%;top:50%;transform: translate(-50%, -50%);font-size: 30rpx;border:1rpx solid #222;border-radius: 10rpx;}

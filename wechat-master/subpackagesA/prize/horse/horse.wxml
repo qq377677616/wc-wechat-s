@@ -1,0 +1,11 @@
+<!--index.wxml-->
+<view class="body flex-cen-col">
+  <view class="prizeBox">
+    <view class="prize_box">
+      <view class="ul">
+        <view class="li {{curIndex == index ? 'cur' : ''}}" wx:for="{{prizeList}}" wx:key="id">{{item.name}}</view>
+      </view>
+      <view class="start {{isPrize ? '' : 'on'}}]" bindtap="start"><text wx:if="{{isPrize}}">开始</text><text wx:if="{{!isPrize}}">好运来...</text></view>
+    </view>  
+  </view>
+</view>

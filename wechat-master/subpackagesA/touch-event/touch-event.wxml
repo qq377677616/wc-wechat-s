@@ -1,0 +1,2 @@
+<!--subpackages/touch-event/touch-event.wxml-->
+<view class="body full flex-cen" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd">开始上下左右滑动吧</view>

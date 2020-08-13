@@ -1,0 +1,9 @@
+/* subpackagesA/wx-validate/wx-validate.wxss */
+.ul{padding:100rpx 60rpx;}
+.ul .li{margin-bottom: 40rpx;}
+.ul .li .title{width: 130rpx;text-align-last: justify;}
+.ul .li .input{margin-left: 20rpx;}
+.ul .li input{border:1px solid #ccc;border-radius: 10rpx;padding-left: 20rpx;height: 60rpx;}
+
+
+
