@@ -1,0 +1,29 @@
+{
+  "pages": [
+    "pages/index/index"
+  ],
+  "window": {
+    "navigationBarTitleText": "小程序目录模板",
+    "navigationBarBackgroundColor": "#057466",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": false
+  },
+  "navigateToMiniProgramAppIdList": [],
+  "sitemapLocation": "sitemap.json",
+  "plugins": {},
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "requiredBackgroundModes": [
+    "audio"
+  ],
+  "usingComponents": {
+
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "cos-wx-sdk-v5": "^0.7.10",
+    "dayjs": "^1.8.23",
+    "tim-wx-sdk": "^2.7.0",
+    "wxministore": "^1.2.9"
+  }
+}

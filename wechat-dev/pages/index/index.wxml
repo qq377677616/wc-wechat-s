@@ -1,0 +1,3 @@
+<!--index.wxml-->
+<!-- 小程序模板内容 -->
+<view id="body" class="index body flex-cen">Wechat</view>

@@ -1,0 +1,2 @@
+/**index.wxss**/
+.body{background: linear-gradient(135deg,#057466 0%, #B57E4D 100%);font-style:italic;color:#fff;font-size: 60rpx;}

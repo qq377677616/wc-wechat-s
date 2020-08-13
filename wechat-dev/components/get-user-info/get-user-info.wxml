@@ -1,0 +1,7 @@
+<!--components/get-user-info/get-user-info.wxml-->
+<view class="get-box posf full haze flex-cen" wx:if="{{isShow}}">
+  <view class="box">
+    <image src="https://vrupup.com/resources/web/yls/ybyl/index/auth_01.png"></image>
+    <button class="posa" open-type="getUserInfo" bindgetuserinfo="bindgetuserinfo"></button>
+  </view>
+</view>
