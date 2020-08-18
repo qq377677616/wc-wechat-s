@@ -1,5 +1,5 @@
 // subpackagesA/calendar/my-calendar/my-calendar.js
-import { getDate, getDistance } from '../../../utils/util'
+import { getDate, getDistance } from '../../../utils/publics/util'
 
 Page({
   data: {

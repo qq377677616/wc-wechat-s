@@ -1,6 +1,6 @@
 // subpackages/audio/audio.js
 import Audio from '../../utils/audio'
-import { minutesAndSeconds } from '../../utils/util'
+import { minutesAndSeconds } from '../../utils/publics/util'
 var num = 0
 Page({
   /**

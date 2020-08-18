@@ -2,7 +2,7 @@
 import api from '../../utils/api/api'
 import gets from '../../utils/publics/authorization'
 import tool from '../../utils/publics/tool'
-import { timestampToTime } from '../../utils/util'
+import { timestampToTime } from '../../utils/publics/util'
 Page({
 
   /**

@@ -1,5 +1,5 @@
 // subpackagesA/live/voip-room/voip-room.js
-import util from '../../../utils/util'
+import util from '../../../utils/publics/util'
 import { login } from '../../../utils/api/login'
 import CryptoJS from '../../../utils/crypto-js'
 import tool from '../../../utils/publics/tool'

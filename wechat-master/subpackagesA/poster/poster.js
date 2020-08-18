@@ -1,7 +1,7 @@
 // pages/pages-list/poster/poster.js
 import tool from '../../utils/publics/tool'
 import auth from '../../utils/publics/authorization'
-import util from '../../utils/util'
+import util from '../../utils/publics/util'
 Page({
 
   /**
