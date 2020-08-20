@@ -156,20 +156,19 @@ const jump_back = (delta) => {
 }
 //本地缓存
 const storage = (key, value) => {
-  console.log("value", value)
   if (value != null) {
     wx.setStorageSync(key, value)
   } else {
     if (key == null) {
       return wx.getStorageInfoSync()
     } else {
-      if (key.length > 1) {
+      if (key != '#') {
         if (key[0] == '#') {
           wx.removeStorageSync(key.slice(1))
         } else {
           return wx.getStorageSync(key)
         }
-      } else if (key == '#' ) {
+      } else if (key == '#') {
         wx.clearStorageSync()
       }
     }
