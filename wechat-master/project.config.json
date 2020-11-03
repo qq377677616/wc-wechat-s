@@ -1,504 +1,516 @@
 {
-	"description": "项目配置文件",
-	"packOptions": {
-		"ignore": []
-	},
-	"setting": {
-		"urlCheck": false,
-		"es6": true,
-		"enhance": false,
-		"postcss": true,
-		"preloadBackgroundData": false,
-		"minified": true,
-		"newFeature": true,
-		"coverView": true,
-		"nodeModules": true,
-		"autoAudits": false,
-		"showShadowRootInWxmlPanel": true,
-		"scopeDataCheck": false,
-		"uglifyFileName": false,
-		"checkInvalidKey": true,
-		"checkSiteMap": false,
-		"uploadWithSourceMap": true,
-		"compileHotReLoad": false,
-		"babelSetting": {
-			"ignore": [],
-			"disablePlugins": [],
-			"outputPath": ""
-		},
-		"useIsolateContext": true,
-		"useCompilerModule": false,
-		"userConfirmedUseCompilerModuleSwitch": false
-	},
-	"compileType": "miniprogram",
-	"libVersion": "2.12.0",
-	"appid": "wx9cb717d8151d8486",
-	"projectname": "%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%E6%A8%A1%E6%9D%BF623",
-	"debugOptions": {
-		"hidedInDevtools": []
-	},
-	"isGameTourist": false,
-	"simulatorType": "wechat",
-	"simulatorPluginLibVersion": {},
-	"condition": {
-		"search": {
-			"current": -1,
-			"list": []
-		},
-		"conversation": {
-			"current": -1,
-			"list": []
-		},
-		"plugin": {
-			"current": -1,
-			"list": []
-		},
-		"game": {
-			"currentL": -1,
-			"list": []
-		},
-		"gamePlugin": {
-			"current": -1,
-			"list": []
-		},
-		"miniprogram": {
-			"current": -1,
-			"list": [
-				{
-					"id": 0,
-					"name": "定位",
-					"pathName": "subpackagesA/location/location",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 1,
-					"name": "subpackagesA/poster/poster",
-					"pathName": "subpackagesA/poster/poster",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 2,
-					"name": "条形码二维码",
-					"pathName": "subpackagesA/codes/codes",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 3,
-					"name": "海报",
-					"pathName": "subpackagesA/poster/poster",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "日历",
-					"pathName": "subpackagesA/calendar/calendar",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "html解析",
-					"pathName": "subpackagesA/html/html",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "subpackagesA/map/qqmap/qqmap",
-					"pathName": "subpackagesA/map/qqmap/qqmap",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "components/gesture/gesture",
-					"pathName": "components/gesture/gesture",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "websocket",
-					"pathName": "subpackagesA/websocket/websocket",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "AR",
-					"pathName": "subpackagesA/ar/ar",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "图片验证码",
-					"pathName": "subpackagesA/img-code/img-code",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 11,
-					"name": "subpackagesA/computed-watch/computed-watch",
-					"pathName": "subpackagesA/computed-watch/computed-watch",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 12,
-					"name": "我的地图",
-					"pathName": "subpackagesA/map/my-map/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 13,
-					"name": "登录",
-					"pathName": "/subpackagesA/login/login",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "中英文",
-					"pathName": "subpackagesA/ch-en/ch-en",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "自定义nav和tabbar",
-					"pathName": "subpackagesA/custom/custom",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "3d轮播",
-					"pathName": "subpackagesA/swiper3d/swiper3d",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 17,
-					"name": "测试页面",
-					"pathName": "pages/pages-list/test/test",
-					"query": "",
-					"scene": 1011
-				},
-				{
-					"id": 18,
-					"name": "手写签名",
-					"pathName": "subpackagesA/handwriting/handwriting",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "机器人",
-					"pathName": "subpackagesA/robot/robot",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "全景",
-					"pathName": "subpackagesA/panorama/panorama",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "单地图",
-					"pathName": "pages/maps/maps",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "图片裁剪",
-					"pathName": "subpackagesA/cropper/cropper",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "bar",
-					"pathName": "subpackagesA/wx-charts/bar/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "刮刮乐",
-					"pathName": "subpackagesA/prize/scrape/scrape",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "图表",
-					"pathName": "subpackagesA/wx-charts/index/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "测试2",
-					"pathName": "subpackagesA/test/test2",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "滑动删除",
-					"pathName": "subpackagesA/sliding-del/sliding-del",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "抛物线动画",
-					"pathName": "subpackagesA/parabola/parabola",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "授权",
-					"pathName": "subpackagesA/authorize/authorize",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "索引列表",
-					"pathName": "subpackagesA/index-list/index-list",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "地图-纯净版",
-					"pathName": "subpackagesA/map/maps/maps",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 32,
-					"name": "subpackagesA/live/index",
-					"pathName": "subpackagesA/live/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "即时聊天--腾讯云IM",
-					"pathName": "subpackagesA/chat/txim/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "即时聊天--对话详情",
-					"pathName": "subpackagesA/chat/txim/main/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "直播录制",
-					"pathName": "subpackagesA/live/live-dev/live-pusher",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "直播播放",
-					"pathName": "subpackagesA/live/live-dev/live-play",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "直播目录",
-					"pathName": "subpackagesA/live/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "直播连麦",
-					"pathName": "subpackagesA/live/live-room/live-room",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "多滑块",
-					"pathName": "subpackagesA/slider/slider",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 40,
-					"name": "拖拽",
-					"pathName": "subpackagesA/move/move",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "滑动事件",
-					"pathName": "subpackagesA/touch-event/touch-event",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "老虎机",
-					"pathName": "subpackagesA/prize/tiger/tiger",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "拖拽",
-					"pathName": "subpackagesA/move/move",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "播放音效",
-					"pathName": "subpackagesA/audio/audio",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 45,
-					"name": "状态管理",
-					"pathName": "subpackagesA/wxministore/wxministore",
-					"query": "code=1122334455",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "微信步数",
-					"pathName": "subpackagesA/werun/werun",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "获取头像昵称",
-					"pathName": "subpackagesA/authorize/authorize",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "获取手机号",
-					"pathName": "subpackagesA/get-phone/get-phone",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "购物车",
-					"pathName": "subpackagesB/shop/cart/cart",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "圆形进度条",
-					"pathName": "subpackagesA/circle/circle",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "数字滚动",
-					"pathName": "subpackagesA/countUp/countUp",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 52,
-					"name": "订单管理",
-					"pathName": "subpackagesB/shop/order/order",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "html解析",
-					"pathName": "subpackagesA/html/html",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "我的日历",
-					"pathName": "subpackagesA/calendar/my-calendar/my-calendar",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "多人音视频对话",
-					"pathName": "subpackagesA/live/voip-room/voip-room",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "表单验证",
-					"pathName": "subpackagesA/wx-validate/wx-validate",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "授权",
-					"pathName": "subpackagesA/authorize/authorize",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "双向滑块",
-					"pathName": "subpackagesA/slider/slider",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 59,
-					"name": "转盘抽奖",
-					"pathName": "subpackagesA/prize/disk/disk",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "九宫格",
-					"pathName": "subpackagesA/prize/horse/horse",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "转盘盘转",
-					"pathName": "subpackagesA/prize/disks/disks",
-					"query": "",
-					"scene": null
-				}
-			]
-		}
-	}
+  "description": "项目配置文件",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": false,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": true,
+    "coverView": true,
+    "nodeModules": true,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": false,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "useMultiFrameRuntime": false,
+    "useApiHook": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "useIsolateContext": true,
+    "useCompilerModule": true,
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": []
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.12.2",
+  "appid": "wx9cb717d8151d8486",
+  "projectname": "%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%E6%A8%A1%E6%9D%BF623",
+  "debugOptions": {
+    "hidedInDevtools": []
+  },
+  "isGameTourist": false,
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "search": {
+      "list": []
+    },
+    "conversation": {
+      "list": []
+    },
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "currentL": -1,
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": 0,
+          "name": "定位",
+          "pathName": "subpackagesA/location/location",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 1,
+          "name": "subpackagesA/poster/poster",
+          "pathName": "subpackagesA/poster/poster",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 2,
+          "name": "条形码二维码",
+          "pathName": "subpackagesA/codes/codes",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 3,
+          "name": "海报",
+          "pathName": "subpackagesA/poster/poster",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "日历",
+          "pathName": "subpackagesA/calendar/calendar",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "html解析",
+          "pathName": "subpackagesA/html/html",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "subpackagesA/map/qqmap/qqmap",
+          "pathName": "subpackagesA/map/qqmap/qqmap",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "components/gesture/gesture",
+          "pathName": "components/gesture/gesture",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "websocket",
+          "pathName": "subpackagesA/websocket/websocket",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "AR",
+          "pathName": "subpackagesA/ar/ar",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "图片验证码",
+          "pathName": "subpackagesA/img-code/img-code",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 11,
+          "name": "subpackagesA/computed-watch/computed-watch",
+          "pathName": "subpackagesA/computed-watch/computed-watch",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 12,
+          "name": "我的地图",
+          "pathName": "subpackagesA/map/my-map/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 13,
+          "name": "登录",
+          "pathName": "/subpackagesA/login/login",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "中英文",
+          "pathName": "subpackagesA/ch-en/ch-en",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "自定义nav和tabbar",
+          "pathName": "subpackagesA/custom/custom",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "3d轮播",
+          "pathName": "subpackagesA/swiper3d/swiper3d",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 17,
+          "name": "测试页面",
+          "pathName": "pages/pages-list/test/test",
+          "query": "",
+          "scene": 1011
+        },
+        {
+          "id": 18,
+          "name": "手写签名",
+          "pathName": "subpackagesA/handwriting/handwriting",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "机器人",
+          "pathName": "subpackagesA/robot/robot",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "全景",
+          "pathName": "subpackagesA/panorama/panorama",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "单地图",
+          "pathName": "pages/maps/maps",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "图片裁剪",
+          "pathName": "subpackagesA/cropper/cropper",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "bar",
+          "pathName": "subpackagesA/wx-charts/bar/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "刮刮乐",
+          "pathName": "subpackagesA/prize/scrape/scrape",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "图表",
+          "pathName": "subpackagesA/wx-charts/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "测试2",
+          "pathName": "subpackagesA/test/test2",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "滑动删除",
+          "pathName": "subpackagesA/sliding-del/sliding-del",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "抛物线动画",
+          "pathName": "subpackagesA/parabola/parabola",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "授权",
+          "pathName": "subpackagesA/authorize/authorize",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "索引列表",
+          "pathName": "subpackagesA/index-list/index-list",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "地图-纯净版",
+          "pathName": "subpackagesA/map/maps/maps",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 32,
+          "name": "subpackagesA/live/index",
+          "pathName": "subpackagesA/live/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "即时聊天--腾讯云IM",
+          "pathName": "subpackagesA/chat/txim/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "即时聊天--对话详情",
+          "pathName": "subpackagesA/chat/txim/main/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "直播录制",
+          "pathName": "subpackagesA/live/live-dev/live-pusher",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "直播播放",
+          "pathName": "subpackagesA/live/live-dev/live-play",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "直播目录",
+          "pathName": "subpackagesA/live/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "直播连麦",
+          "pathName": "subpackagesA/live/live-room/live-room",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "多滑块",
+          "pathName": "subpackagesA/slider/slider",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 40,
+          "name": "拖拽",
+          "pathName": "subpackagesA/move/move",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "滑动事件",
+          "pathName": "subpackagesA/touch-event/touch-event",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "老虎机",
+          "pathName": "subpackagesA/prize/tiger/tiger",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "拖拽",
+          "pathName": "subpackagesA/move/move",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "播放音效",
+          "pathName": "subpackagesA/audio/audio",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 45,
+          "name": "状态管理",
+          "pathName": "subpackagesA/wxministore/wxministore",
+          "query": "code=1122334455",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "微信步数",
+          "pathName": "subpackagesA/werun/werun",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "获取头像昵称",
+          "pathName": "subpackagesA/authorize/authorize",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "获取手机号",
+          "pathName": "subpackagesA/get-phone/get-phone",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "购物车",
+          "pathName": "subpackagesB/shop/cart/cart",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "圆形进度条",
+          "pathName": "subpackagesA/circle/circle",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "数字滚动",
+          "pathName": "subpackagesA/countUp/countUp",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 52,
+          "name": "订单管理",
+          "pathName": "subpackagesB/shop/order/order",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "html解析",
+          "pathName": "subpackagesA/html/html",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "我的日历",
+          "pathName": "subpackagesA/calendar/my-calendar/my-calendar",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "多人音视频对话",
+          "pathName": "subpackagesA/live/voip-room/voip-room",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "表单验证",
+          "pathName": "subpackagesA/wx-validate/wx-validate",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "授权",
+          "pathName": "subpackagesA/authorize/authorize",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "双向滑块",
+          "pathName": "subpackagesA/slider/slider",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 59,
+          "name": "转盘抽奖",
+          "pathName": "subpackagesA/prize/disk/disk",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "九宫格",
+          "pathName": "subpackagesA/prize/horse/horse",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "转盘盘转",
+          "pathName": "subpackagesA/prize/disks/disks",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "测试页面",
+          "pathName": "pages/pages-list/test/test",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "嵌入h5",
+          "pathName": "subpackagesA/webview/webview",
+          "scene": null
+        }
+      ]
+    }
+  }
 }

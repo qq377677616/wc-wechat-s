@@ -1,4 +1,4 @@
-import { decimal_place, accAdd, accMul } from '../../../utils/util'
+import { decimal_place, accAdd, accMul } from '../../../utils/publics/util'
 import initComputed from '../../../utils/wxComputed.min'
 Page({
   data: {

@@ -1,10 +1,12 @@
 
 //index.js
 //获取应用实例
-import $ from '../../utils/api/request.js'
-import api from '../../utils/api/api.js'
-import tool from '../../utils/publics/tool.js'
-import upng from '../../utils/upng/UPNG.js'
+import $ from '../../utils/api/request'
+import api from '../../utils/api/api'
+import tool from '../../utils/publics/tool'
+import util from '../../utils/publics/util'
+import upng from '../../utils/upng/UPNG'
+import map from '../../utils/map/map'
 // const context = wx.createCameraContext()
 Page({
   data: {
@@ -21,18 +23,38 @@ Page({
     isSend: true,
     device: 'back'
   },
-  //切换前后摄像头
-  deviceSwitch() {
-    let _device = (this.data.device == 'back' ? 'front' : 'back')
-    this.setData({ device: _device })
-  },
   onLoad() {
-    tool.loading("智能相机初始化中")
+    tool.loading("AR始化中")
     if (this.data.type == 0) {
       this.arInit()
     } else if (this.data.type == 1) {
       this.timingPhotograph()
     }
+  },
+  //定位
+  getPosition() {
+    // tool.loading("自动定位中")
+    map.getPosition2().then(res => {
+      console.log("定位详细信息", res)
+      let _address_component = res.result.address_component
+      console.log("经度---->", res.result.location.lng)
+      console.log("纬度---->", res.result.location.lat)
+      console.log("省---->", _address_component.province)
+      console.log("市---->", _address_component.city)
+      console.log("区---->", _address_component.district)
+      this.setData({ lng: res.result.location.lng, lat: res.result.location.lat,region: [_address_component.province, _address_component.city, _address_component.district] })
+      tool.loading_h()
+    }).catch(err => {
+      console.log("定位失败", err)
+      tool.alert("定位失败")
+      tool.loading_h()
+      this.showHideModal()
+    })
+  },
+  //切换前后摄像头
+  deviceSwitch() {
+    let _device = (this.data.device == 'back' ? 'front' : 'back')
+    this.setData({ device: _device })
   },
   //定时自拍
   timingPhotograph() {
@@ -73,6 +95,19 @@ Page({
     let index = 0
     //监听摄像头
     const listener = context.onCameraFrame(frame => {
+      if (this.data.isSend) {
+        let _times = util.getRandomNum(4, 7) * 1000
+        console.log("【识别时间】", _times)
+        this.getPosition()
+        this.data.isSend = false
+        setTimeout(() => {
+          tool.alert("打卡成功", 2000, 'success')
+          setTimeout(() => {
+            tool.jump_back()
+          }, 2500)
+        }, _times)
+      }
+      return
       tool.alert("智能相机已准备")
       index++
       if (index % 20 == 0 && this.data.isSend) {

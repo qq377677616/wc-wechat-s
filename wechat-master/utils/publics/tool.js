@@ -356,7 +356,7 @@ const canvasImg = options => {
           let _wrap = _textList[i].wrap
           let _h = _textList[i].textY
           let _string = _textList[i].string
-          if ((_textList[i].string.length > _textList[i].wrap) && !_textList[i].isWrap) {
+          if ((_textList[i].string.length > _wrap) && !_textList[i].isWrap) {
             let _arrText = []
             _arrText = [(_textList[i].string).replace(/\s+/g,"")]
             let _x = 0
@@ -367,7 +367,7 @@ const canvasImg = options => {
               var str = ''
               var nums = 0
               for (var k = 0; k <= _arrText[x].length; k++) {
-                if (nums < _textList[i].wrap && !(k == _arrText[x].length)) {
+                if (nums < _wrap && !(k == _arrText[x].length)) {
                   (/[0-9a-ln-z.]/.test(_arrText[x][k])) ? nums += 0.5 : nums++
                   str += _arrText[x][k] 
                 } else {
@@ -375,7 +375,7 @@ const canvasImg = options => {
                   let _item = cloneObj(_textList[i])
                   _item.string = str
                   _item.textY = _h
-                  if (_item.string.length > _textList[i].wrap) _item.isWrap = true
+                  if (_item.string.length > _wrap) _item.isWrap = true
                   _textList.push(_item)
                   _h += _item.lineHeight
                   str = _arrText[x][k]
@@ -393,7 +393,7 @@ const canvasImg = options => {
                 newObj[key] = typeof val === 'object' ? cloneObj(val) : val;
               }
               return newObj;
-            }
+            } 
             _textList.splice(i, 1)
           }
         }
@@ -404,7 +404,7 @@ const canvasImg = options => {
           console.log("ctx.font",  ctx.font)
           // ctx.setFontSize(_curText.fontSize)
           ctx.setFillStyle(_curText.color)
-          ctx.setTextAlign('left')
+          ctx.setTextAlign(_curText.textAlign || 'left')
           ctx.setTextBaseline('top')
           ctx.fillText(_curText.string, _curText.textX, _curText.textY)
           if (_curText.bold) {

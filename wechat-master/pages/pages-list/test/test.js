@@ -4,6 +4,8 @@ import tool from '../../../utils/publics/tool.js'
 import gifshot from '../../../utils/gifshot.min.js'
 import api from '../../../utils/api/api.js'
 import map from '../../../utils/map/map'
+import utils from '../../../utils/publics/util'
+import mta from '../../../utils/mta_analysis'
 // 在页面中定义激励视频广告
 // let videoAd = null
 Page({
@@ -17,35 +19,160 @@ Page({
     curIndexArr: [],
     sequenceListIndex0: 8,
     prevIndex: 0,
-    imgVideoType: 0
+    imgVideoType: 0,
+    markers: [{
+      iconPath: "/resources/others.png",
+      id: 0,
+      latitude: 23.099994,
+      longitude: 113.324520,
+      width: 50,
+      height: 50
+    }],
+    polyline: [{
+      points: [{
+        longitude: 113.3245211,
+        latitude: 23.10229
+      }, {
+        longitude: 113.324520,
+        latitude: 23.21229
+      }],
+      color:"#FF0000DD",
+      width: 2,
+      dottedLine: true
+    }],
+    controls: [{
+      id: 1,
+      iconPath: '/resources/location.png',
+      position: {
+        left: 0,
+        top: 300 - 50,
+        width: 50,
+        height: 50
+      },
+      clickable: true
+    }]
   },
-
+  regionchange(e) {
+    console.log(e.type)
+  },
+  markertap(e) {
+    console.log(e.detail.markerId)
+  },
+  controltap(e) {
+    console.log(e.detail.controlId)
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getVideoData()
-    map.getPosition().then(res => {
-      console.log("定位详细信息", res)
-    }).catch(err => {
-      console.log("定位失败", err)
-      this.logins()
+    wx.enableAlertBeforeUnload({
+      message: "确定要返回？",
+      success: res => { console.log("返回了", res) },
+      fail: res => { console.log("取消返回了", res) }
     })
-    tool.getSystemInfo().then(res => {
-      console.log("res555", res)
-    })
-    this.sequenceInit("sequenceList")//序列帧初始化
-    this.videoPlay(0)
-    console.log("__wxConfig", __wxConfig)
-    tool.getWxConfig().then(res => {
-      console.log("当前小程序信息", res)
-    })
-    setTimeout(() => {
-      this.roundRect(wx.createCanvasContext("myCanvas"), 10, 10, 100, 100, 10)
-    }, 1000)
+    // setTimeout(() => {
+    //   tool.storage("aaa", 333)
+    //   tool.storage("bbb", 444)
+    //   tool.storage("ccc", 555)
+    //   tool.storage("ddd", 666)
+    //   tool.storage("eee", 777)
+    // }, 2000)
+    // setTimeout(() => {
+    //   console.log(tool.storage())
+    //   console.log(tool.storage("aaa"))
+    // }, 4000)
+    // setTimeout(() => {
+    //   tool.storage("#bbb")
+    // }, 6000)
+    // setTimeout(() => {
+    //   tool.storage("#ccc")
+    // }, 8000)
+    // setTimeout(() => {
+    //   tool.storage("#")
+    // }, 10000)
+    // this.getVideoData()
+    // console.log("utils", utils.getDate().dateDateTime)
+    // map.getPosition().then(res => {
+    //   console.log("定位详细信息", res)
+    // }).catch(err => {
+    //   console.log("定位失败", err)
+    //   this.logins()
+    // })
+    // tool.getSystemInfo().then(res => {
+    //   console.log("res555", res)
+    // })
+    // this.sequenceInit("sequenceList")//序列帧初始化
+    // this.videoPlay(0)
+    // console.log("__wxConfig", __wxConfig)
+    // tool.getWxConfig().then(res => {
+    //   console.log("当前小程序信息", res)
+    // })
+    // setTimeout(() => {
+    //   this.roundRect(wx.createCanvasContext("myCanvas"), 10, 10, 100, 100, 10)
+    // }, 1000)
     // this.connectWifi()
     // this.getWifiList()
     // this.chooseInvoiceTitle()
+  },
+  saveVideo() {
+    tool.loading("保存中")
+    tool.downloadFile('https://img.vrupup.com/web/szq/images/video_02.mp4').then(res => {
+      console.log("res", res)
+      wx.saveVideoToPhotosAlbum({
+        filePath: res,
+        success (res) {
+          tool.alert("已保存到相册",1500, 1)
+          console.log(res.errMsg)
+        },
+        fail(err) {
+          console.log(err)
+        }
+      })
+    })
+  },
+  getVipCrad() {
+    api.getVipCard().then(({data}) => {
+      console.log("【领取卡券vip】", data)
+      wx.addCard({
+        cardList: [
+          data
+        ],
+        success (res) {
+          console.log(res.cardList) // 卡券添加结果
+        }
+      })
+    })
+  },
+  scan() {
+    wx.scanCode({
+      success (res) {
+        console.log(res)
+      }
+    })
+  },
+  //开启小程序进入前后台时均接收位置消息
+  startLocationUpdateBackground() {
+    // setInterval(() => {
+    //   console.log(555)
+    //   mta.Event.stat("startlocationupdate",{ log: 1, lat: 2 })
+    // }, 2000)
+    // return
+    wx.startLocationUpdateBackground({
+      success: res => {
+        console.log("监听成功", res)
+        wx.onLocationChange(res => {
+          console.log("实时动态位置数据", res)
+          res = {...res, ...{ time: utils.getDate().dateDateTime }}
+          let _locationList = this.data.locationList || []
+          _locationList.unshift(res)
+          mta.Event.stat("startlocationupdate",{ location: `${res.longitude}--${res.latitude}` })
+          this.setData({ locationList: _locationList })
+        })
+      },
+      fail: err => {
+        console.log("监听失败", err)
+      }
+    })
   },
   //打开内置地图
   openLocation() {
@@ -379,8 +506,8 @@ Page({
   },
   goWechat() {
     wx.navigateToMiniProgram({
-      appId: 'wxc573aaec1c22f257',
-      path: 'pages/common/blank-page/index?weappSharePath=pages%2Fhome%2Ffeature%2Findex%3Falias%3DuWNUUZsv5n%26kdt_id%3D46028734',
+      appId: 'wxd45c635d754dbf59',
+      path: 'pages/webview/webview?url=https%3A%2F%2Fdocs.qq.com%2Fscenario%2Frecieve-template.html%3FpackId%3DXHwKXlfnC3gePoU%2FMYoQGMQvuFPEH4TlX4NQ2I%2Frkl1LKQBDCd9Sk8zwuzHK7HTD',
       envVersion: 'release',
       extraData: {
         foo: 'bar'

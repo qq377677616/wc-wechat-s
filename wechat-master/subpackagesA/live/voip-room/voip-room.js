@@ -3,7 +3,7 @@ import util from '../../../utils/publics/util'
 import { login } from '../../../utils/api/login'
 import CryptoJS from '../../../utils/crypto-js'
 import tool from '../../../utils/publics/tool'
-import auth from '../../../utils/publics/authorization'
+import auth from '../../../utils/api/authorization'
 import api from '../../../utils/api/api'
 Page({
 

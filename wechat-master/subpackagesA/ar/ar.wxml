@@ -8,7 +8,11 @@
     <!-- <view bindtap="deviceSwitch" class="deviceSwitch">切换前后摄像头</view> -->
     <!-- <view class="preview-tips" wx:if="{{src}}">AR识别到的内容：</view> -->
     <!-- <cover-image mode="widthFix" wx:if="{{src}}" src="{{src}}" style="width: {{imgw}}; height: {{imgh}};display:block;"></cover-image> -->
-    <image mode="widthFix" wx:if="{{src}}" src="{{src}}"></image>
+    <view style="text-align:center;padding-top:100px;line-height:2;">
+      <view wx:if="{{lng}}">经度：{{lng}}--纬度：{{lat}}</view>
+      <view>{{region}}</view>
+    </view>
+    <!-- <image mode="widthFix" wx:if="{{src}}" src="{{src}}"></image>
     <cover-view class="times" wx:if="{{isInit && !photographOk}}">{{times}}</cover-view>
     <view class="img-list" wx:if="{{imgList.length > 0}}">
       <scroll-view scroll-x>
@@ -16,6 +20,6 @@
           <image wx:for="{{imgList}}" src="{{item}}" mode="widthFix"></image>
         </view>
       </scroll-view>
-    </view>
+    </view> -->
   </view>
 </view>

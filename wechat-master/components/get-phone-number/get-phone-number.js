@@ -1,7 +1,8 @@
 // components/getPhoneNumber/getPhoneNumber.js
-const gets = require('../../utils/publics/authorization.js')
-const api = require('../../utils/api/api.js')
-const tool = require('../../utils/publics/tool')
+import gets from '../../utils/api/authorization'
+import api from '../../utils/api/api'
+import tool from '../../utils/publics/tool'
+
 Component({
   /**
    * 组件的属性列表
@@ -22,7 +23,7 @@ Component({
     isShow: false
   },
   ready() {
-    if (!wx.getStorageSync('userInfo').phone) {
+    if (!wx.getStorageSync('userInfo').mobile) {
       // this.showHideModal()
       this.myLogin()
     }
@@ -78,13 +79,13 @@ Component({
         session_key: encodeURIComponent(this.data.session_key),
         iv: encodeURIComponent(this.data.iv)
       }
-      api.getWeRunData(_data).then(res => {
+      api.getPhoneNumber(_data).then(res => {
         if (res.data.code == 1) {
           let userInfo = wx.getStorageSync("userInfo") || {}
-          userInfo.phone = res.data.data.phoneNumber
+          userInfo.mobile = res.data.data.mobile
           getApp().store.setState({ userInfo })
           wx.setStorageSync("userInfo", userInfo)
-          this.triggerEvent("getPhoneCallback", { status: true, phone: res.data.data })
+          this.triggerEvent("getPhoneCallback", { status: true, mobile: res.data.data })
         } else {
           console.log("【手机号解密失败】")
         }

@@ -121,7 +121,8 @@
     "downloadFile": 10000
   },
   "requiredBackgroundModes": [
-    "audio"
+    "audio",
+    "location"
   ],
   "useExtendedLib": {
     "kbone": true,

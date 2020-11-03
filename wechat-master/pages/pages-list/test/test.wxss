@@ -6,7 +6,7 @@ swiper-item .box{position: absolute;left:0;top:0;z-index: 10000;}
 .currency{position:absolute;top:48vh;right:12rpx;z-index: 100;width:140rpx;height:140rpx;}
 .currency .image{position: absolute;width:100%;height:100%;left:0;top:0;opacity: 0;}
 .currency .image.on{opacity: 1;}
-/* .official-account{width:100vw;height:100vh;} */
+.official-account{width:100vw;height:20vh;background-color: green;}
 .li{width:200rpx;height:60rpx;text-align: center;border: 1rpx solid #aaa;margin:40rpx auto;line-height: 60rpx;border-radius: 10rpx;}
 .icon {
        width: 1em; height: 1em;
@@ -25,3 +25,6 @@ canvas{width:100%;height:500px;}
 .tab .bg{position: absolute;width: 100%;height: 100%;left:0;top:0;background:#e1e1e1;filter:blur(24rpx);}
 .tab image{width:563rpx;height: 94.25rpx;}
 /* video{margin:20px auto;} */
+.locationList{position:fixed;width:100vw;height:100vh;left:0;top:0;z-index:100;background:#fff;}
+.locationList .li{width:80%;height:150rpx;line-height:1.5;}
+video{width:100vw;height:100vh;}

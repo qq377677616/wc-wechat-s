@@ -5,7 +5,7 @@ import tool from '../../utils/publics/tool'
 
 Page({
   data: {
-    indexPageTitle: "小程序开发目录(1.8.1)",//页面标题
+    indexPageTitle: "小程序开发目录(2.0.1)",//页面标题
     contentType: -1,//页面内容类型0为小程序模板内容，1为h5游戏嵌入小程序壳子审核专用内容，当需要h5游戏审核时默认置为-1
     isUseShare: false,//是否不配置全局分享
     jumpList: [//模板列表
@@ -54,9 +54,13 @@ Page({
     ]
   },
   onLoad(options) {
+    wx.showShareMenu({
+      withShareTicket: true,
+      menus: ['shareAppMessage', 'shareTimeline']
+    })
     this.configure()//核弹系统
     //静默登录
-    login.login().then(res => {
+    login.login().then(res => { 
       console.log("【静默登录成功】", res)
       //在这里做页面初始化请求操作，可保证本地缓存中有用户的openid/userId
     }).catch(err => {

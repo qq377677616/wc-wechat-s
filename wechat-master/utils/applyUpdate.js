@@ -8,6 +8,7 @@ export default () => {
       if (res.hasUpdate) {
         updateManager.onUpdateReady(() => {
           tool.showModal('更新提示', '新版本已经准备好，请点击下方按钮重启应用', false, '重启,#81D741').then(() => {
+            wx.clearStorageSync()
             updateManager.applyUpdate()
           })
         })

@@ -1,7 +1,7 @@
 // pages/receive_card/receive_card.js
-import tool from '../../utils/publics/tool.js'
-import map from '../../utils/map/map.js'
-import auth from '../../utils/publics/authorization.js'
+import tool from '../../utils/publics/tool'
+import map from '../../utils/map/map'
+import auth from '../../utils/api/authorization'
 Page({
 
   /**

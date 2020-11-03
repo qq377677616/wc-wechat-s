@@ -1,22 +1,23 @@
 import config from '../../config'
-import auth from '../publics/authorization'
+import auth from './authorization'
 import api from './api'
 import tool from '../publics/tool'
 //登录
-const login = () => {
+const login = (get_session_key = 0) => {
   updateUserInfo()
   return new Promise((resolve, reject) => {
-    let _userInfo = wx.getStorageSync("userInfo") || {}
     tool.loading("")
-    auth.login().then(res => {
-      return res
+    auth.login().then(res => { 
+      return res 
     }).then(res => {
       return api.getOpenid({ js_code: res.code })
     }).then(res => {
-      console.log("resres", res)
+      console.log("【静默登录返回】", res)
       tool.loading_h()
+      if (get_session_key == 1) resolve({ session_key: res.data.data.session_key })
       let userInfo = wx.getStorageSync("userInfo") || {}
-      Object.assign(userInfo, res.data.data)
+      Object.assign(userInfo, res.data.data.user_info)
+      getApp().store.setState({ userInfo })
       wx.setStorageSync("userInfo", userInfo)
       resolve(res.data.data)
     }).catch(err => {
@@ -25,14 +26,13 @@ const login = () => {
     })
   })
 }
-
 //授权
 const authorize = e => {
   return new Promise((resolve, reject) => {
     tool.loading("授权中")
-    const userInfo = e.detail.userInfo
-    if (userInfo) {
-      submitUserInfo(userInfo).then(res => {
+    const _userInfo = e.detail.userInfo
+    if (_userInfo) {
+      submitUserInfo(_userInfo).then(res => {
         let userInfo = wx.getStorageSync("userInfo") || {}
         Object.assign(userInfo, res.data.data )
         getApp().store.setState({ userInfo })
@@ -73,7 +73,7 @@ const submitUserInfo = (userInfo) => {
     api.uploadUserInfo({
       openid: wx.getStorageSync("userInfo").openid,
       nickname: userInfo.nickName,
-      headimg: userInfo.avatarUrl
+      avatar: userInfo.avatarUrl
     }).then(res => {
       resolve(res)
     }).catch(err => {

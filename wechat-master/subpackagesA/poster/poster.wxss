@@ -1,9 +1,9 @@
 /* pages/pages-list/poster/poster.wxss */
 /* canvas-mask */
-@font-face {
+/* @font-face {
   font-family:'ygyxsziti2';
   src:url('https://game.flyh5.cn/resources/game/wechat/szq/fonts/ygyxsziti2.0.ttf') format('truetype');
-}
+} */
 .canvas-mask{position: fixed;left: 0;top: 0;z-index:999;width: 100%;height: 100%; background-color: rgba(0,0,0,0.8);}
 .canvas-mask .content{margin: auto;width:574rpx;transform-style:preserve-3d;perspective:2000rpx;}
 .canvas-mask .content .myCanvas{width:100%;height:1022rpx;background-color: #fff;position: relative;z-index: 500;}

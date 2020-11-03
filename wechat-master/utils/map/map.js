@@ -10,7 +10,7 @@ const getPosition = () => {
     wx.getLocation({
       type: 'wgs84',
       success(res) {
-        resolve(res)
+        resolve(res) 
       },
       fail(err) {
         reject(err)

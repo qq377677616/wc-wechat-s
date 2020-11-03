@@ -9,14 +9,14 @@ export default {
   //核弹系统配置 
   configure: (data, url = `https://game.flyh5.cn/game/wx7c3ed56f7f792d84/data_system/api.php?a=web&code=${config.CONFIGURE}`) => { return myRequest(data, url, 'get', true, true) },
   //获取openid
-  getOpenid: (data, url = 'https://game.vrupup.com/sanguo/yangyuntian/applet/meichang/public/api/oauth/get_session_key') => { return myRequest(data, url, 'post', true, true) },
+  getOpenid: (data, url = 'api/oauth/oauth_login') => { return myRequest(data, url, 'post', false, true) },
   //上传头像昵称
-  uploadUserInfo: (data, url = '/api/oauth/perfect_info') => { return myRequest(data, url) },
+  uploadUserInfo: (data, url = 'api/oauth/perfect_info') => { return myRequest(data, url, 'post', false, true) },
+  //手机号解密
+  getPhoneNumber: (data, url = 'api/oauth/de_mobile') => { return myRequest(data, url, 'post', false) },
   /**
    ****项目接口
    */
-  //手机号解密
-  getPhoneNumber: (data, url = 'https://game.vrupup.com/sanguo/yangyuntian/applet/meichang/public/api/oauth/de_mobile') => { return myRequest(data, url, 'post', true) },
   //微信步数解密
   getWeRunData: (data, url = 'https://game.vrupup.com/sanguo/yangyuntian/applet/meichang/public//api/oauth/de_bushu') => { return myRequest(data, url, 'post', true) },
   //上传base64图片
@@ -25,4 +25,6 @@ export default {
   requestSubscribeMessage: (data, url = '/api/message/send_remind_msg') => { return myRequest(data, url) },
   //获取签名
   getJoinVoIPChatSignature: (data, url = '/api/oauth/encrypt') => { return myRequest(data, url) },
+  //领取会员卡到微信卡包
+  getVipCard: (data, url = 'https://game.vrupup.com/sanguo/yangyuntian/applet/good100/public/api/card/get_card') => { return myRequest(data, url, 'post', true) },
 }

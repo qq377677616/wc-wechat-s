@@ -1,6 +1,6 @@
 // pages/pages-list/poster/poster.js
 import tool from '../../utils/publics/tool'
-import auth from '../../utils/publics/authorization'
+import auth from '../../utils/api/authorization'
 import util from '../../utils/publics/util'
 Page({
 
@@ -8,7 +8,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    showModalOption: {  
+    showModalOption: {
       isShow: false,
       type: 0,
       title: "访问手机相册",
@@ -24,20 +24,13 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-    this.setData({ userInfo: wx.getStorageSync("userInfo") || {} })
-    if (this.data.userInfo.nickName) { 
-      this.getSharePoster()
-    } else {
-      tool.showModal("未授权", "系统检测到您未授权，请先去授权再来生成海报", false, "去授权,red").then(res => {
-        tool.jump_back()
-      })
-    }
+  onLoad(options) {
+    // this.setData({ userInfo: wx.getStorageSync("userInfo") || {} })
+    this.getSharePoster()
     tool.getSystemInfo().then(res => {
       this.setData({ isIos: res.model.includes("iPhone") ? 1 : 2})
     })
   },
-
   //获取分享海报
   getSharePoster() {
     var _this = this
@@ -52,14 +45,14 @@ Page({
       canvasId: 'myCanvas', 
       canvasSize: '574*1022',
       imgList: [
-        { url: "https://game.flyh5.cn/resources/game/wechat/szq/images/img_04.jpg", drawW: 574, drawH: 726, imgX: 0, imgY: 0 },
-        { url: _this.data.userInfo.avatarUrl, drawW: 78, drawH: 78, imgX: 26, imgY: 788, isRadius: true },
+        { url: "https://img.vrupup.com/web/szq/images/poster_02.png", drawW: 574, drawH: 1022, imgX: 0, imgY: 0 },
         { url: "https://game.flyh5.cn/resources/game/wechat/xw/rc_qc/assets/district/code.jpg", drawW: 91, drawH: 91, imgX: 452, imgY: 876 }
       ],
       textList: [
-        { string: this.data.userInfo.nickName, color: '#373737', fontSize: '23', fontFamily: 'Arial', bold: false, textX: 117, textY: 797 },
-        { string: '群体皮内陷，孔小，直径约 1.5 mm。共骨有小突起列纵纹。生列呈活1.5 mm群体列列常呈呈色或棕褐色结尾了吧。', color: '#a0a3a7', fontSize: '20', fontFamily: 'ygyxsziti2', fontStyle: 'italic',  bold: false, textX: 116, textY: 833, wrap: 10, lineHeight: 30 },
-        { string: '长按识别二维码，马上进入体验', color: '#9fa0a0', fontSize: '13', fontFamily: 'Arial', bold: false, textX: 364, textY: 977 }
+        { string: "中国太平人寿", color: '#FFEEE9', fontSize: '23', fontFamily: 'Arial', textAlign: 'center', bold: false, textX: 287, textY: 340 },
+        { string: "这是一些文字可以居中", color: '#FF9B5F', fontSize: '23', fontFamily: 'Arial', textAlign: 'center', bold: false, textX: 287, textY: 500 },
+        { string: '一份份捐赠如星火燎原之势，点亮孩子的希望，爱润童心，助力成长！特发此证，感恩您的爱心义举！', color: '#60294E', fontSize: '22', fontFamily: 'Arial', fontStyle: 'italic',  bold: false, textX: 130, textY: 545, wrap: 15, lineHeight: 34 }, 
+        { string: '长按识别二维码，马上进入体验', color: '#fff', fontSize: '13', fontFamily: 'Arial', bold: false, textX: 364, textY: 977 }
       ]
     }).then(res => {
       console.log("res", res)
@@ -78,12 +71,12 @@ Page({
   //判断是否授权访问手机相册
   isSettingScope() {
     let _self = this
-    auth.isSettingScope("scope.writePhotosAlbum", res => {
+    auth.isSettingScope("scope.writePhotosAlbum").then(res => {
       console.log("res", res)
       if (res.status == 0) {
         tool.loading_h()
         _self.showHideModal()
-      } else if (res.status == 1 || res.status == 2) {
+      } else {
         _self.saveImageToPhotosAlbum(this.data.posterImgUrl)
       }
     })
@@ -126,5 +119,5 @@ Page({
     let _showModalOption = this.data.showModalOption
     _showModalOption.isShow = !_showModalOption.isShow
     this.setData({ showModalOption: _showModalOption })
-  },
+  }
 })

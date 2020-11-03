@@ -3,9 +3,9 @@ export default {
   MTAAPPID: 500689212,
   //核弹系统码
   CONFIGURE: "tJ4GXH2P2luArDVm0u9",
-  //接口请求路径
-  REQUESTURL: 'https://game.flyh5.cn/game/wx7c3ed56f7f792d84/yyt_quan/public/index.php',
-  //线上cdn资源路径
+  //接口请求url
+  REQUESTURL: 'https://game.vrupup.com/sanguo/yangyuntian/applet/wctest/public/',
+  //线上cdn资源url
   ASSETSURL: 'https://img.vrupup.com/web/cdn/szq/',
   //背景音乐配置  
   BGMCONFIG: {

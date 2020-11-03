@@ -12,7 +12,7 @@ Page({
   },
   //点击开始授权
   getUserInfo() {
-    if (!getApp().store.getState().userInfo.nickName) this.isShowGetUserInfo()
+    if (!getApp().store.getState().userInfo.nickname) this.isShowGetUserInfo()
   }, 
   //获取用户信息_回调
   bindgetUserInfoCallback(e) {

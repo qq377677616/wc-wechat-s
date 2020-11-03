@@ -5,7 +5,7 @@ import login from '../../utils/api/login'
 Component({
   /**
    * 组件的属性列表
-   */
+   */ 
   properties: {
     curPage: {
       type: Object,
@@ -36,13 +36,13 @@ Component({
     },
     //获取用户信息
     bindgetuserinfo(e) {
+      console.log("e", e)
       if (!e.detail.userInfo) {
         console.log("【拒绝了授权】")
         this.triggerEvent("getUserInfoCallback", { status: false })
         return
       }
       login.authorize(e, this).then(res => {
-        console.log("【提交用户用户信息返回】", res)
         this.triggerEvent("getUserInfoCallback", { status: true })
       })
     }

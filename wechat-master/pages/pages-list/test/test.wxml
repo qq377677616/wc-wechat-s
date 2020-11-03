@@ -33,9 +33,9 @@
 <video src="http://video.szjspx.com.cn/resource/bjyy/2019/zhongxiaoyou/tongshi/xgjdhzdmy/xgjdhzdmy_01_01.mp4"></video> -->
 <view>
   <!-- 公众号组件 -->
-  <!-- <view class="official-box">
+  <view class="official-box">
     <official-account class="official-account"></official-account>
-  </view> -->
+  </view>
   <view>
     <!-- <video src="http://ivi.bupt.edu.cn/hls/cctv1hd.m3u8"></video> -->
     <!-- <video src="https://93678.liveplay.myqcloud.com/live/songziquan.m3u8"></video> -->
@@ -47,6 +47,12 @@
   <!-- <canvas canvas-id="myCanvas" id="myCanvas"></canvas> -->
   <!-- <video style="width:100vw;height:30vh;margin-top:40rpx;" src="http://game.flyh5.cn/resources/game/wechat/szq/images/video_04.mp4" objectFit="cover"></video>
   <video style="width:100vw;height:30vh;margin-top:40rpx;" src="https://vrupup.com/resources/web/yls/webview/video_02.mp4" objectFit="cover"></video> -->
+  <!-- <video src="https://v9.cdn66.cn/hls/10406/1/1/1.m3u8" autoplay></video> -->
+  <!-- <map id="map" longitude="112.989688" latitude="28.183803" scale="14" subkey="GW3BZ-NMN6J-JSEFT-FTC6R-F7DA3-Z3FVJ" controls="{{controls}}" bindcontroltap="controltap" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="width: 100vw; height: 300vh;"></map> -->
+  <view class="li" bindtap="saveVideo">保存视频</view>
+  <view class="li" bindtap="getVipCrad">会员卡卡包</view>
+  <view class="li" bindtap="scan">扫一扫</view>
+  <view class="li" bindtap="startLocationUpdateBackground">监听位置</view>
   <view class="li" bindtap="openLocation">打开地图</view>
   <view class="li" bindtap="chooseVideo">录制视频</view>
   <view class="li" bindtap="chooseAddressMap">地图选择</view>
@@ -69,8 +75,21 @@
   <button class="li" session-from="来自小程序模板" open-type="contact" send-message-title="张三" show-message-card="{{true}}" send-message-path="/pages/pages-list/ar/ar" send-message-img="https://res.zhangu365.com/fodder/img/2019/0805/1358/2761d3adbf5f811495bb2d5e1e61f699.png?x-oss-process=image/resize,w_250">进入客服会话</button>
   <ad unit-id="adunit-1c1f3a26e877a68e"></ad>
   <view class="li" bindtap="goTest2">进入下一个广告页</view>
-  <mp-toptips msg="这是一个错误提示" type="error" show="这是一个错误提示"></mp-toptips>
+  <!-- <mp-toptips msg="这是一个错误提示" type="error" show="这是一个错误提示"></mp-toptips> -->
+  <view class="locationList" wx:if="{{locationList.length > 0}}">
+    <scroll-view scroll-y>
+      <view class="li flex-cen" wx:for="{{locationList}}">
+        <view style="padding:0 20rpx;">{{locationList.length - index}}</view>
+        <view>
+          <view>时间：{{item.time}}</view>
+          <view>经度：{{item.longitude}}</view>
+          <view>纬度：{{item.latitude}}</view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
 </view>
+<!-- <web-view src="https://vrupup.com/resources/web/szq/live/index.html"></web-view> -->
 <!-- <web-view src="https://game.flyh5.cn/resources/game/wechat/szq/index.html"></web-view> -->
 <!-- 自定义导航 -->
 <!-- <my-tabbar bindmytab="bindmytab"></my-tabbar> -->

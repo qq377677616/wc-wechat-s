@@ -1,7 +1,7 @@
 // const app = getApp()
 import mta from '../mta_analysis'
 import config from '../../config'
-import tool from './tool'
+import tool from '../publics/tool'
 //腾讯统计代码
 const setMta = appId => {
   let option = {
@@ -43,37 +43,23 @@ const isCheckSession = callback => {
   })
 }
 /*查询用户是否否授权了 scope*/
-const isSettingScope = (scope, callback) => {
-  return new Promise(reject => {
+const isSettingScope = scope => {
+  return new Promise(resolve => {
     wx.getSetting({
       success(res) {
         if (res.authSetting[scope] === false ) {
-          reject({ status: 0, message: "用户已拒绝过授权" })
+          resolve({ status: 0, message: "用户已拒绝过授权" })
         } else if (res.authSetting[scope] === true ) {
-          reject({ status: 1, message: "用户已授权" })
-        } else {
-          reject({ status: -1, message: "用户未进行过此授权" })
+          resolve({ status: 1, message: "用户已授权" })
+        } else if (res.authSetting[scope] === undefined){
+          resolve({ status: -1, message: "用户未进行过此授权" })
         }
       }
     })
   })
 }
-/*判断是否授权用户信息*/
-const isSetting = callBack => {
-  wx.getSetting({
-    success: res => {
-      //授过权
-      if (res.authSetting['scope.userInfo']) {
-        callBack(true)
-        //未授权  
-      } else {
-        callBack(false)
-      }
-    }
-  })
-}
 //发起授权
-const authorize = (scope)=> {
+const authorize = scope=> {
   return new Promise((reject, resolve) => {
     wx.authorize({
       scope: scope,
@@ -101,7 +87,6 @@ module.exports = {
   isCheckSession,
   isSettingScope,
   login,
-  isSetting,
   authorize,
   openSetting
 }

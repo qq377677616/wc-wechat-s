@@ -3,7 +3,7 @@ import tool from '../../../utils/publics/tool'
 import touch from '../../../utils/sliding-del'
 import watch from '../../../utils/wxWatch'
 import WxCountUp from '../../../utils/countUp.min.js'
-import { decimal_place, accAdd, accMul } from '../../../utils/util'
+import { decimal_place, accAdd, accMul } from '../../../utils/publics/util'
 
 Page({
   data: {

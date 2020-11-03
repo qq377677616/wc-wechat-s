@@ -1,6 +1,6 @@
 import applyUpdate from './utils/applyUpdate'
 import store from './utils/store/index'
-import { setMta } from './utils/publics/authorization'
+import { setMta } from './utils/api/authorization'
 import { backgroundAudio } from './utils/backgroundAudio'
 import robotInit from './utils/robot-init'
 import setAllShare from './utils/setAllShare'

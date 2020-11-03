@@ -1,12 +1,8 @@
 // 解析链接中的参数
 let getQueryString = (url, name) => {
-  console.log("url = " + url)
-  console.log("name = " + name)
   var reg = new RegExp('(^|&|/?)' + name + '=([^&|/?]*)(&|/?|$)', 'i')
   var r = url.substr(1).match(reg)
   if (r != null) {
-    console.log("r = " + r)
-    console.log("r[2] = " + r[2])
     return r[2]
   }
   return null
@@ -118,6 +114,15 @@ const decimal_place = (x, n = 2, math = 'round') => {
     s_x += '0'
   }
   return s_x
+}
+/*两个数组之间的交集、差集、补集、并集 */
+const getArrGather = (arr1, arr2) => {
+  let sa = new Set(arr1), sb = new Set(arr2)
+  let intersect = arr1.filter(x => sb.has(x))// 交集
+  let minus = arr1.filter(x => !sb.has(x))// 差集
+  let complement = [...arr1.filter(x => !sb.has(x)), ...arr2.filter(x => !sa.has(x))]// 补集
+  let unionSet = Array.from(new Set([...arr1, ...arr2]))// 并集
+  return { intersect, minus, complement, unionSet }
 }
 //生成随机字符串
 const randomString = len => {
@@ -341,6 +346,7 @@ module.exports = {
   timestampToTime,//时间戳转换时间
   minutesAndSeconds,//倒计时
   decimal_place,//保留固定小数不足添0
+  getArrGather,//两个数组之间的交集、差集、补集、并集
   randomString,//生成随机字符串
   getRandomNum,//生成随机数
   shake_one_shake,//摇一摇

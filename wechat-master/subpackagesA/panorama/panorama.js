@@ -4,22 +4,23 @@ const wxPano = requirePlugin("wxPano")
 Page({
   data: {
     krpanoList: [
-      'https://game.flyh5.cn/resources/game/wechat/szq/krpano/krpano_01.jpg',
-      'https://game.flyh5.cn/resources/game/wechat/szq/krpano/krpano_02.jpg',
-      'https://game.flyh5.cn/resources/game/wechat/szq/krpano/krpano_03.jpg',
-      'https://game.flyh5.cn/resources/game/wechat/szq/krpano/krpano_04.jpg'
+      'https://img.vrupup.com/web/szq/images/krpano_01.jpg',
+      'https://img.vrupup.com/web/szq/images/krpano_02.jpg',
+      'https://img.vrupup.com/web/szq/images/krpano_03.jpg',
+      'https://img.vrupup.com/web/szq/images/krpano_04.jpg'
     ]
   },
-  onReady: function () {
+  onReady() {
     tool.loading("全景加载中")
-    wxPano.onReady = function () { //wxPano初始化完成后会触发此事件
+    wxPano.onReady = () => { //wxPano初始化完成后会触发此事件
       tool.loading_h()
       tool.alert("全景加载成功")
     }
     wxPano.config({
       panolist: [{
         name: "xindamen",
-        src: this.data.krpanoList[Math.floor(Math.random() * 4)],
+        // src: this.data.krpanoList[Math.floor(Math.random() * 4)],
+        src: 'https://img.vrupup.com/web/szq/images/krpano_01.jpg',
         infospots: [ //信息标记
           {
             type: "modal",
@@ -29,7 +30,12 @@ Page({
             },
             position: { x: 0.092, y: 0.434 },
             size: 1,
-            icon: "info"
+            icon: "info",
+            bindcamera:true,
+            bindsize: 0.5,
+            bindicon: "info",
+            bindopacity:0.75,
+            bindposition: { x: 0.5, y: 0.75 }
           },
           {
             type: "page",
@@ -47,8 +53,9 @@ Page({
           }
         ]
       }],
-      entrypanoname: "xindamen"
-    })
+      request:wx.request,
+      loader:"GLLoader",
+      entryname:"xindamen"})
   },
   covertap: function () {
     var panoId = wxPano.addPano({
@@ -76,18 +83,18 @@ Page({
       entryname: "dongdamen"
     });
   },
-  setCameraLookAt: function () {
+  setCameraLookAt() {
     wxPano.setCameraLookAt({
       x: 0.5, y: 0.5
     })
   },
-  enableTouch: function () {
+  enableTouch() {
     wxPano.enableTouch()
   },
-  disableTouch: function () {
+  disableTouch() {
     wxPano.disableTouch()
   },
-  getPanoInfo: function () {
+  getPanoInfo() {
     console.log(wxPano.getPanoInfo())
   }
 })
