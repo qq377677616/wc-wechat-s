@@ -1,9 +1,9 @@
-import applyUpdate from './utils/applyUpdate'
+import applyUpdate from './utils/apply-update'
 import store from './utils/store/index'
 import { setMta } from './utils/api/authorization'
-import { backgroundAudio } from './utils/backgroundAudio'
+import { backgroundAudio } from './utils/background-audio'
 import robotInit from './utils/robot-init'
-import setAllShare from './utils/setAllShare'
+import setAllShare from './utils/set-all-share'
 App({
   onLaunch(opation) {
     applyUpdate()//自动更新小程序

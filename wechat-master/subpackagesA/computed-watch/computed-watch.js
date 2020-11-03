@@ -1,6 +1,6 @@
 // pages/pages-list/computed-watch/computed-watch.js
-import initComputed from '../../utils/wxComputed.min'
-import watch from '../../utils/wxWatch'
+import initComputed from '../../utils/computed.min'
+import watch from '../../utils/watch'
 Page({
 
   /**

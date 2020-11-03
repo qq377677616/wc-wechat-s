@@ -57,7 +57,7 @@
         "chat/index",
         "chat/txim/index",
         "chat/txim/main/index",
-        "countUp/countUp",
+        "count-up/count-up",
         "touch-event/touch-event",
         "audio/audio",
         "move/move",

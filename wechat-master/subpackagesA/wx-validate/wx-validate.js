@@ -1,5 +1,5 @@
 // subpackagesA/wx-validate/wx-validate.js
-import WxValidate from '../../utils/wxValidate'
+import WxValidate from '../../utils/validate'
 import tool from '../../utils/publics/tool'
 Page({
   data: {

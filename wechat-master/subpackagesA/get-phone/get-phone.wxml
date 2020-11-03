@@ -1,7 +1,9 @@
 <!--pages/pages-list/get-phone/get-phone.wxml-->
 <view class="body flex-cen">
-  <view>您的手机号：</view>
-  <view class="h4" bindtap="getPhone">{{$state.userInfo.mobile || '1**********'}}</view>
-  <!-- 获取手机号_授权 -->
-  <getPhoneNumber bindgetPhoneCallback="bindgetPhoneCallback" id="authPhone"></getPhoneNumber>
+  <view class="phone">
+    <view>您的手机号：</view>
+    <view class="h4" bindtap="getPhone">{{$state.userInfo.mobile || '1**********'}}</view>
+    <!-- 获取手机号_授权 -->
+    <getPhoneNumber wx:if="{{!$state.userInfo.mobile}}" bindgetPhoneCallback="bindgetPhoneCallback" id="authPhone"></getPhoneNumber>
+  </view>
 </view>

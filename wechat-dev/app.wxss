@@ -1,0 +1,10 @@
+/**app.wxss**/
+@import "assets/css/animate.min.wxss";
+@import "assets/css/publics.wxss";
+@import "assets/css/font-icon.wxss";
+.body,.container{height:100vh;font-size: 28rpx;}
+.titles{padding:20rpx 40rpx;border:1rpx solid #333;border-radius: 10rpx;}
+.titles2{margin:20rpx 0;border:1rpx solid #666;padding:10rpx 0;width:240rpx;text-align: center;}
+.canvas {width: 100%;height: 200px;}
+.li-item{width:60%;height: 60rpx;line-height: 60rpx;text-align: center;margin:10rpx auto;border: 1rpx solid #666;}
+/* button{width:20%;display: block;margin:10rpx auto;} */

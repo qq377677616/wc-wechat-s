@@ -1,6 +1,7 @@
+import api from './api'
+import apiConfig from './api.config'
 import config from '../../config'
 import auth from './authorization'
-import api from './api'
 import tool from '../publics/tool'
 //登录
 const login = (get_session_key = 0) => {
@@ -10,9 +11,8 @@ const login = (get_session_key = 0) => {
     auth.login().then(res => { 
       return res 
     }).then(res => {
-      return api.getOpenid({ js_code: res.code })
+      return apiConfig.getOpenid({ js_code: res.code })
     }).then(res => {
-      console.log("【静默登录返回】", res)
       tool.loading_h()
       if (get_session_key == 1) resolve({ session_key: res.data.data.session_key })
       let userInfo = wx.getStorageSync("userInfo") || {}
@@ -70,7 +70,7 @@ const updateUserInfo = () => {
 //提交用户头像昵称
 const submitUserInfo = (userInfo) => {
   return new Promise((resolve, reject) => {
-    api.uploadUserInfo({
+    apiConfig.uploadUserInfo({
       openid: wx.getStorageSync("userInfo").openid,
       nickname: userInfo.nickName,
       avatar: userInfo.avatarUrl

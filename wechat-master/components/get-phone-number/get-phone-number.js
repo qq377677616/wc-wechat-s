@@ -1,6 +1,7 @@
 // components/getPhoneNumber/getPhoneNumber.js
-import gets from '../../utils/api/authorization'
 import api from '../../utils/api/api'
+import apiConfig from '../../utils/api/api.config'
+import gets from '../../utils/api/authorization'
 import tool from '../../utils/publics/tool'
 
 Component({
@@ -38,12 +39,8 @@ Component({
     },
     //登录
     myLogin() {
-      // gets.isCheckSession(res => {
-      //   console.log("是否过期", res)
-      // })
-      tool.loading("", true)
       gets.login().then(value => {
-        return api.getOpenid({
+        return apiConfig.getOpenid({
           js_code: value.code
         })
       }).then(value => {
@@ -56,7 +53,6 @@ Component({
         } else {
           tool.loading_h()
           console.log("【服务器异常，请稍后再试】")
-          // this.myLogin()
         }
       })
     },
@@ -71,6 +67,7 @@ Component({
       } else { 
         this.triggerEvent("getPhoneCallback", { status: false })
       }
+      tool.loading_h()
     },
     //解密手机号
     decryptPhone() {
@@ -79,7 +76,7 @@ Component({
         session_key: encodeURIComponent(this.data.session_key),
         iv: encodeURIComponent(this.data.iv)
       }
-      api.getPhoneNumber(_data).then(res => {
+      apiConfig.getPhoneNumber(_data).then(res => {
         if (res.data.code == 1) {
           let userInfo = wx.getStorageSync("userInfo") || {}
           userInfo.mobile = res.data.data.mobile

@@ -24,16 +24,11 @@ Component({
    */
   data: {
     baseurl: new getApp().globalData.ASSETSURL,//图片基本路径
-    isShow: false
   },
   /**
    * 组件的方法列表
    */
   methods: {
-    //显示、隐藏
-    isShow() {
-      this.setData({ isShow: !this.data.isShow })
-    },
     //获取用户信息
     bindgetuserinfo(e) {
       console.log("e", e)
@@ -45,6 +40,7 @@ Component({
       login.authorize(e, this).then(res => {
         this.triggerEvent("getUserInfoCallback", { status: true })
       })
+      tool.loading_h()
     }
   }
 })

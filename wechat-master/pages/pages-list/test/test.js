@@ -5,7 +5,6 @@ import gifshot from '../../../utils/gifshot.min.js'
 import api from '../../../utils/api/api.js'
 import map from '../../../utils/map/map'
 import utils from '../../../utils/publics/util'
-import mta from '../../../utils/mta_analysis'
 // 在页面中定义激励视频广告
 // let videoAd = null
 Page({

@@ -1,5 +1,6 @@
 //index.js
 import api from '../../utils/api/api'
+import apiConfig from '../../utils/api/api.config'
 import login from '../../utils/api/login'
 import tool from '../../utils/publics/tool'
 
@@ -48,7 +49,7 @@ Page({
       { name: "播放音效", url: "/subpackagesA/audio/audio"},
       { name: "表单验证", url: "/subpackagesA/wx-validate/wx-validate"},
       { name: "状态管理", url: "/subpackagesA/wxministore/wxministore"},
-      { name: "数字滚动", url: "/subpackagesA/countUp/countUp"},
+      { name: "数字滚动", url: "/subpackagesA/count-up/count-up"},
       { name: "商城合集", url: "/subpackagesB/shop/index"},
       { name: "测试", url: "/pages/pages-list/test/test"}
     ]
@@ -73,7 +74,7 @@ Page({
       wx.setNavigationBarTitle({ title: this.data.indexPageTitle })
       return
     }
-    api.configure().then(res => {
+    apiConfig.configure().then(res => {
       let _data = JSON.parse(decodeURIComponent(res.data.data.content.info))
       let _val = _data.custom.h5.val
       this.setData({ contentType:  _val})

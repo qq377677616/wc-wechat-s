@@ -1,0 +1,4 @@
+<!--index.wxml-->
+<view>
+  <view class="body posf flex-cen">wechat</view>
+</view>
