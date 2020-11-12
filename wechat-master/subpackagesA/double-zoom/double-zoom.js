@@ -1,5 +1,4 @@
 // subpackagesA/double-zoom/double-zoom.js
-import { touchstartCallback, touchmoveCallback, calcDistance } from '../../utils/double-zoom'
 Page({
 
   /**
