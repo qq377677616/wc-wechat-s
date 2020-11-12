@@ -9,8 +9,8 @@ Page({
     nowIdx: 0,//当前swiper索引
     imgList: [//图片列表
       "https://n.sinaimg.cn/tech/transform/780/w459h321/20200409/770c-iryninw9027188.gif",
-      "http://game.flyh5.cn/resources/game/wechat/szq/images/img_01.png",
-      "http://game.flyh5.cn/resources/game/wechat/szq/images/img_01.png",
+      "https://img.vrupup.com/web/szq/images/img_04.jpg",
+      "https://img.vrupup.com/web/szq/images/img_05.jpg",
     ]
   },
 

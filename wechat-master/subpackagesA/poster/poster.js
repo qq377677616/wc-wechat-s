@@ -44,7 +44,7 @@ Page({
     tool.canvasImg({
       canvasId: 'myCanvas', 
       canvasSize: '574*1022',
-      imgList: [
+      imgList: [ 
         { url: "https://img.vrupup.com/web/szq/images/poster_02.png", drawW: 574, drawH: 1022, imgX: 0, imgY: 0 },
         { url: "https://game.flyh5.cn/resources/game/wechat/xw/rc_qc/assets/district/code.jpg", drawW: 91, drawH: 91, imgX: 452, imgY: 876 }
       ],

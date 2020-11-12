@@ -51,6 +51,7 @@ Page({
       { name: "状态管理", url: "/subpackagesA/wxministore/wxministore"},
       { name: "数字滚动", url: "/subpackagesA/count-up/count-up"},
       { name: "商城合集", url: "/subpackagesB/shop/index"},
+      { name: "双指缩放", url: "/subpackagesA/double-zoom/double-zoom"},
       { name: "测试", url: "/pages/pages-list/test/test"}
     ]
   },
@@ -60,7 +61,7 @@ Page({
       menus: ['shareAppMessage', 'shareTimeline']
     })
     this.configure()//核弹系统
-    //静默登录
+    //静默登录 
     login.login().then(res => { 
       console.log("【静默登录成功】", res)
       //在这里做页面初始化请求操作，可保证本地缓存中有用户的openid/userId

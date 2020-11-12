@@ -31,7 +31,6 @@ Component({
   methods: {
     //获取用户信息
     bindgetuserinfo(e) {
-      console.log("e", e)
       if (!e.detail.userInfo) {
         console.log("【拒绝了授权】")
         this.triggerEvent("getUserInfoCallback", { status: false })

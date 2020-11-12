@@ -1,5 +1,6 @@
 // subpackages/werun/werun.js
 import api from '../../utils/api/api'
+import apiConfig from '../../utils/api/api.config'
 import gets from '../../utils/api/authorization'
 import tool from '../../utils/publics/tool'
 import { timestampToTime } from '../../utils/publics/util'
@@ -15,7 +16,6 @@ Page({
     runType: -1,//按钮状态
     times: 0//用时
   },
-
   /**
    * 生命周期函数--监听页面加载
    */
@@ -33,7 +33,7 @@ Page({
     // })
     tool.loading("", true)
     gets.login().then(value => {
-      return api.getOpenid({
+      return apiConfig.getOpenid({
         js_code: value.code
       })
     }).then(value => {

@@ -1,16 +1,16 @@
 import { decimal_place, accAdd, accMul } from '../../../utils/publics/util'
-import initComputed from '../../../utils/wxComputed.min'
+import initComputed from '../../../utils/computed.min'
 Page({
   data: {
     label: ["全部", "待付款", "待发货", "待收货"],//标签列表
     labelIndex: 0,//标签索引
     orderList: [//订单列表
-      { id: 1, type: 1, orders: [{ id: 1, img: 'https://game.flyh5.cn/resources/game/wechat/szq/images/good_02.jpg', name: '焕活骨胶原面膜焕活骨胶原面膜焕活骨胶原面膜焕活骨胶原面膜', other: "310ml", prize: "68.50", num: 1}, { id: 2, img: 'https://game.flyh5.cn/resources/game/wechat/szq/images/good_02.jpg', name: '焕活骨胶原面膜焕活骨胶原面膜焕活骨胶原面膜焕活骨胶原面膜', other: "310ml", prize: "128.00", num: 2}] },
-      { id: 2, type: 2, orders: [{ id: 1, img: 'https://game.flyh5.cn/resources/game/wechat/szq/images/good_02.jpg', name: '焕活骨胶原面膜焕活骨胶原面膜焕活骨胶原面膜焕活骨胶原面膜', other: "310ml", prize: "68.50", num: 1}, { id: 2, img: 'https://game.flyh5.cn/resources/game/wechat/szq/images/good_02.jpg', name: '焕活骨胶原面膜焕活骨胶原面膜焕活骨胶原面膜焕活骨胶原面膜', other: "310ml", prize: "128.00", num: 2}] },
-      { id: 3, type: 3, orders: [{ id: 1, img: 'https://game.flyh5.cn/resources/game/wechat/szq/images/good_02.jpg', name: '焕活骨胶原面膜焕活骨胶原面膜焕活骨胶原面膜焕活骨胶原面膜', other: "310ml", prize: "68.50", num: 1}, { id: 2, img: 'https://game.flyh5.cn/resources/game/wechat/szq/images/good_02.jpg', name: '焕活骨胶原面膜焕活骨胶原面膜焕活骨胶原面膜焕活骨胶原面膜', other: "310ml", prize: "128.00", num: 2}] },
-      { id: 4, type: 4, orders: [{ id: 1, img: 'https://game.flyh5.cn/resources/game/wechat/szq/images/good_02.jpg', name: '焕活骨胶原面膜焕活骨胶原面膜焕活骨胶原面膜焕活骨胶原面膜', other: "310ml", prize: "68.50", num: 1}, { id: 2, img: 'https://game.flyh5.cn/resources/game/wechat/szq/images/good_02.jpg', name: '焕活骨胶原面膜焕活骨胶原面膜焕活骨胶原面膜焕活骨胶原面膜', other: "310ml", prize: "128.00", num: 2}] },
-      { id: 5, type: 5, orders: [{ id: 1, img: 'https://game.flyh5.cn/resources/game/wechat/szq/images/good_02.jpg', name: '焕活骨胶原面膜焕活骨胶原面膜焕活骨胶原面膜焕活骨胶原面膜', other: "310ml", prize: "68.50", num: 1}, { id: 2, img: 'https://game.flyh5.cn/resources/game/wechat/szq/images/good_02.jpg', name: '焕活骨胶原面膜焕活骨胶原面膜焕活骨胶原面膜焕活骨胶原面膜', other: "310ml", prize: "128.00", num: 2}] },
-      { id: 6, type: 6, orders: [{ id: 1, img: 'https://game.flyh5.cn/resources/game/wechat/szq/images/good_02.jpg', name: '焕活骨胶原面膜焕活骨胶原面膜焕活骨胶原面膜焕活骨胶原面膜', other: "310ml", prize: "68.50", num: 1}, { id: 2, img: 'https://game.flyh5.cn/resources/game/wechat/szq/images/good_02.jpg', name: '焕活骨胶原面膜焕活骨胶原面膜焕活骨胶原面膜焕活骨胶原面膜', other: "310ml", prize: "128.00", num: 2}] }
+      { id: 1, type: 1, orders: [{ id: 1, img: 'https://img.vrupup.com/web/szq/images/good_01.jpg', name: '焕活骨胶原面膜焕活骨胶原面膜焕活骨胶原面膜焕活骨胶原面膜', other: "310ml", prize: "68.50", num: 1}, { id: 2, img: 'https://img.vrupup.com/web/szq/images/good_01.jpg', name: '焕活骨胶原面膜焕活骨胶原面膜焕活骨胶原面膜焕活骨胶原面膜', other: "310ml", prize: "128.00", num: 2}] },
+      { id: 2, type: 2, orders: [{ id: 1, img: 'https://img.vrupup.com/web/szq/images/good_01.jpg', name: '焕活骨胶原面膜焕活骨胶原面膜焕活骨胶原面膜焕活骨胶原面膜', other: "310ml", prize: "68.50", num: 1}, { id: 2, img: 'https://img.vrupup.com/web/szq/images/good_01.jpg', name: '焕活骨胶原面膜焕活骨胶原面膜焕活骨胶原面膜焕活骨胶原面膜', other: "310ml", prize: "128.00", num: 2}] },
+      { id: 3, type: 3, orders: [{ id: 1, img: 'https://img.vrupup.com/web/szq/images/good_01.jpg', name: '焕活骨胶原面膜焕活骨胶原面膜焕活骨胶原面膜焕活骨胶原面膜', other: "310ml", prize: "68.50", num: 1}, { id: 2, img: 'https://img.vrupup.com/web/szq/images/good_01.jpg', name: '焕活骨胶原面膜焕活骨胶原面膜焕活骨胶原面膜焕活骨胶原面膜', other: "310ml", prize: "128.00", num: 2}] },
+      { id: 4, type: 4, orders: [{ id: 1, img: 'https://img.vrupup.com/web/szq/images/good_01.jpg', name: '焕活骨胶原面膜焕活骨胶原面膜焕活骨胶原面膜焕活骨胶原面膜', other: "310ml", prize: "68.50", num: 1}, { id: 2, img: 'https://img.vrupup.com/web/szq/images/good_01.jpg', name: '焕活骨胶原面膜焕活骨胶原面膜焕活骨胶原面膜焕活骨胶原面膜', other: "310ml", prize: "128.00", num: 2}] },
+      { id: 5, type: 5, orders: [{ id: 1, img: 'https://img.vrupup.com/web/szq/images/good_01.jpg', name: '焕活骨胶原面膜焕活骨胶原面膜焕活骨胶原面膜焕活骨胶原面膜', other: "310ml", prize: "68.50", num: 1}, { id: 2, img: 'https://img.vrupup.com/web/szq/images/good_01.jpg', name: '焕活骨胶原面膜焕活骨胶原面膜焕活骨胶原面膜焕活骨胶原面膜', other: "310ml", prize: "128.00", num: 2}] },
+      { id: 6, type: 6, orders: [{ id: 1, img: 'https://img.vrupup.com/web/szq/images/good_01.jpg', name: '焕活骨胶原面膜焕活骨胶原面膜焕活骨胶原面膜焕活骨胶原面膜', other: "310ml", prize: "68.50", num: 1}, { id: 2, img: 'https://img.vrupup.com/web/szq/images/good_01.jpg', name: '焕活骨胶原面膜焕活骨胶原面膜焕活骨胶原面膜焕活骨胶原面膜', other: "310ml", prize: "128.00", num: 2}] }
     ]
   },
   onLoad() {

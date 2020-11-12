@@ -43,7 +43,7 @@ export default new Store({
   pageLisener: {
     onLoad(options) {
       console.log("【store监听onLoad生命周期】", this, options)
-      mta.Page.init()//腾讯统计
+      tool.getWxConfig().then(res => { if (this.route.includes(res.pages[0])) mta.Page.init() })//腾讯统计
       if (this.route.includes("wxministore")) tool.showModal("生命周期监听", `页面onLoad生命周期监听成功，当前页面路径为【${this.route}】,options中带参：【${Object.keys(options)[0]}:${options.code}】`, false)
     },
     onShow() {

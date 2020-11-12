@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    sequenceList: { url: `${getApp().globalData.ASSETSURL}/sequence/bean/bean_`, num: 30, speed: 100, loop: false }
+    sequenceList: { url: `https://img.vrupup.com/web/szq/ylzhennong/images/sequence/home/cow/da/zayan/dayan_`, num: 20, speed: 100, loop: false }
   },
 
   /**
@@ -24,7 +24,7 @@ Page({
     let _url = this.data[sequence].url
     let _num = this.data[sequence].num
     for (let i = 0; i < _num; i++) {
-      _sequence.push({ url: `${_url}${i + 1}.png`, num: this.data[sequence].num, speed: this.data[sequence].speed, loop: this.data[sequence].loop })
+      _sequence.push({ url: `${_url}${i}.png`, num: this.data[sequence].num, speed: this.data[sequence].speed, loop: this.data[sequence].loop })
     }
     this.setData({ [sequence]: _sequence })
   },

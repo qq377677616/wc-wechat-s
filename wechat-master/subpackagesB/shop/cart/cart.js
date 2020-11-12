@@ -1,8 +1,8 @@
 // subpackages/shop/cart/cart.js
 import tool from '../../../utils/publics/tool'
 import touch from '../../../utils/sliding-del'
-import watch from '../../../utils/wxWatch'
-import WxCountUp from '../../../utils/countUp.min.js'
+import watch from '../../../utils/watch'
+import WxCountUp from '../../../utils/countup.min'
 import { decimal_place, accAdd, accMul } from '../../../utils/publics/util'
 
 Page({
@@ -10,12 +10,12 @@ Page({
     goodsDetailsUrl: '/pages/index/index?goodsId=',//商品详情页路径
     settlementsUrl: '/pages/index/index',//商品结算页路径
     goodsList: [//购物车列表
-      { id: 1, name: "焕活骨胶原面膜", other: "310ml", prize: "68.50", num: 1, img: "http://game.flyh5.cn/resources/game/wechat/szq/images/good_02.jpg" },
-      { id: 2, name: "焕活骨胶原面膜", other: "220ml", prize: "58.15", num: 1, img: "http://game.flyh5.cn/resources/game/wechat/szq/images/good_02.jpg" },
-      { id: 3, name: "焕活骨胶原面膜", other: "500ml", prize: "128.50", num: 1, img: "http://game.flyh5.cn/resources/game/wechat/szq/images/good_02.jpg" },
-      { id: 4, name: "焕活骨胶原面膜", other: "520ml", prize: "99.99", num: 1, img: "http://game.flyh5.cn/resources/game/wechat/szq/images/good_02.jpg" },
-      { id: 5, name: "焕活骨胶原面膜", other: "200ml", prize: "28.00", num: 1, img: "http://game.flyh5.cn/resources/game/wechat/szq/images/good_02.jpg" },
-      { id: 6, name: "焕活骨胶原面膜", other: "350ml", prize: "108.00", num: 1, img: "http://game.flyh5.cn/resources/game/wechat/szq/images/good_02.jpg" }
+      { id: 1, name: "焕活骨胶原面膜", other: "310ml", prize: "68.50", num: 1, img: "https://img.vrupup.com/web/szq/images/good_01.jpg" },
+      { id: 2, name: "焕活骨胶原面膜", other: "220ml", prize: "58.15", num: 1, img: "https://img.vrupup.com/web/szq/images/good_01.jpg" },
+      { id: 3, name: "焕活骨胶原面膜", other: "500ml", prize: "128.50", num: 1, img: "https://img.vrupup.com/web/szq/images/good_01.jpg" },
+      { id: 4, name: "焕活骨胶原面膜", other: "520ml", prize: "99.99", num: 1, img: "https://img.vrupup.com/web/szq/images/good_01.jpg" },
+      { id: 5, name: "焕活骨胶原面膜", other: "200ml", prize: "28.00", num: 1, img: "https://img.vrupup.com/web/szq/images/good_01.jpg" },
+      { id: 6, name: "焕活骨胶原面膜", other: "350ml", prize: "108.00", num: 1, img: "https://img.vrupup.com/web/szq/images/good_01.jpg" }
     ],
     prizeTotal: 0,
     loadMoreType: 2,//加载更多状态

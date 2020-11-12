@@ -1,0 +1,34 @@
+<!--subpackagesA/double-zoom/double-zoom.wxml-->
+<view>
+  <view class='content'>
+    <scroll-view class='scroll-view' scroll-y="true" scroll-x="true" bindtouchmove="touchmoveCallback" bindtouchstart="touchstartCallback">
+      <view>
+        <view class="ul">
+          <view class="li flex" wx:for="{{mySeatList}}" wx:key="index1" wx:for-index="index1" wx:for-item="item1">
+            <view class="item flex-cen {{item.isSelect ? 'on' : ''}}" style="width:{{itemSize[0] * curScale[0]}}rpx;font-size: {{itemSize[3] * curScale[0]}}rpx;height:{{itemSize[0] * curScale[0]}}rpx;margin:{{itemSize[2] * curScale[0]}}rpx;" wx:for="{{item1}}" wx:key="index" wx:for-index="index" wx:for-item="item" data-index="{{index1 * 10 + index}}" bindtap="selectSeatList">{{index1 * 10 + index + 1}}座</view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+    <!-- <scroll-view class='scroll-view' scroll-y="true" scroll-x="true" bindtouchmove="touchmoveCallback" bindtouchstart="touchstartCallback">
+      <view>
+        <view class="ul">
+          <image src="https://img.vrupup.com/web/szq/images/img_04.jpg" style="transform: scale({{curScale[0]}})"></image>
+        </view>
+      </view>
+    </scroll-view> -->
+    <!-- <scroll-view class='scroll-view' scroll-y="true" scroll-x="true" bindtouchmove="touchmoveCallback" bindtouchstart="touchstartCallback">
+      <view>
+        <view class="bg" style="width:{{720 * curScale[0]}}rpx;height:20rpx;background:green;"></view>
+        <view class="ol" style="transform: scale({{curScale[0]}})">
+          <view class="li"></view>
+          <view class="li"></view>
+          <view class="li"></view>
+          <view class="li"></view>
+          <view class="li"></view>
+          <view class="li"></view>
+        </view>
+      </view>
+    </scroll-view> -->
+  </view>
+</view>

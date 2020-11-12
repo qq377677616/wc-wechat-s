@@ -45,17 +45,10 @@
   "simulatorType": "wechat",
   "simulatorPluginLibVersion": {},
   "condition": {
-    "search": {
-      "list": []
-    },
-    "conversation": {
-      "list": []
-    },
     "plugin": {
       "list": []
     },
     "game": {
-      "currentL": -1,
       "list": []
     },
     "gamePlugin": {
@@ -508,6 +501,12 @@
           "id": -1,
           "name": "嵌入h5",
           "pathName": "subpackagesA/webview/webview",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "双指缩放",
+          "pathName": "subpackagesA/double-zoom/double-zoom",
           "scene": null
         }
       ]

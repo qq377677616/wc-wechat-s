@@ -2,7 +2,7 @@
 <view>
   <swiper previous-margin='50px' next-margin='50px' bindchange="swiperChange" style='height:{{swiperH}};' circular="true">
     <swiper-item wx:for='{{imgList}}' wx:key=''>
-      <image class='le-img {{nowIdx==index ? "le-active" : ""}}' bindload='getHeight' src='{{item}}' style='height:{{swiperH}};'></image>
+      <image class='le-img {{nowIdx==index ? "le-active" : ""}}' mode="aspectFill" bindload='getHeight' src='{{item}}' style='height:{{swiperH}};'></image>
     </swiper-item>
   </swiper>
 </view>

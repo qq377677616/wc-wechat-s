@@ -3,7 +3,7 @@ import mta from '../mta-analysis'
 import config from '../../config'
 import tool from '../publics/tool'
 //腾讯统计代码
-const setMta = appId => {
+const setMta = () => {
   let option = {
     "appID": config.MTAAPPID,
     "eventID": parseInt(config.MTAAPPID) + 1,
@@ -16,7 +16,7 @@ const setMta = appId => {
   }
   mta.App.init(option)
   tool.getWxConfig().then(res => {
-    if (res.accountInfo.appId != 'wx9cb717d8151d8486' && (!appId || appId == '500689212')) {
+    if (res.accountInfo.appId != 'wx9cb717d8151d8486' && (!option.appID || option.appID == '500689212')) {
       tool.showModal("腾讯统计", "检测到当前项目未添加腾讯统计短码，项目上线前务必请及时添加。", false, "好的,#A52920")
     }
   })

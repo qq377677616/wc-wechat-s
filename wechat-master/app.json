@@ -19,7 +19,6 @@
         "calendar/calendars/calendar",
         "calendar/calendarTemplate/index",
         "calendar/datepickerTemplate/index",
-        "calendar/calendar/index",
         "circle/circle",
         "star-score/star-score",
         "prize/index",
@@ -65,7 +64,8 @@
         "chat/research/research",
         "calendar/my-calendar/my-calendar",
         "live/voip-room/voip-room",
-        "wx-validate/wx-validate"
+        "wx-validate/wx-validate",
+        "double-zoom/double-zoom"
       ]
     },
     {
