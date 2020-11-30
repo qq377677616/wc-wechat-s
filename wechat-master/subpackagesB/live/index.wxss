@@ -1,0 +1,6 @@
+/* subpackages/live/live/index.wxss */
+.box{padding:100rpx 60rpx;background: #fff;border-radius: 10rpx;position: relative;}
+.box input{height: 80rpx;border:1rpx solid#999;text-align: center;}
+button{height: 80rpx;line-height: 80rpx;border-radius: 10rpx;margin-top: 40rpx;background: #62BE2A;text-align: center;font-size: 36rpx;color: #fff;}
+.close{position: absolute;left: 50%;transform: translateX(-50%);bottom:115%;}
+.close text{font-size: 80rpx;color: #fff;}

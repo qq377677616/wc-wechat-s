@@ -8,7 +8,7 @@ const login = (get_session_key = 0) => {
   updateUserInfo()
   return new Promise((resolve, reject) => {
     tool.loading("")
-    auth.login().then(res => { 
+    auth.login().then(res => {
       return res 
     }).then(res => {
       return apiConfig.getOpenid({ js_code: res.code })

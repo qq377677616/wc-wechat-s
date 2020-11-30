@@ -20,9 +20,11 @@
     </view>
   </view>
   <view class="map">
-    <map id="{{mapOption.mapId}}" longitude="{{mapOption.longitude}}" latitude="{{mapOption.latitude}}" scale="{{mapOption.scale}}" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" circles="{{circles}}" polyline="{{polyline}}" bindregionchange="regionchange" show-location></map>
-  </view>
-  <view class="controls">
-    <view class="current" bindtap="getMyPosition"><image src="../icon_04.png" mode="widthFix"></image></view>
+    <!-- 地图 -->
+    <map id="{{mapOption.mapId}}" longitude="{{mapOption.longitude}}" latitude="{{mapOption.latitude}}" scale="{{mapOption.scale}}" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" circles="{{circles}}" polyline="{{polyline}}" bindregionchange="regionchange" show-location>
+      <cover-view class="controls">
+        <cover-view class="current" bindtap="getMyPosition"><cover-image src="../icon_04.png" mode="widthFix"></cover-image></cover-view>
+      </cover-view>
+    </map>
   </view>
 </view>

@@ -1,8 +1,8 @@
 /**
  * Created by sail on 2017/6/1.
  */
-import WeCropper from '../../utils/we-cropper/we-cropper.js'
-import tool from '../../utils/publics/tool.js'
+import WeCropper from './we-cropper/we-cropper'
+import tool from '../../utils/publics/tool'
 
 Page({
   data: {

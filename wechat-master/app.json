@@ -29,7 +29,6 @@
         "map/my-map/index",
         "map/maps/maps",
         "websocket/websocket",
-        "ar/ar",
         "img-code/img-code",
         "computed-watch/computed-watch",
         "ch-en/ch-en",
@@ -47,10 +46,6 @@
         "slider/slider",
         "parabola/parabola",
         "wx-charts/index/index",
-        "live/index",
-        "live/live-dev/live-play",
-        "live/live-dev/live-pusher",
-        "live/live-room/live-room",
         "prize/tiger/tiger",
         "werun/werun",
         "chat/index",
@@ -63,7 +58,6 @@
         "wxministore/wxministore",
         "chat/research/research",
         "calendar/my-calendar/my-calendar",
-        "live/voip-room/voip-room",
         "wx-validate/wx-validate",
         "double-zoom/double-zoom"
       ]
@@ -71,6 +65,15 @@
     {
       "root": "subpackagesB",
       "pages": [
+        "live/index",
+        "live/live-dev/live-play",
+        "live/live-dev/live-pusher",
+        "live/live-room/live-room",
+        "live/voip-room/voip-room",
+        "ar/index",
+        "ar/ar3d/ar3d",
+        "ar/scanning/scanning",
+        "ar/ar",
         "shop/cart/cart",
         "shop/index",
         "shop/order/order"

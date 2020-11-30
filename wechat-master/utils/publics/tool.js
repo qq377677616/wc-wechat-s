@@ -300,7 +300,7 @@ const canvasToTempImage = (canvasId, w, h, x = 0, y = 0) => {
 //canvas绘图生成海报图片
 const canvasImg = options => {
   return new Promise((resolve, reject) => {
-    const ctx = wx.createCanvasContext(options.canvasId);
+    const ctx = wx.createCanvasContext(options.canvasId)
     ctx.setFillStyle('#fff')
     ctx.rect(0, 0, options.canvasSize.split("*")[0], options.canvasSize.split("*")[1])
     ctx.fill()

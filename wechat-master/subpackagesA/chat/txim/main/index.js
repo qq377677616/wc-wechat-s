@@ -1,9 +1,9 @@
 // pages/pages-list/chat/txim/main/index.js
 import TIM from 'tim-wx-sdk'
-import { decodeElement } from '../../../../utils/im/decodeElement'
+import { decodeElement } from '../im/decodeElement'
 import { getDom, alert, previewImage } from '../../../../utils/publics/tool'
 import { isSettingScope, openSetting } from '../../../../utils/api/authorization'
-import { emojiName, emojiMap, emojiUrl } from '../../../../utils/im/emojiMap'
+import { emojiName, emojiMap, emojiUrl } from '../im/emojiMap'
 const audioContext = wx.createInnerAudioContext()
 const recorderManager = wx.getRecorderManager()
 const recordOptions = {

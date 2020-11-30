@@ -1,6 +1,8 @@
 /* pages/pages-list/map/my-map/index.wxss */
-map{width:100vw;height:100vh !important;}
-.current{position: fixed;bottom:8vh;right:2vw;width:100rpx;height:100rpx;}
+.map{padding-top: 212rpx;position: relative;}
+map{width:100vw;height:calc(100vh - 212rpx) !important;}
+.controls{position: absolute;bottom:8vh;right:2vw;width:100rpx;height:100rpx;z-index: 100;}
+/* .current{position: absolute;bottom:8vh;right:2vw;width:100rpx;height:100rpx;} */
 image{width:100%;}
 .flex-style{
   display: -webkit-box;
@@ -8,8 +10,8 @@ image{width:100%;}
   display: flex;
 }
 .flex-item{
-  height: 35px; 
-  line-height: 35px;
+  height: 60rpx; 
+  line-height: 60rpx;
   text-align: center;
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -65,7 +67,7 @@ image{width:100%;}
   left: 0;
   z-index: 1000;
   border-bottom:1px solid #c3c3c3;
-  padding-bottom: 10rpx;
+  padding-bottom: 20rpx;
 }
 .map-inputtips-input input{
   border: 1px solid #ddd;
@@ -75,8 +77,8 @@ image{width:100%;}
   width: 100%;
   box-sizing: border-box;
   padding: 0 5px;
-  margin-top: 10rpx;
 }
+.map-inputtips-input input:last-child{ margin-top: 10rpx;}
 .map-box{
   margin: 0 10px;
   border-bottom:1px solid #c3c3c3;

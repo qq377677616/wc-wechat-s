@@ -220,8 +220,9 @@ Page({
   },
   //点击地图上标注
   markertap(e) {
+    console.log("【点击地图上的标注点】", e)
     this.setData({ position_start_end: [0, 0] })
-    e && (this.data.markerId = e.markerId)
+    e && (this.data.markerId = e.detail.markerId)
     this.planningRoute(`${this.data.centerLat || this.data.mapOption.latitude},${this.data.centerLon || this.data.mapOption.longitude}`, `${this.data.markers[this.data.markerId].latitude},${this.data.markers[this.data.markerId].longitude}`)
   }, 
   //输入框聚焦

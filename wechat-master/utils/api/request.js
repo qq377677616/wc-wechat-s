@@ -70,7 +70,7 @@ const getP = (url, data = {}, header = { 'content-type': 'application/x-www-form
       },
       fail: function (err) {
         reject(err)
-      }
+      } 
     })
   })
 }

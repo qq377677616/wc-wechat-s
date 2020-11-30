@@ -1,0 +1,12 @@
+<!--subpackages/live/live-room/live-room.wxml-->
+<view>
+  <mlvb-live-room id="id_liveroom"
+      roomID="{{roomID}}"
+      roomName="{{roomName}}"
+      template="float"
+      beauty="{{beauty}}"
+      muted="{{muted}}"
+      debug="{{debug}}"
+      bindonRoomEvent="onRoomEvent">
+  </mlvb-live-room>
+</view>

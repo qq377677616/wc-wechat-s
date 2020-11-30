@@ -3,9 +3,9 @@ import tool from '../../utils/publics/tool.js'
 Page({
   //页面的初始数据
   data: {
-    // h5Url: 'https://game.flyh5.cn/resources/game/wechat/szq/ftxiyouji/index.html',//前端的h5链接地址
+    h5Url: 'https://game.flyh5.cn/resources/game/wechat/szq/webview/index.html',//前端的h5链接地址
     // h5Url: 'https://dev.flyh5.cn/leysen/wxAuth/login',//前端的h5链接地址
-    h5Url: 'https://game.flyh5.cn/resources/game/wechat/szq/demo/getwh.html',//前端的h5链接地址
+    // h5Url: 'https://game.flyh5.cn/resources/game/wechat/szq/demo/getwh.html',//前端的h5链接地址
     isUseShare: true,
     isAvatar: true,//是否将头像传给h5
     isNickName: true,//是否将昵称传给h5
@@ -32,20 +32,17 @@ Page({
     this.setData({ h5Url })
     console.log("【最终跳转到h5的链接】", this.data.h5Url)
   },
-  //通信事件
+  //通信事件(h5中配置分享信息)
   bindmessage(e) {
     console.log("e.detail", e.detail)
     this.setData({ shareContent: e.detail.data[0] })
   },
-  /**
-   * 用户点击右上角分享
-   */
+  //监听用户点击右上角分享（半监听）
   onShareAppMessage(options) {
     console.log("onShareAppMessage", options)
-    if (options[0].from == "menu" && this.data.isWatchShare) {
+    if (options.from == "menu" && this.data.isWatchShare) {
       console.log("【您点击了分享】")
-      let _h5Url = `${this.data.h5Url}#ShareOk${new Date().getTime()}`
-      this.setData({ h5Url: _h5Url })
+      this.setData({ h5Url: `${this.data.h5Url}#shareOk${new Date().getTime()}` })
       console.log("分享后的url---" + this.data.h5Url)
     }
     if (this.data.shareContent) return this.data.shareContent

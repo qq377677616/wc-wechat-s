@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "直播",
+  "usingComponents": {
+    "load-more": "/components/load-more/load-more"
+  }
+}

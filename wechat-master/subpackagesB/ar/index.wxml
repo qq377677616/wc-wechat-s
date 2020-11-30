@@ -1,0 +1,4 @@
+<view class="body flex-cen-col">
+  <view class="titles2" bindtap="jump" data-page="/subpackagesB/ar/scanning/scanning">普通AR识别</view>
+  <view class="titles2" bindtap="jump" data-page="/subpackagesB/ar/ar3d/ar3d">AR + 3D</view>
+</view>

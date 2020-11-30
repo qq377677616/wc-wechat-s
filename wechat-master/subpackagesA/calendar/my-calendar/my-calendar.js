@@ -7,7 +7,7 @@ Page({
     calendarConfig: {
       multi: true, // 是否开启多选,
       theme: 'default', // 日历主题，目前共两款可选择，默认 default 及 elegant，自定义主题在 theme 文件夹扩展
-      showLunar: false, // 是否显示农历，此配置会导致 setTodoLabels 中 showLabelAlways 配置失效
+      showLunar: true, // 是否显示农历，此配置会导致 setTodoLabels 中 showLabelAlways 配置失效
       lunar: true, // 在配置showLunar为false, 但需返回农历信息时使用该选项
       inverse: true, // 单选模式下是否支持取消选中,
       chooseAreaMode: false, // 开启日期范围选择模式，该模式下只可选择时间段

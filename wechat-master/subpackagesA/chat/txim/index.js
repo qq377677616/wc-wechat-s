@@ -1,5 +1,5 @@
 import { jump_nav, chooseImage } from '../../../utils/publics/tool'
-import tims from '../../../utils/im/tim.js'
+import tims from './im/tim.js'
 import dayjs from 'dayjs'
 let tim;
 Page({

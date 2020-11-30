@@ -1,0 +1,4 @@
+<!--subpackages/live/live/live-dev/live-play.wxml-->
+<view>
+  <live-player src="{{playerUrl}}" mode="live" autoplay bindstatechange="statechange" binderror="error" />
+</view>

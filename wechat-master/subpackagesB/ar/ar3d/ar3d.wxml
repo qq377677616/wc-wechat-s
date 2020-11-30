@@ -1,0 +1,19 @@
+<!--subpackagesA/ar/ar3d/ar3d.wxml-->
+<view>
+  <!-- AR摄像头 -->
+  <camera device-position="{{devicePosition}}" flash="off" frame-size="large" binderror="error" class="camera1"></camera>
+  <!-- 3d部分 -->
+  <canvas
+    id="canvas1"
+    canvas-id="canvas1"
+    class="canvas1"
+    type="webgl"
+    disable-scroll = true
+    bindtouchstart="touchStart"
+    bindtouchmove="touchMove">
+    <cover-view class="cover-view">
+      <cover-view bindtap="toggleDeviceMotion">Auto Mode / Manual Mode</cover-view>
+      <cover-view bindtap="changeDirection" class="marginTop10">切换前/后摄像头</cover-view>
+    </cover-view>
+  </canvas>
+</view>

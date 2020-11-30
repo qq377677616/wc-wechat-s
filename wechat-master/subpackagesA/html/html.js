@@ -1,6 +1,6 @@
 // pages/pages-list/html/html.js
 import $ from '../../utils/api/request'
-import WxParse from '../../utils/wxParse/wxParse.js'
+import WxParse from './wxParse/wxParse.js'
 import htmlDom from './htmjson'
 
 Page({

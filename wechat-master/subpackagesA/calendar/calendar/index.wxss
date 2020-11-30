@@ -1,291 +1,214 @@
-page {
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
+@import './theme/iconfont.wxss';
+@import './theme/theme-default.wxss';
+@import './theme/theme-elegant.wxss';
+
+.b {
+    display: flex;
 }
 
-.box {
-  display: flex;
+.lr {
+    flex-direction: row;
 }
 
-.box-lr {
-  flex-direction: row;
+.tb {
+    flex-direction: column;
 }
 
-.box-rl {
-  flex-direction: row-reverse;
+.pc {
+    justify-content: center;
 }
 
-.box-tb {
-  flex-direction: column;
+.ac {
+    align-items: center;
 }
 
-.box-bt {
-  flex-direction: column-reverse;
+.cc {
+    align-items: center;
+    justify-content: center;
 }
 
-.box-pack-center {
-  justify-content: center;
-}
-
-.box-pack-start {
-  justify-content: flex-start;
-}
-
-.box-pack-end {
-  justify-content: flex-end;
-}
-
-.box-pack-between {
-  justify-content: space-between;
-}
-
-.box-pack-around {
-  justify-content: space-around;
-}
-
-.box-align-center {
-  align-items: center;
-}
-
-.box-align-start {
-  align-items: flex-start;
-}
-
-.box-align-end {
-  align-items: flex-end;
-}
-
-.self-align-center {
-  align-self: center;
-  margin: 0 auto;
-}
-
-.self-align-start {
-  align-self: flex-start;
-}
-
-.self-align-end {
-  align-self: flex-end;
-}
-
-.self-align-stretch {
-  align-self: stretch;
-}
-
-.box-wrap {
-  flex-wrap: wrap;
-}
-
-.box-nowrap {
-  flex-wrap: nowrap;
+.wrap {
+    flex-wrap: wrap;
 }
 
 .flex {
-  flex-grow: 1;
-}
-
-.shrink {
-  flex-shrink: 1;
+    flex-grow: 1;
 }
 
 .bg {
-  background-image: linear-gradient(to bottom, #faefe7, #ffcbd7);
-  overflow: hidden;
-}
-
-.brown-color {
-  color: #784344;
-}
-
-.pink-color {
-  color: #ff629a;
+    background-image: linear-gradient(to bottom, #faefe7, #ffcbd7);
+    overflow: hidden;
 }
 
 .white-color {
-  color: #fff;
+    color: #fff;
 }
 
 .fs24 {
-  font-size: 24rpx;
+    font-size: 24rpx;
 }
 
 .fs28 {
-  font-size: 28rpx;
+    font-size: 28rpx;
 }
 
 .fs32 {
-  font-size: 32rpx;
+    font-size: 32rpx;
 }
 
 .fs36 {
-  font-size: 36rpx;
+    font-size: 36rpx;
 }
 
-.top-handle {
-  height: 80rpx;
+.calendar {
+    width: 100%;
+    box-sizing: border-box;
 }
 
-.prev {
-  text-align: right;
-  height: 80rpx;
+/* 日历操作栏 */
+
+.handle {
+    height: 80rpx;
 }
 
-.next {
-  height: 80rpx;
-}
-
-.prev-handle {
-  width: 80rpx;
-  height: 100%;
-}
-
+.prev-handle,
 .next-handle {
-  width: 80rpx;
-  height: 100%;
+    padding: 20rpx;
 }
 
-.date-area {
-  width: 50%;
-  height: 80rpx;
-  text-align: center;
+.date-in-handle {
+    height: 80rpx;
 }
+
+/* 星期栏 */
 
 .weeks {
-  height: 50rpx;
-  line-height: 50rpx;
-  opacity: 0.5;
+    height: 50rpx;
+    line-height: 50rpx;
+    opacity: 0.5;
 }
 
 .week {
-  text-align: center;
+    text-align: center;
 }
 
-.days {
-  height: 500rpx;
+.grid,
+.week {
+    width: 14.286014285714286%;
 }
 
-.grid {
-  width: 107.1428571429rpx;
+.date-wrap {
+    width: 100%;
+    height: 80rpx;
+    position: relative;
+    left: 0;
+    top: 0;
 }
 
-.day {
-  width: 60rpx;
-  height: 60rpx;
-  color: #88d2ac;
-  font-size: 26rpx;
-  font-weight: 200;
+.date {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 55rpx;
+    height: 55rpx;
+    text-align: center;
+    line-height: 55rpx;
+    font-size: 26rpx;
+    font-weight: 200;
+    border-radius: 50%;
+    transition: all 0.3s;
+    animation-name: choosed;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
 }
 
-.border-radius {
-  border-radius: 50%;
-  position: relative;
-  left: 0;
-  top: 0;
-  color: #fff;
+.date-area-mode {
+    width: 100%;
+    border-radius: 0;
 }
 
-.pink-bg {
-  background-color: #ff629a;
+.date-desc {
+    width: 150%;
+    height: 32rpx;
+    font-size: 20rpx;
+    line-height: 32rpx;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -webkit-line-clamp: 1;
+    text-align: center;
 }
 
-.purple-bg {
-  background-color: #b8b8f1;
+@keyframes choosed {
+    from {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.9);
+    }
+
+    to {
+        transform: scale(1);
+    }
 }
 
-.right-triangle::after {
-  content: "";
-  display: block;
-  width: 0;
-  height: 0;
-  border: 15rpx solid transparent;
-  border-left-color: #ff629a;
-  position: absolute;
-  right: -22rpx;
-  top: 18rpx;
+/* 日期圆圈标记 */
+.todo-circle {
+    border-width: 1rpx;
+    border-style: solid;
+    box-sizing: border-box;
 }
 
-.left-triangle::before {
-  content: "";
-  display: block;
-  width: 0;
-  height: 0;
-  border: 15rpx solid transparent;
-  border-right-color: #ff629a;
-  position: absolute;
-  left: -22rpx;
-  top: 18rpx;
+/* 待办点标记相关样式 */
+.todo-dot {
+    width: 10rpx;
+    height: 10rpx;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-.tips {
-  text-align: center;
-  margin-top: 20rpx;
-  margin-bottom: 20rpx;
+.todo-dot-top {
+    top: 3rpx;
 }
 
-.types {
-  background-color: #ffedf4;
-  height: 50rpx;
+.todo-dot.todo-dot-top-always {
+    top: -8rpx;
 }
 
-.types-desc {
-  padding: 0 20rpx;
+.todo-dot.todo-dot-bottom {
+    bottom: 0;
 }
 
-.type-name {
-  margin-top: 50rpx;
-  margin-bottom: 30rpx;
+.todo-dot.todo-dot-bottom-always {
+    bottom: -10rpx;
 }
 
-.type-desc {
-  padding: 0 35rpx;
-  line-height: 38rpx;
+/* 日期描述文字（待办文字/农历）相关样式 */
+
+.date-desc.date-desc-top {
+    top: -6rpx;
 }
 
-.explain {
-  border-top: 1px solid #eee;
-  width: 90%;
-  margin: 20rpx 5% 20rpx 5%;
-  padding: 20rpx 0;
+.date-desc.date-desc-top-always {
+    top: -20rpx;
 }
 
-.explain-title {
-  font-weight: bold;
-  margin-bottom: 15rpx;
+.date-desc.date-desc-bottom {
+    bottom: -14rpx;
 }
 
-.explain-item {
-  padding: 8rpx 20rpx;
-  color: #fff;
+.todo-circle .date-desc.date-desc-bottom {
+    bottom: -30rpx;
 }
 
-.left-border-radius {
-  border-top-left-radius: 20rpx;
-  border-bottom-left-radius: 20rpx;
-}
-
-.right-border-radius {
-  border-top-right-radius: 20rpx;
-  border-bottom-right-radius: 20rpx;
-}
-
-.picker-btns {
-  height: 120rpx;
-  line-height: 120rpx;
-  border-bottom: 1rpx solid #ff7ca0;
-}
-
-.picker-confirm {
-  margin-right: 50rpx;
-}
-
-.picker-cancel {
-  margin-left: 50rpx;
-}
-
-.picker-view {
-  color: #ff7ca0;
-  text-align: center;
+.date-desc.date-desc-bottom-always {
+    bottom: -28rpx;
 }
